@@ -1,0 +1,41 @@
+ <nav class="navbar navbar-expand-lg navigation-wrap">
+
+            <!-- contenedor -->
+            <div class="container">
+
+                <!-- logotipo de empresa -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="Logo 1820" class="img-fluid">
+                </a>
+
+                <!-- menu hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- icono 3 lineas horizontales -->
+                    <i class="uil uil-bars"></i>
+                </button>
+
+                <!-- estructura del menu (contenido)-->
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <!-- listado del menu -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#slogan">Slogan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cafes">Cafés</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#preguntas">Preguntas</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav> 
