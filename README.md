@@ -8,7 +8,7 @@
 
 ###
 
-<h1 align="center">🇨🇷 🤓 Proyecto Web 1 😎 🇨🇷</h1>
+<h1 align="center">🇨🇷 🤓 Proyecto Web 2 😎 🇨🇷</h1>
 
 ###
 
@@ -16,7 +16,7 @@
 
 ###
 
-<h3 align="center">🏅 ¡Bienvenido al repositorio de Proyecto Web 1! 🏅</h3>
+<h3 align="center">🏅 ¡Bienvenido al repositorio de Proyecto Web 2! 🏅</h3>
 
 ###
 
@@ -24,7 +24,7 @@
 
 ###
 
-<p align="left">Este espacio está diseñado para organizar y respaldar el trabajo realizado durante el curso de Programación Web 1 (PW1) y proyectos relacionados.</p>
+<p align="left">Este espacio está diseñado para organizar y respaldar el trabajo realizado durante el curso de Programación Web 2 (PW2) y proyectos relacionados.</p>
 
 ###
 
@@ -32,7 +32,7 @@
 
 ###
 
-<p align="left">Este repositorio contiene una colección de tareas, prácticas en clase, ademas del proyecto final del curso de Proyecto Web 1 (PW1) en la Universidad Cenfotec. <br>El objetivo es proporcionar un espacio centralizado para el seguimiento del progreso y la colaboración entre estudiante y la revisión por parte de los profesores.</p>
+<p align="left">Este repositorio contiene una colección de tareas, prácticas en clase, ademas del proyecto final del curso de Proyecto Web 2 (PW2) en la Universidad Cenfotec. <br>El objetivo es proporcionar un espacio centralizado para el seguimiento del progreso y la colaboración entre estudiante y la revisión por parte de los profesores.</p>
 
 ###
 
@@ -40,7 +40,7 @@
 
 ###
 
-<h4 align="left">🔸📂 cenfotec-pw1/<br>🔸🔸📂 practicas_clase/<br>🔸🔸📂 proyecto_final/<br>🔸🔸📂 tareas/</h4>
+<h4 align="left">🔸📂 pw2/<br>🔸🔸📂 practicas_clase/<br>🔸🔸📂 proyecto_final/<br>🔸🔸📂 tareas/</h4>
 
 ###
 
