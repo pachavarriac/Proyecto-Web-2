@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Stalinist One";
+    src        : url("../fonts/StalinistOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style : normal;
+}
+
+:root {
+    --main-bg: #120727;
+    --card-bg: #1e0d3a;
+    --accent: #c14b9b;
+    --accent-light: #6bd9e8;
+    --text-main: #fff;
+    --text-muted: #d1d1d1;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--main-bg);
+    color: var(--text-main);
+}
+
+header {
+    background-image: url("../images/zona506_logo.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--text-main);
+    width: 100%;
+    position: relative;
+    min-height: 210px;
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header-title {
+    font-family: "Stalinist One", cursive;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.header-title-purple {
+    color: var(--accent);
+}
+
+footer {
+    background-color: #000;
+    color: var(--text-main);
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.tech-platforms {
+    background-color: var(--main-bg);
+    padding: 5rem 0;
+    color: var(--text-main);
+}
+
+.platforms-title {
+    font-weight: bold;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.platforms-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--accent);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.platform-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #2d1a4a;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+}
+
+.platform-card:hover,
+.platform-link:focus {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-color: var(--accent);
+    outline: none;
+}
+
+.platform-icon {
+    font-size: 3rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+.platform-name {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+.platform-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+}
+
+.platform-link {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.platform-link:hover, .platform-link:focus {
+    color: var(--accent);
+    background-color: rgba(193, 75, 155, 0.1);
+    text-decoration: underline;
+}
+
+.btn-resources {
+    background-color: var(--accent);
+    color: var(--text-main);
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(193, 75, 155, 0.3);
+    outline: none;
+}
+
+.btn-resources:hover, .btn-resources:focus {
+    background-color: #a93a86;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(193, 75, 155, 0.4);
+    color: var(--text-main);
+}
+
+.btn-resources i {
+    transition: transform 0.3s ease;
+}
+
+.btn-resources:hover i,
+.btn-resources:focus i {
+    transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+    .platforms-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .platform-card {
+        padding: 2rem;
+    }
+    .btn-resources {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .platforms-title {
+        font-size: 1.5rem;
+    }
+    .platform-card {
+        padding: 1.5rem;
+    }
+}
+
+a:focus, button:focus {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
+}

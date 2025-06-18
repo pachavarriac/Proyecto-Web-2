@@ -1,0 +1,187 @@
+@font-face {
+    font-family        : "Cinzel-700";
+    src                : url('../fonts/Cinzel-VariableFont_wght.ttf') format("truetype");
+    font-optical-sizing: auto;
+    font-weight        : 700;
+    font-style         : normal;
+}
+
+:root {
+    --main-red: #8b0000;
+    --main-red-hover: #a52a2a;
+    --white: #fff;
+    --black: #000;
+    --overlay: rgba(0, 0, 0, 0.3);
+    --font-title: 'Cinzel-700';
+    --font-base: 'Arial', sans-serif;
+}
+
+body {
+    font-family   : var(--font-base);
+    margin        : 0;
+    padding       : 0;
+    min-height    : 100vh;
+    width         : 100vw;
+    display       : flex;
+    flex-direction: column;
+    background    : var(--black);
+}
+
+.main-container {
+    background-image   : url("../images/bannerFogo-min.jpg");
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    flex               : 1;
+    position           : relative;
+    display            : flex;
+    flex-direction     : column;
+}
+
+.main-container::before {
+    content         : "";
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    background-color: var(--overlay);
+    z-index         : 0;
+}
+
+.header-container {
+    position   : relative;
+    z-index    : 1;
+    padding    : 20px 0;
+    flex-shrink: 0;
+}
+
+.header-logo {
+    max-height: 80px;
+    width     : auto;
+    display   : block;
+    margin    : 0 auto;
+}
+
+.content-section {
+    position   : relative;
+    z-index    : 1;
+    color      : var(--white);
+    flex       : 1;
+    display    : flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-wrapper {
+    padding: 20px 0;
+    width  : 100%;
+    margin: 0 auto;
+}
+
+.main-title {
+    font-family  : var(--font-title);
+    font-weight  : 700;
+    font-size    : clamp(2rem, 6vw, 3.5rem);
+    line-height  : 1.2;
+    margin-bottom: 20px;
+    text-align   : left;
+}
+
+.main-description {
+    font-size    : clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 30px;
+    max-width    : 600px;
+    text-align   : left;
+}
+
+.button-group {
+    display       : flex;
+    flex-wrap     : wrap;
+    gap           : 10px;
+}
+
+.main-btn {
+    padding       : 10px 25px;
+    font-weight   : bold;
+    border-radius : 0;
+    transition    : background 0.2s, border 0.2s, color 0.2s;
+    font-size     : 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow    : 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.primary-btn {
+    background-color: var(--main-red);
+    border-color    : var(--main-red);
+    color           : var(--white);
+}
+
+.primary-btn:hover,
+.primary-btn:focus {
+    background-color: var(--main-red-hover);
+    border-color    : var(--main-red-hover);
+    color           : var(--white);
+}
+
+.outline-btn {
+    background     : transparent;
+    color          : var(--white);
+    border         : 2px solid var(--white);
+}
+
+.outline-btn:hover,
+.outline-btn:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    color           : var(--white);
+}
+
+.site-footer {
+    background-color: var(--black);
+    color           : var(--white);
+    padding         : 15px 0;
+    text-align      : center;
+    flex-shrink     : 0;
+}
+
+.copyright-text {
+    margin-bottom: 0;
+    font-size    : 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        gap           : 0;
+    }
+
+    .main-btn {
+        width        : 100%;
+        margin-bottom: 10px;
+    }
+
+    .main-title,
+    .main-description {
+        text-align: center;
+    }
+
+    .content-wrapper {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo {
+        max-height: 60px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .main-description {
+        margin-bottom: 18px;
+    }
+}
