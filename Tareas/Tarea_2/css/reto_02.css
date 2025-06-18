@@ -1,152 +1,74 @@
+@font-face {
+    font-family: "Stalinist One";
+    src        : url("../fonts/StalinistOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style : normal;
+}
+
+:root {
+    --main-bg: #120727;
+    --card-bg: #1e0d3a;
+    --accent: #c14b9b;
+    --accent-light: #6bd9e8;
+    --text-main: #fff;
+    --text-muted: #d1d1d1;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 body {
-    font-family     : "Arial", sans-serif;
-    display         : flex;
-    flex-direction  : column;
-    min-height      : 100vh;
-    margin          : 0;
-    background-color: #120727;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--main-bg);
+    color: var(--text-main);
 }
 
 header {
-    background-image   : url("../images/zona506_logo.jpg");
-    background-size    : cover;
+    background-image: url("../images/zona506_logo.jpg");
+    background-size: cover;
     background-position: center;
-    color              : white;
-    width              : 100%;
-    position           : relative;
-    min-height         : 210px;
+    color: var(--text-main);
+    width: 100%;
+    position: relative;
+    min-height: 210px;
 }
 
 .header-content {
     background-color: rgba(0, 0, 0, 0.8);
-    position        : absolute;
-    top             : 0;
-    left            : 0;
-    right           : 0;
-    bottom          : 0;
-    display         : flex;
-    align-items     : center;
-    justify-content : center;
-    text-align      : center;
-    padding         : 2rem;
-}
-
-.main-content {
-    flex            : 1;
-    display         : flex;
-    align-items     : center;
-    padding         : 3rem 0;
-    color           : white;
-    background-color: #000000;
-}
-
-.main-content .row {
-    min-height: 60vh;
-}
-
-.event-img {
-    width          : 100%;
-    height         : 100%;
-    object-fit     : cover;
-    border-radius  : 8px;
-    box-shadow     : 0 4px 8px rgba(0, 0, 0, 0.3);
-    object-position: center;
-}
-
-.btn-custom {
-    background-color: #ffffff;
-    border          : none;
-    padding         : 10px 25px;
-    font-weight     : bold;
-    margin-top      : 20px;
-    color           : #000000;
-    transition      : all 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: #e6e6e6;
-    color           : #000000;
-    transform       : translateY(-2px);
-}
-
-footer {
-    background-color: #000000;
-    color           : white;
-    padding         : 1.5rem 0;
-    width           : 100%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
 }
 
 .header-title {
-    font-family   : "Stalinist One", cursive;
-    font-size     : clamp(2rem, 6vw, 4rem);
-    font-weight   : normal;
-    text-shadow   : 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Stalinist One", cursive;
+    font-size: clamp(2rem, 6vw, 4rem);
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
 }
 
 .header-title-purple {
-    font-family   : "Stalinist One", cursive;
-    font-size     : clamp(2rem, 6vw, 4rem);
-    font-weight   : normal;
-    text-shadow   : 2px 2px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-    color         : #c14b9b;
+    color: var(--accent);
 }
 
-.section-title {
-    color        : white;
-    font-weight  : bold;
-    font-size    : clamp(2rem, 3vw, 2.2rem);
-    margin-bottom: 1.5rem;
+footer {
+    background-color: #000;
+    color: var(--text-main);
+    padding: 1.5rem 0;
+    width: 100%;
 }
 
-.section-text {
-    color      : white;
-    font-size  : 1.1rem;
-    line-height: 1.6;
-}
-
-.section-subtitle {
-    color    : white;
-    font-size: 1.3rem;
-}
-
-.services-list {
-    color          : white;
-    list-style-type: none;
-    padding-left   : 0;
-    margin-bottom  : 1.5rem;
-}
-
-.services-list li {
-    position     : relative;
-    padding-left : 1.5rem;
-    margin-bottom: 0.5rem;
-    line-height  : 1.5;
-}
-
-.services-list li::before {
-    content  : "•";
-    color    : #6bd9e8;
-    font-size: 1.2rem;
-    position : absolute;
-    left     : 0;
-    top      : -2px;
-}
-
-.main-content .container>.row {
-    min-height: 60vh;
-}
-
-.col-lg-6.h-100 {
-    padding: 0;
-}
-
-/* CSS para la sección modificada */
 .tech-platforms {
-    background-color: #120727;
+    background-color: var(--main-bg);
     padding: 5rem 0;
-    color: white;
+    color: var(--text-main);
 }
 
 .platforms-title {
@@ -154,7 +76,6 @@ footer {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     text-align: center;
     margin-bottom: 1rem;
-    color: #ffffff;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -163,7 +84,7 @@ footer {
     text-align: center;
     font-size: 1.2rem;
     margin-bottom: 3rem;
-    color: #C14B9B;
+    color: var(--accent);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -178,7 +99,7 @@ footer {
 }
 
 .platform-card {
-    background-color: #1e0d3a;
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 2.5rem;
     text-align: center;
@@ -187,24 +108,27 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow);
 }
 
-.platform-card:hover {
+.platform-card:hover,
+.platform-link:focus {
     transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: #C14B9B;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-color: var(--accent);
+    outline: none;
 }
 
 .platform-icon {
     font-size: 3rem;
-    color: #C14B9B;
+    color: var(--accent);
     margin-bottom: 2rem;
 }
 
 .platform-name {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
-    color: #ffffff;
+    color: var(--text-main);
     font-weight: bold;
 }
 
@@ -212,12 +136,12 @@ footer {
     font-size: 1.1rem;
     line-height: 1.7;
     margin-bottom: 2rem;
-    color: #d1d1d1;
+    color: var(--text-muted);
     flex-grow: 1;
 }
 
 .platform-link {
-    color: #6bd9e8;
+    color: var(--accent-light);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
@@ -227,14 +151,15 @@ footer {
     border-radius: 4px;
 }
 
-.platform-link:hover {
-    color: #C14B9B;
+.platform-link:hover, .platform-link:focus {
+    color: var(--accent);
     background-color: rgba(193, 75, 155, 0.1);
+    text-decoration: underline;
 }
 
 .btn-resources {
-    background-color: #C14B9B;
-    color: white;
+    background-color: var(--accent);
+    color: var(--text-main);
     border: none;
     padding: 12px 30px;
     font-size: 1.1rem;
@@ -244,20 +169,22 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(193, 75, 155, 0.3);
+    outline: none;
 }
 
-.btn-resources:hover {
+.btn-resources:hover, .btn-resources:focus {
     background-color: #a93a86;
     transform: translateY(-3px);
     box-shadow: 0 7px 20px rgba(193, 75, 155, 0.4);
-    color: white;
+    color: var(--text-main);
 }
 
 .btn-resources i {
     transition: transform 0.3s ease;
 }
 
-.btn-resources:hover i {
+.btn-resources:hover i,
+.btn-resources:focus i {
     transform: translateX(3px);
 }
 
@@ -266,11 +193,9 @@ footer {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
     .platform-card {
         padding: 2rem;
     }
-    
     .btn-resources {
         padding: 10px 25px;
         font-size: 1rem;
@@ -278,12 +203,15 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .col-lg-6 .mt-auto {
-        display        : flex;
-        justify-content: center;
+    .platforms-title {
+        font-size: 1.5rem;
     }
+    .platform-card {
+        padding: 1.5rem;
+    }
+}
 
-    .section-title {
-        text-align: center;
-    }
+a:focus, button:focus {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
 }
