@@ -10,6 +10,9 @@
     --card-bg: #1e0d3a;
     --accent: #c14b9b;
     --accent-light: #6bd9e8;
+    --highlight-cyan: #6bd9e8;
+    --white: #fff;
+    --black: #000;
     --text-main: #fff;
     --text-muted: #d1d1d1;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -63,6 +66,21 @@ footer {
     color: var(--text-main);
     padding: 1.5rem 0;
     width: 100%;
+}
+
+
+.footer-title, .footer-title-purple {
+    font-family: "Stalinist One", sans-serif;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 1;
+    display: inline-block;
+}
+
+.footer-title-purple {
+    color: var(--accent-purple);
 }
 
 .tech-platforms {
@@ -188,6 +206,31 @@ footer {
     transform: translateX(3px);
 }
 
+a:focus, button:focus {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 2px;
+}
+
+.btn-custom {
+    background: linear-gradient(90deg, var(--white) 80%, #ececec 100%);
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: var(--black);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.btn-custom:hover,
+.btn-custom:focus {
+    background: var(--highlight-cyan);
+    color: var(--black);
+    transform: translateY(-2px) scale(1.02);
+    outline: none;
+}
+
 @media (max-width: 768px) {
     .platforms-grid {
         grid-template-columns: 1fr;
@@ -209,9 +252,7 @@ footer {
     .platform-card {
         padding: 1.5rem;
     }
-}
-
-a:focus, button:focus {
-    outline: 2px solid var(--accent-light);
-    outline-offset: 2px;
+    .footer-title, .footer-title-purple {
+        font-size: 1.2rem;
+    }
 }

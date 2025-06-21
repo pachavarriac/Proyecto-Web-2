@@ -13,6 +13,10 @@
     --color-txt: #fff;
     --color-txt-muted: #d1d1d1;
     --color-border: #2d1a4a;
+    --accent-purple: #c14b9b;
+    --highlight-cyan: #6bd9e8;
+    --white: #fff;
+    --black: #000;
 }
 
 body {
@@ -62,6 +66,20 @@ footer {
     width: 100%;
     flex-shrink: 0;
     text-align: center;
+}
+
+.footer-title, .footer-title-purple {
+    font-family: "Stalinist One", sans-serif;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 1;
+    display: inline-block;
+}
+
+.footer-title-purple {
+    color: var(--accent-purple);
 }
 
 .academic-offer {
@@ -185,6 +203,12 @@ footer {
     transform: translateX(3px);
 }
 
+a:focus,
+.btn-offer:focus {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
     .offer-grid { grid-template-columns: 1fr; }
     .offer-card { padding: 1.5rem; }
@@ -194,10 +218,9 @@ footer {
     .offer-title { font-size: 1.6rem; }
     .offer-card { padding: 1rem; }
     .offer-subtitle { font-size: 1.1rem; }
+    .footer-title, .footer-title-purple {
+        font-size: 1.2rem;
+    }
+
 }
 
-a:focus,
-.btn-offer:focus {
-    outline: 2px solid var(--color-principal);
-    outline-offset: 2px;
-}

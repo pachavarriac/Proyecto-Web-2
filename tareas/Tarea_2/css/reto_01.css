@@ -139,6 +139,20 @@ footer {
     width: 100%;
 }
 
+.footer-title, .footer-title-purple {
+    font-family: "Stalinist One", sans-serif;
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 1;
+    display: inline-block;
+}
+
+.footer-title-purple {
+    color: var(--accent-purple);
+}
+
 .col-lg-6.h-100 {
     padding: 0;
 }
@@ -161,4 +175,8 @@ footer {
     }
     .section-title { text-align: center; }
     .event-img { min-height: 120px; }
+
+    .footer-title, .footer-title-purple {
+        font-size: 1.2rem;
+    }
 }

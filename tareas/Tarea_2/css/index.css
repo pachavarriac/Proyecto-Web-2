@@ -29,7 +29,7 @@ a.card-link {
     transition: all 0.3s ease;
 }
 
-.card-title {
+.card-title, .card-subtitle {
     color: #333;
     text-align: center;
 }
