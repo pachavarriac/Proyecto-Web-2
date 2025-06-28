@@ -1,0 +1,67 @@
+.titulo1 {
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+.titulo2 {
+    color: #fff;
+    font-size: 40px;
+}
+.titulo3 {
+    color: #000;
+    font-size: 50px;
+}
+
+i{
+    font-size: 100px;
+}
+
+
+.banner1 {
+    background-image: url(../imagenes/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+}
+
+.fondo1 {
+    background-color: #FED72A;
+}
+
+/* Tamaño especificos de contenedores*/
+
+.container-fluid1 {
+    padding-top: 210px;
+    padding-bottom: 200px;
+}
+.container-fluid2 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.container-fluid3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container-fluid4 {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.banner2 {
+    background-image: url(../imagenes/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container-fluid5 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container-fluid6 {
+    padding-top: 0px;
+    padding-bottom: 30px;
+}

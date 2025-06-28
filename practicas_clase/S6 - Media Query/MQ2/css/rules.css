@@ -1,0 +1,12 @@
+@media (max-width: 576px) {
+    .banner1 {
+        animation       : none;
+        background-image: none;
+        color           : #fff;
+        background      : rgb(68, 36, 8);
+        background      : linear-gradient(90deg,
+                rgba(68, 36, 8, 1) 0%,
+                rgba(254, 226, 192, 1) 100%,
+                rgba(254, 226, 192, 1) 100%);
+    }
+}
