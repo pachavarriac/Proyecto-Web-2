@@ -1,0 +1,101 @@
+ p {
+    font-size: 22px;
+  }
+.cursor{
+  cursor: pointer;
+}
+.bordes{
+  border-radius: 30px;
+}
+.tp{
+    font-size: 60px;
+    color:purple;
+    letter-spacing: 15px;
+}
+.tp2{
+    font-size: 60px;
+    color:purple;
+}
+.titulos1{
+    font-size: 40px;
+}
+.titulos2{
+    font-size: 30px;
+  }
+.margin{
+    margin-bottom: 80px;
+ }
+ .color1{
+    color:#000;
+  }
+  .color2{
+    color:orange;
+  }
+.fijo{
+    position: sticky; /*GOOGLE*/
+    position: fixed; /*IE*/
+    max-width: 100%;
+    z-index: 1000;
+ }
+
+.container-fluid {
+      padding-top: 130px;
+      padding-bottom: 130px;
+  }
+
+  .fondo1{ 
+      background-color: #e2e2e2; 
+      color: #000000;
+  }
+  .fondo2 { 
+      background-color: #474e5d; 
+      color: #ffffff;
+  }
+  .fondo3 { 
+      background-color: #ffffff;
+      color: #555555;
+  }
+  .fondo4 { 
+      background-color: #2f2f2f; 
+      color: #fff;
+  }
+  
+.go-top {
+  position: fixed;
+  bottom:1em;
+  right: 1em;
+  text-decoration: none;
+  padding: 1em;
+  border-radius:3px;
+}
+.go-top img:hover {
+    transform: scale(2);
+    transition: all 0.8s;
+} 
+
+
+
+.pie{
+  text-align: center;
+  color: #ffffff;
+  line-height: 30px;
+  padding:80px 0 20px 0;
+} 
+
+
+.espacio{
+  display: inline-block;
+  margin:0px 15px 0px 15px;
+}
+
+
+
+div.animacion:hover i {
+  transition: all 1s ease-in-out;
+  transform: rotate(360deg);
+  background-color: purple;
+}
+
+
+
+

@@ -1,0 +1,64 @@
+body {
+    color: #273b69;
+    font: 400 14px/20px 'Roboto', sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+h1 {
+    line-height: 100px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 36px;
+    /*line-height: 42px;*/
+    letter-spacing: 3px;
+}
+
+h5 {
+    font-weight: bolder;
+}
+
+p {
+    text-align: left;
+}
+
+.fondo1 {
+    background: #03818d;
+}
+
+
+/*permite poner una caja de color plano */
+
+.caja {
+    background: #03818d;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+.thumb {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumb img {
+    width: 100%;
+    height: auto;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+
+.thumb:hover img {
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+

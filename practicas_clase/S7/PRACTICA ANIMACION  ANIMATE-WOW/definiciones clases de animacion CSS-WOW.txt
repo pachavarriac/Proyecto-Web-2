@@ -1,0 +1,12 @@
+
+clases de animacion CSS-WOW
+
+    	    <!-- animate__animated es la llamada al efecto que se vaya a usar  -->
+            <!-- animate__bounce es el nombre del efecto a usar -->
+            <!-- animate__delay-400ms es el tiempo de espera que sale el objeto animado -->
+            <!-- animate__repeat es para repetir el efecto el # de veces deseada-->
+            <!-- animate__ infinite  es para repetir el efecto siempre -->
+            <!-- animate__duration es el tiempo que dura el efecto -->
+            <!-- animate__slow duración lenta -->
+            <!-- animate__fast duración rapida -->
+            <!-- animate__faster duración superrapida -->

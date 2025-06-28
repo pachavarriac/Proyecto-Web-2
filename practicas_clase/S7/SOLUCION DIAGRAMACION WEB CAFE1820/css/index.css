@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-image: url('../img/banner.jpg');
+    /* Posicion del banner  */
+    background-position: center;
+    /* Si queremos que se repita o no  */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+header h1 {
+    padding-top: 260px;
+    font-size: 85px;
+    color: #000;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    font-weight: bold;
+}
+
+.seccion1 {
+    background-color: #FFD433;
+}
+
+.seccion1 h2 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.seccion2 .tituloSeccion2{
+    padding-top: 25px;
+    padding-bottom: 45px;
+    font-size: 45px;
+}
+.seccion2 .icon {
+    /*generador de vector web*/
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background-color: #FFD433;
+    width: 110px;
+    padding: 25px;
+    color: #fff;
+}
+.seccion3{
+    background-image: url('../img/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* permite que el fondo se mueva. A esto se le llama efecto parallax */
+    background-attachment: fixed;
+    height: 250px;
+}
+.seccion3 h2{
+    color: #fff;
+    font-weight: bold;
+    font-size: 45px;
+}
+.seccion4 .tituloSeccion4{
+    padding-top: 25px;
+    padding-bottom: 45px;
+    font-size: 45px;
+}
+.seccion4 .card{
+    border: none;
+}
+footer{
+    background-color: #FFD433;
+}
+footer p{
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 15px;
+}

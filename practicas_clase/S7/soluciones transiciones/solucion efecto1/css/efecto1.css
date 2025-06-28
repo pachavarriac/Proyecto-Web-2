@@ -1,0 +1,76 @@
+
+.lideres{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/*agregar fondo a los empleados*/
+/*si no les gusta el fondo pueden comentar esta clase y no va a parecer*/
+.item-team{
+	background-image: url("../imagenes/fondo.png");
+	padding: 10px;
+}
+
+
+.item-team img:hover{
+	opacity: 0;
+}
+
+
+.nombre-team{
+	border: 5px solid #fff;
+}
+
+
+
+/*empleado1*/
+.img-team1:hover{
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("../imagenes/hover1.png");
+}
+
+/*empleado2*/
+.img-team2:hover{
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("../imagenes/hover2.png");
+}
+
+/*empleado3*/
+.img-team3:hover{
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("../imagenes/hover3.png");
+}
+
+/*empleado4*/
+.img-team4:hover{
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("../imagenes/hover4.png");
+}
+
+/*empleado5*/
+.img-team5:hover{
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("../imagenes/hover5.png");
+}
+/*empleado6*/
+.img-team6:hover{
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("../imagenes/hover6.png");
+}
+
+
+
+
