@@ -25,6 +25,7 @@
 </head>
 
 <body>
+
     <!-- SECCIÓN 1: logo e imagen con degradado bottom to top -->
     <section class="container-fluid background-image-1 position-relative">
         <div class="gradient-overlay"></div>
@@ -33,15 +34,14 @@
             <img src="assets/images/logo.webp" alt="" class="logo-img">
         </div>
 
-        <!-- Contenido principal centrado -->
         <div class="h-75 text-center text-white d-flex flex-column align-items-center justify-content-center">
             <h1 class="px-3 animate__animated animate__slideInRight animate__fast" style="font-family: 'oswald';">LET
                 WONDER TAKE OVER</h1>
             <h4 class="p-1 fw-bold animate__animated animate__fadeIn">The Ultimate Movie Experience</h4>
             <a href="#"
-                class="btn btn-dark btn-lg px-5 rounded-pill fw-bold m-5 w-auto animate__animated animate__headShake animate__infinite animate__slow animate__header">BUY
+                class="btn btn-dark btn-lg py-3 px-5 rounded-pill fw-bold m-5 w-auto animate__animated animate__headShake animate__infinite animate__slow animate__header">BUY
                 TICKEETS <i class="bi bi-arrow-right"></i></a>
-            <a href="#" class="text-decoration-none text-white">
+            <a href="#video" class="text-decoration-none text-white">
                 <div>
                     <h5 class="mb-0">Watch the trailer</h5>
                     <i class="bi bi-chevron-down fs-1 d-block"></i>
@@ -55,7 +55,7 @@
         class="container-fluid bg-black bg-2 position-relative d-flex justify-content-center align-items-center">
         <div class="text-center">
             <h3 class="py-5">EXPLORE THE WORLD LIKE NEVER BEFORE</h3>
-            <p class="mw-50 mx-auto text-center lh-base">
+            <p class="mw-50 mx-auto text-start lh-base">
                 Discover absolute awe at Flyover. Our immersive journeys connect you with our planet from a whole new
                 perspective. Soar over iconic locations, dive into authentic stories and lose yourself to an experience
                 unlike any other.<br><br>
@@ -69,7 +69,7 @@
     <section class="bg-f5 py-6 text-black d-flex flex-column justify-content-center align-items-center">
         <div class="container px-3">
             <h2 class="text-center display-4 fw-bold mb-4 text-black">BUY ONLINE TO SAVE</h2>
-            <p class="text-center mb-3 mw-50 mx-auto">
+            <p class="text-center py-3 mw-50 mx-auto">
                 Children must be at least 40" (102 cm) tall. Children (13 and under) must be accompanied by an adult or
                 guardian (14 years or older).
             </p>
@@ -103,7 +103,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 fw-bold text-uppercase small">BOOK AHEAD TO SAVE</div>
-                            <button class="btn btn-dark btn-lg rounded-pill fw-bold mt-auto w-auto align-self-start">
+                            <button class="btn btn-dark btn-lg  rounded-pill fw-bold mt-auto w-auto align-self-start">
                                 SELECT EXPERIENCE <i class="bi bi-arrow-right"></i>
                             </button>
                         </div>
@@ -173,10 +173,10 @@
                                 </div>
                             </div>
                             <div
-                                class="col-md-6 py-5 px-3 d-flex flex-column justify-content-between align-items-center text-center">
+                                class="col-md-6 py-5 px-3 d-flex flex-column justify-content-between align-items-center ta">
                                 <div class="carousel-text-heigh"> <!-- Contenedor adicional para el contenido -->
                                     <h4 class="fw-bold mb-3 text-black">CHOOSE YOUR ADVENTURE</h4>
-                                    <p class="text-black">
+                                    <p class="text-black px-3">
                                         Four immersive experiences are now available at Flyover in Las Vegas. Choose two
                                         to
                                         discover — Wonders of the American West, Believe Chicago, Legendary Iceland or
@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                             <div
-                                class="col-md-6 py-5 px-3 d-flex flex-column justify-content-between align-items-center text-center">
+                                class="col-md-6 py-5 px-3 d-flex flex-column justify-content-between align-items-center ta">
                                 <div class="carousel-text-heigh"> <!-- Contenedor adicional para el contenido -->
                                     <h3 class="fw-bold mb-3 text-black text-uppercase">Partnership Offers</h4>
                                         <p class="text-black">
@@ -222,13 +222,13 @@
                 </div>
 
                 <!-- Controles del carrusel -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#dealsCarousel"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev position-absolute bottom-0 start-0 m-0" type="button"
+                    data-bs-target="#dealsCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#dealsCarousel"
-                    data-bs-slide="next">
+                <button class="carousel-control-next position-absolute bottom-0 end-0 m-0" type="button"
+                    data-bs-target="#dealsCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -240,16 +240,18 @@
     <section class="bg-black">
         <div class="container-fluid p-0 m-0">
             <div class="row p-0 m-0 justify-content-start align-items-center">
-                <div class="col-12 col-md-6 text-start py-3 wow animate__animated animate__slideInLeft animate__fast">
-                    <div class="circle--offset">
+                <div
+                    class="col-12 col-md-6 text-start py-3 wow animate animate__animated animate__slideInLeft animate__fast">
+                    <div class="circle--offset circle--offset-left">
                         <img src="assets/images/FWT-Riders-Over-Railroad-Canyon.webp" alt="Personas en atracción" />
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="smp">
-                        <div>
-                            <h4 class="text-uppercase text-center">awaken your senses</h4>
-                            <p class="lh-base py-5 d-flex align-items-center justify-content-center fw-normal">
+                    <div class="smp vp ms">
+                        <div class="mx-3">
+                            <h3 class="text-uppercase ta">awaken your senses</h3>
+                            <p
+                                class="py-5 d-flex align-items-center justify-content-center fw-normal text-start lh-base">
                                 Flyover grabs all your senses to immerse you in landscapes, stories and culture. Using
                                 the power of unique perspectives, the sensations of flight and complete sensory
                                 engagement, you'll soar over, around and through the world's most epic places.
@@ -257,17 +259,18 @@
                         </div>
 
                         <!-- SECCIÓN ACORDEÓN -->
-                        <section class="container-fluid bg-black py-5">
-                            <div class="container">
-                                <div class="accordion custom-accordion" id="customAccordion">
+                        <div class="p-0 m-0 container-fluid bg-black">
+                            <div class="p-0 m-0 container">
+                                <div class="p-0 m-0 accordion custom-accordion" id="customAccordion">
 
                                     <!-- Ítem 1 -->
                                     <div class="accordion-item border-0 bg-black text-white">
                                         <div class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
+                                            <button
+                                                class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
                                                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                                                 aria-expanded="false" aria-controls="collapseOne">
-                                                
+
                                                 <!-- Icono IZQ -->
                                                 <img src="assets/icons/wind.svg" class="icon-left" alt="Icono L">
 
@@ -287,24 +290,25 @@
                                         </div>
                                         <div id="collapseOne" class="accordion-collapse collapse"
                                             aria-labelledby="headingOne" data-bs-parent="#customAccordion">
-                                            <div class="accordion-body text-white">
-                                                <p class="fw-normal h5 lh-base">
+                                            <div class="accordion-body text-white text-start">
+                                                <p class="fw-normal lh-base">
                                                     You won’t just see these incredible places. Through special effects
                                                     you’ll feel them, too.
                                                 </p>
                                             </div>
                                         </div>
+                                        <hr>
                                     </div>
 
-                                    <hr>
 
                                     <!-- Ítem 2 -->
                                     <div class="accordion-item border-0 bg-black text-white">
                                         <div class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
+                                            <button
+                                                class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
                                                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
-                                                
+
                                                 <!-- Icono IZQ -->
                                                 <img src="assets/icons/mountain.svg" class="icon-left" alt="Icono L">
 
@@ -324,23 +328,25 @@
                                         </div>
                                         <div id="collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="headingOne" data-bs-parent="#customAccordion">
-                                            <div class="accordion-body text-white">
-                                                <p class="fw-normal h5 lh-base">
-                                                    Engineered to swoop, dip and turn — giving you the true feeling of flight.
+                                            <div class="accordion-body text-white text-start">
+                                                <p class="fw-normal lh-base">
+                                                    Engineered to swoop, dip and turn — giving you the true feeling of
+                                                    flight.
                                                 </p>
                                             </div>
                                         </div>
+                                        <hr>
                                     </div>
 
-                                    <hr>
 
                                     <!-- Ítem 3 -->
                                     <div class="accordion-item border-0 bg-black text-white">
                                         <div class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
+                                            <button
+                                                class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
                                                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseOne">
-                                                
+
                                                 <!-- Icono IZQ -->
                                                 <img src="assets/icons/trees.svg" class="icon-left" alt="Icono L">
 
@@ -360,23 +366,25 @@
                                         </div>
                                         <div id="collapseThree" class="accordion-collapse collapse"
                                             aria-labelledby="headingOne" data-bs-parent="#customAccordion">
-                                            <div class="accordion-body text-white">
-                                                <p class="fw-normal h5 lh-base">
-                                                    Unique scents are used to transport you to the iconic locations in the films for a fully immersive experience.
+                                            <div class="accordion-body text-white text-start">
+                                                <p class="fw-normal lh-base">
+                                                    Unique scents are used to transport you to the iconic locations in
+                                                    the films for a fully immersive experience.
                                                 </p>
                                             </div>
                                         </div>
+                                        <hr>
                                     </div>
 
-                                    <hr>
 
                                     <!-- Ítem 4 -->
                                     <div class="accordion-item border-0 bg-black text-white">
                                         <div class="accordion-header" id="headingOne">
-                                            <button class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
+                                            <button
+                                                class="accordion-button collapsed bg-black text-white d-flex align-items-center custom-accordion-button"
                                                 type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
                                                 aria-expanded="false" aria-controls="collapseOne">
-                                                
+
                                                 <!-- Icono IZQ -->
                                                 <img src="assets/icons/wraparound.webp" class="icon-left" alt="Icono L">
 
@@ -396,19 +404,20 @@
                                         </div>
                                         <div id="collapseFour" class="accordion-collapse collapse"
                                             aria-labelledby="headingOne" data-bs-parent="#customAccordion">
-                                            <div class="accordion-body text-white">
-                                                <p class="fw-normal h5 lh-base">
-                                                    Our 52.5-foot-wide spherical screen surrounds you and puts you right into the action.
+                                            <div class="accordion-body text-white text-start">
+                                                <p class="fw-normal lh-base">
+                                                    Our 52.5-foot-wide spherical screen surrounds you and puts you right
+                                                    into the action.
                                                 </p>
                                             </div>
                                         </div>
+                                        <hr>
                                     </div>
 
-                                    <hr>
 
                                 </div>
                             </div>
-                        </section>
+                        </div>
 
 
                     </div>
@@ -417,6 +426,178 @@
         </div>
     </section>
 
+    <!-- SECCIÓN 6 -->
+    <section class="bg-black py-5">
+        <div class="container-fluid py-5 p-0">
+            <div class="row p-0 m-0 justify-content-start align-items-center">
+
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <div class="smp vp ms">
+                        <div>
+                            <h2 class="text-uppercase ta">Believe Chicago: The Windy City from New Heights</h2>
+                            <p class="py-5 d-flex align-items-center justify-content-center fw-normal ta lh-base">
+                                Immerse yourself in Chicago’s signature sights, sounds and skyline. Believe Chicago
+                                explores the urban landscape from a whole new perspective, allowing you to soar above
+                                and dive into the heart of an electric American city.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-center js">
+                            <a href="#"
+                                class="btn btn-light btn-lg py-3 px-5 rounded-pill fw-bold animate__animated animate__headShake animate__repeat-3 animate__slow animate__header">
+                                <h6 class="px-5">BUY
+                                    TICKETS <i class="bi bi-arrow-right"></i></h6>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div
+                    class="col-12 col-md-6 text-end order-1 order-md-2 py-3 wow animate animate__animated animate__slideInRight animate__fast">
+                    <div class="circle--offset circle--offset-right">
+                        <img src="assets/images/FWS-Chicago-Skyline-Sunset.webp" alt="Personas en atracción" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 7-->
+    <section class="bg-black py-3">
+        <div class="container-fluid py-5 p-0">
+            <div class="row p-0 m-0 justify-content-start align-items-center">
+
+                <div
+                    class="col-12 col-md-6 text-end py-3 wow animate animate__animated animate__slideInLeft animate__fast">
+                    <div class="circle--offset circle--offset-left">
+                        <img src="assets/images/FWS-Rocky-Mountains.webp" alt="Personas en atracción" />
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="smp vp ms">
+                        <div>
+                            <h2 class="text-uppercase ta"
+                                style="font-family: 'Oswald', sans-serif; font-weight: normal;">Windborne: Call of the
+                                Canadian Rockies</h2>
+                            <p class="py-5 d-flex align-items-center justify-content-center fw-normal ta lh-base">
+                                Connect with the sights, sounds and spirit of the Canadian Rockies. Flyover’s alpine
+                                adventure transports you over iconic mountain scenery, from the legendary waters of
+                                Maligne Lake to the snowy heights of Mount Somervell.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-center js">
+                            <a href="#"
+                                class="btn btn-light btn-lg py-3 px-5 rounded-pill fw-bold animate__animated animate__headShake animate__repeat-3 animate__slow animate__header">
+                                <h6 class="px-5">BUY
+                                    TICKETS <i class="bi bi-arrow-right"></i></h6>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 8 -->
+    <section class="bg-black py-5">
+        <div class="container-fluid py-5 p-0">
+            <div class="row p-0 m-0 justify-content-start align-items-center">
+
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <div class="smp vp ms">
+                        <div>
+                            <h2 class="text-uppercase ta">Legendary Iceland: Landscapes & Lore</h2>
+                            <p class="pt-5 d-flex align-items-center justify-content-center fw-normal ta lh-base">
+                                Soar to the land of fire and ice. Hang on to your seat and be swept away to explore
+                                volcanoes, glaciers, history and legends as you soar across pristine Iceland.
+                            </p>
+                            <p class="pb-5 d-flex align-items-center justify-content-center fw-normal ta lh-base">
+                                Legendary locations include: Breiðamerkurjökull Glacier, Mountains of Hörgársveit,
+                                Island of Elliðaey, Aldeyjarfoss Waterfalls, City of Reykjavík and more.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-center js">
+                            <a href="#"
+                                class="btn btn-light btn-lg py-3 px-5 rounded-pill fw-bold animate__animated animate__headShake animate__repeat-3 animate__slow animate__header">
+                                <h6 class="px-5">BUY
+                                    TICKETS <i class="bi bi-arrow-right"></i></h6>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div
+                    class="col-12 col-md-6 text-end order-1 order-md-2 py-3 wow animate animate__animated animate__slideInRight animate__fast">
+                    <div class="circle--offset circle--offset-right">
+                        <img src="assets/images/FWS-Icebergs-Jokulsarlon.webp" alt="Personas en atracción" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 9-->
+    <section class="bg-black py-3">
+        <div class="container-fluid py-5 p-0">
+            <div class="row p-0 m-0 justify-content-start align-items-center">
+
+                <div
+                    class="col-12 col-md-6 text-end py-3 wow animate animate__animated animate__slideInLeft animate__fast">
+                    <div class="circle--offset circle--offset-left">
+                        <img src="assets/images/FWS-Horseshoe-Bend.webp" alt="Personas en atracción" />
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="smp vp ms">
+                        <div>
+                            <h2 class="text-uppercase ta"
+                                style="font-family: 'Oswald', sans-serif; font-weight: normal;">Wonders of the American
+                                West</h2>
+                            <p class="pt-5 d-flex align-items-center justify-content-center fw-normal ta lh-base">
+                                Discover America’s rugged west aboard an epic immersive journey. Wonders of the American
+                                West brings the United States’ vast prairies, towering mountains and electric urban
+                                monuments to life.
+                            </p>
+                            <p class="pb-5 d-flex align-items-center justify-content-center fw-normal ta lh-base">
+                                Locations include: the Grand Canyon, Zion National Park, Lake Tahoe, Las Vegas Strip and
+                                many more.
+                            </p>
+                        </div>
+                        <div class="d-flex align-items-center js">
+                            <a href="#"
+                                class="btn btn-light btn-lg py-3 px-5 rounded-pill fw-bold animate__animated animate__headShake animate__repeat-3 animate__slow animate__header">
+                                <h6 class="px-5">BUY
+                                    TICKETS <i class="bi bi-arrow-right"></i></h6>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 10: Video -->
+    <section class="container-fluid bg-black" id="video">
+        <div class="video-responsive">
+            <iframe src="https://www.youtube.com/embed/BUV1sZazxvI?si=2UK1BhewRF3Jz2_F" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
 
     <script src="js/wow.min.js"></script>
     <script>
