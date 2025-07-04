@@ -5,42 +5,53 @@
     --highlight-cyan: #6bd9e8;
     --white         : #fff;
     --black         : #000;
+    --fos           : "Oswald", sans-serif;
+    --fro           : "Roboto", sans-serif;
 }
 
 /* ====== BASE ====== */
 body {
     margin          : 0;
     padding         : 0;
-    font-family     : "Roboto", sans-serif;
+    font-family     : var(--fro);
     background-color: var(--main-bg);
     color           : var(--white);
     overflow-x      : hidden;
 }
 
 h1 {
-    font-size  : clamp(2.5rem, 6vw, 5.25rem);
-    font-weight: 700;
-    color      : var(--white);
+    font-size: clamp(2.5rem, 6vw, 6rem);
 }
 
 h2 {
     font-size: clamp(2.5rem, 5vw, 4.375rem);
-    color    : var(--white);
 }
 
 h3 {
     font-size: clamp(2rem, 4vw, 3.5rem);
-    color    : var(--white);
 }
 
 h4 {
-    font-size: clamp(1.4rem, 3vw, 2.625rem);
-    color    : var(--white);
+    font-size: clamp(1.75rem, 3vw, 2.625rem);
 }
 
 h5 {
-    font-size: clamp(1rem, 2vw, 1.75rem);
-    color    : var(--white);
+    font-size: clamp(1.5rem, 2vw, 1.75rem);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color              : var(--white);
+    font-family        : var(--fos);
+    font-optical-sizing: auto;
+    font-weight        : bold;
+    font-style         : normal;
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
 hr {
@@ -80,6 +91,7 @@ hr {
 
 .btn-dark {
     background-color: var(--black);
+    font-family     : var(--fos);
 }
 
 .btn-dark:hover,
@@ -119,9 +131,8 @@ hr {
 
 /* ====== SECTIONS ====== */
 
-.py-6 {
-    padding-top   : 4rem;
-    padding-bottom: 3rem;
+.vp {
+    width: 65% !important;
 }
 
 .background-image-1 {
@@ -230,7 +241,6 @@ hr {
 
 
 .circle--offset {
-    /* width       : clamp(18.75rem, 37.5vw, 75rem); */
     aspect-ratio  : 1/1;
     clip-path     : inset(0 0 0 0 round 0 45% 45% 0);
     overflow      : hidden;
@@ -242,6 +252,103 @@ hr {
     height    : 100%;
     object-fit: cover;
 }
+
+
+
+
+
+/* ====== ACORDEÓN PERSONALIZADO ====== */
+
+.bg-black {
+    background: #000 !important;
+}
+
+/* .custom-accordion-button {
+    display    : flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap  : nowrap;
+    background : transparent !important;
+    border     : none;
+    padding    : 1rem;
+} */
+
+.icon-left {
+    flex-shrink : 0;
+    width          : clamp(2.5rem, 5.5vw, 4rem);
+    height         : clamp(2.5rem, 5.5vw, 4rem);
+    margin-right: clamp(1rem, 2vw, 3rem);
+}
+
+.accordion-title {
+    flex       : 1;
+    white-space: normal;
+    word-break : break-word;
+    font-family: var(--fos);
+    font-size  : 1.25rem;
+    font-weight: 600;
+}
+
+.icon-right {
+    width          : clamp(2.5rem, 5.5vw, 3rem);
+    height         : clamp(2.5rem, 5.5vw, 3rem);
+    margin-left    : clamp(1rem, 2vw, 3rem);
+    display        : flex;
+    align-items    : center;
+    justify-content: flex-end;
+    flex-shrink    : 0;
+}
+
+.custom-accordion-button .icon-right {
+    margin-left : auto !important;
+    margin-right: 0 !important;
+}
+
+.custom-accordion-button.collapsed .icon-plus {
+    display: inline-block;
+}
+
+.custom-accordion-button.collapsed .icon-minus {
+    display: none;
+}
+
+.custom-accordion-button:not(.collapsed) .icon-plus {
+    display: none;
+}
+
+.custom-accordion-button:not(.collapsed) .icon-minus {
+    display: inline-block;
+}
+
+.custom-accordion-button::after {
+    display: none !important;
+}
+
+.custom-accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    border          : none !important;
+    box-shadow      : none !important;
+}
+
+.custom-accordion-button:focus,
+.custom-accordion-button:active,
+.custom-accordion-button:focus-visible {
+    outline   : none !important;
+    box-shadow: none !important;
+}
+
+.custom-accordion-button .accordion-title {
+    flex      : 0 1 auto;
+    text-align: left;
+    /* por si acaso no hereda bien */
+}
+
+.custom-accordion-button .icon-left,
+.custom-accordion-button .accordion-title,
+.custom-accordion-button .icon-right {
+    align-self: center;
+}
+
 
 /* ====== RESPONSIVE ====== */
 
@@ -290,6 +397,10 @@ hr {
         display: none !important;
     }
 
+    .mw-50 {
+        max-width: 90vw;
+    }
+
     .mw-60 {
         max-width: 90vw;
     }
@@ -300,18 +411,24 @@ hr {
     }
 
     .circle--offset {
-        /* width       : clamp(18.75rem, 37.5vw, 60rem); */
         aspect-ratio: 1/1;
         clip-path   : inset(0 round 50%);
         overflow    : hidden;
     }
 
-    /* Imagen de relleno */
     .circle--offset img {
         width     : 100vw;
         height    : 100vh;
         object-fit: cover;
+    }
 
+    .vp {
+        width     : 100% !important;
+        text-align: justify !important;
+    }
+
+    .smp {
+        margin-top: 2rem;
     }
 
 }
