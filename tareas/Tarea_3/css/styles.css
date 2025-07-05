@@ -376,12 +376,12 @@ hr {
 
 
 .video-responsive {
-    position                      : relative;
-    width                         : 100%;
+    position      : relative;
+    width         : 100%;
     /* todo el ancho del contenedor padre */
-    height                        : 0;
-    padding-bottom                : 56.25%;
-    overflow                      : hidden;
+    height        : 0;
+    padding-bottom: 56.25%;
+    overflow      : hidden;
 }
 
 .video-responsive iframe {
@@ -396,13 +396,89 @@ hr {
     justify-content: flex-start;
 }
 
+.card-cover {
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
+    height             : 100%;
+    min-height         : 250px;
+}
+
+.container-fluid {
+    position: relative;
+    z-index : 1 !important;
+}
+
+.card-custom {
+    border       : none;
+    border-radius: 12px;
+    overflow     : hidden;
+    box-shadow   : 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-cover img {
+    width     : 100%;
+    height    : auto;
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover .card-cover img {
+    transform: scale(1.03);
+}
+
+.back-to-top {
+    /* mix-blend-mode: difference; */
+    bottom          : 1.5rem;
+    right           : 1.5rem;
+    width           : 2.9rem;
+    height          : 2.9rem;
+    background-color: white;
+    border-radius   : 50%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    z-index         : 900;
+}
+
+.icon {
+    bottom                 : 1.5rem;
+    right                  : 1.5rem;
+    width                  : 3rem;
+    height                 : 3rem;
+    font-size              : 3rem;
+    background             : linear-gradient(90deg, #cc50ae, #fd7e14);
+    -webkit-background-clip: text;
+    background-clip        : text;
+    -webkit-text-fill-color: transparent;
+    display                : flex;
+    align-items            : center;
+    justify-content        : center;
+    z-index                : 1000;
+}
+
+.map-ratio {
+    --bs-aspect-ratio: 42.8571428571%;
+}
+
 
 /* ====== RESPONSIVE ====== */
 
 @media (max-width: 30rem) {
 
+    h1,
+    h2,
+    h3,
+    h4 {
+        color              : var(--white);
+        font-family        : var(--fos);
+        font-optical-sizing: auto;
+        font-weight        : normal;
+        font-style         : normal;
+    }
+
     .logo {
         display        : flex !important;
+        width          : 100vw !important;
         justify-content: center;
         align-items    : center;
         padding        : 1rem;
@@ -464,8 +540,8 @@ hr {
     }
 
     .circle--offset img {
-        width     : 100vw;
-        height    : 100vh;
+        width     : 100%;
+        height    : 100%;
         object-fit: cover;
     }
 
@@ -491,8 +567,6 @@ hr {
         text-align: center;
     }
 
-
-
     .animate.animate__animated.animate__slideInLeft,
     .animate.animate__animated.animate__slideInRight {
         animation-name: fadeIn !important;
@@ -503,7 +577,39 @@ hr {
     }
 
     .js {
-    justify-content: center;
-}
+        justify-content: center;
+    }
 
+    .card-custom {
+        border       : none;
+        border-radius: 0;
+        overflow     : hidden;
+        box-shadow   : none;
+        width        : 100%;
+    }
+
+    .card-cover img {
+        width     : 100%;
+        height    : auto;
+        transition: none;
+    }
+
+    .card-body {
+        padding: 0;
+    }
+
+    .cw-100 {
+        margin : 0;
+        padding: 0;
+        width  : 100% !important;
+    }
+
+    .p-05 {
+        padding-left : 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .map-ratio {
+        --bs-aspect-ratio: 100%;
+    }
 }
