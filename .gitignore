@@ -1,7 +1,7 @@
 /recursos
 README.md
-
-/home/pchavar/SSD_1/CENFOTEC/Proyecto Web 2/tareas/Tarea_2/git.txt
-/home/pchavar/SSD_1/CENFOTEC/Proyecto Web 2/tareas/Tarea_2/backup_tarea_2.zip
-/home/pchavar/SSD_1/CENFOTEC/Proyecto Web 2/tareas/Tarea_2/temp
+tareas/Tarea_2/backup_tarea_2.zip
+tareas/Tarea_2/git.txt
+tareas/Tarea_2/temp
+tareas/Tarea_3/compose.yml
 .gitignore
