@@ -1,7 +1,8 @@
 /recursos
 README.md
-tareas/Tarea_2/backup_tarea_2.zip
-tareas/Tarea_2/git.txt
-tareas/Tarea_2/temp
-tareas/Tarea_3/compose.yml
+/tareas/Tarea_2/backup_tarea_2.zip
+/tareas/Tarea_2/git.txt
+/tareas/Tarea_2/temp
+/tareas/Tarea_3/compose.yml
+/tareas/Tarea_3/.env
 .gitignore
