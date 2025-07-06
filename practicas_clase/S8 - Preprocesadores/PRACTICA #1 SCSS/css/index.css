@@ -1,0 +1,125 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+/*variables*/
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Montserrat, sans-serif";
+}
+
+h1,
+h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #ff0000;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+header {
+  padding: 20px;
+}
+
+footer {
+  /* si se quita la posición fija el pie de página dejará de estar al final de la página */
+  /* position: fixed; */
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+footer h2 {
+  color: #fff;
+}
+
+/* funciones = permiten agrupar propiedades */
+.btnazul {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.3rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #0000ff;
+}
+
+.btnazul:hover {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.3rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #000000;
+}
+
+.btnverde {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.3rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #008000;
+}
+
+.btnverde:hover {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.3rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #000000;
+}
+
+.btnnaranja {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.3rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #ff9d00;
+}
+
+.btnnaranja:hover {
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.2rem 1.3rem;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #560759;
+}/*# sourceMappingURL=index.css.map */

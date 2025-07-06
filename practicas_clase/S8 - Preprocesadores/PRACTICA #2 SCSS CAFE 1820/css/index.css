@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Manjari", sans-serif;
+}
+
+/*variables*/
+header {
+  background-image: url("../img/banner.jpg");
+  color: #fff;
+  background-position: center;
+  background-size: cover;
+  height: 650px;
+}
+
+footer {
+  background-color: #FFD433;
+}
+
+header h1 {
+  padding-top: 260px;
+  font-size: 85px;
+  color: #000;
+  text-shadow: 2px 2px 2px rgb(150, 150, 150);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+i {
+  font-size: 5rem;
+}
+
+footer p {
+  padding: 1rem;
+}
+
+.seccion1 {
+  background-color: #FFD433;
+}
+
+.seccion3 {
+  background-image: url("../img/banner2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 250px;
+}
+
+.seccion3 h2 {
+  color: #fff;
+}
+
+.seccion2 .icon {
+  -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+          clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  background-color: #FFD433;
+  width: 110px;
+  padding: 25px;
+  font-size: 50px;
+  color: #000;
+}
+
+.seccion4 .card {
+  border: none;
+}/*# sourceMappingURL=index.css.map */

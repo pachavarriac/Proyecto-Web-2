@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: "Manjari", sans-serif;
+}
+
+/*variables*/
+$titulo1: 4rem;
+$titulo2: 2.5rem;
+$titulo3: 1.5rem;
+$titulo4: 1.3rem;
+$iconos : 5rem;
+$textoblanco: #fff;
+$textonegro : #000;
+$parrafos   : 1.2rem;
+$banner1    : url("../img/banner.jpg");
+$banner2    : url("../img/banner2.jpg");
+$fondopie   : #FFD433;
+$fondosec1  : #FFD433;
+
+header {
+    background-image   : $banner1;
+    color              : $textoblanco;
+    background-position: center;
+    background-size    : cover;
+    height             : 650px;
+}
+
+footer {
+    background-color: $fondopie;
+}
+
+header h1 {
+    padding-top: 260px;
+    font-size  : 85px;
+    color      : $textonegro;
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: $titulo1;
+}
+
+h2 {
+    font-size: $titulo2;
+}
+
+h3 {
+    font-size  : $titulo3;
+    font-weight: bolder;
+}
+
+h5 {
+    font-size  : $titulo4;
+    font-weight: bolder;
+}
+
+p {
+    font-size: $parrafos;
+}
+
+i {
+    font-size: $iconos;
+}
+
+footer p {
+    padding: 1rem;
+}
+
+.seccion1 {
+    background-color: $fondosec1;
+}
+
+.seccion3 {
+    background-image     : $banner2;
+    background-position  : center;
+    background-size      : cover;
+    background-attachment: fixed;
+    height               : 250px;
+}
+
+.seccion3 h2 {
+    color: $textoblanco;
+}
+
+.seccion2 .icon {
+    clip-path       : polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background-color: $fondosec1;
+    width           : 110px;
+    padding         : 25px;
+    font-size       : 50px;
+    color           : #000;
+}
+
+.seccion4 .card {
+    border: none;
+}

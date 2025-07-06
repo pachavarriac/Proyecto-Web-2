@@ -1,0 +1,53 @@
+// 1) VARIABLES
+$header-color:      #336699;
+$footer-color:      #993366;
+
+$title-color-1:     #ff0000;
+$title-color-2:     #00ff00;
+$title-color-3:     #0000ff;
+
+$paragraph-size-1:  1rem;
+$paragraph-size-2:  1.25rem;
+$paragraph-size-3:  1.5rem;
+
+$btn-color-1:       #ff6600;
+$btn-color-2:       #0099cc;
+$btn-color-3:       #33cc33;
+
+// 2) MIXIN BASE PARA BOTONES
+@mixin boton-base {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// 3) HEADER Y FOOTER
+header {
+  background-color: $header-color;
+  padding: 1rem;
+  color: #fff;
+}
+
+footer {
+  background-color: $footer-color;
+  padding: 1rem;
+  color: #fff;
+}
+
+// 4) 3 TÍTULOS
+h1 { color: $title-color-1; }
+h2 { color: $title-color-2; }
+h3 { color: $title-color-3; }
+
+// 5) 3 PÁRRAFOS (primeros 3 en el flujo del documento)
+p:nth-of-type(1) { font-size: $paragraph-size-1; }
+p:nth-of-type(2) { font-size: $paragraph-size-2; }
+p:nth-of-type(3) { font-size: $paragraph-size-3; }
+
+// 6) 3 BOTONES
+.btn1 { @include boton-base; background-color: $btn-color-1; }
+.btn2 { @include boton-base; background-color: $btn-color-2; }
+.btn3 { @include boton-base; background-color: $btn-color-3; }

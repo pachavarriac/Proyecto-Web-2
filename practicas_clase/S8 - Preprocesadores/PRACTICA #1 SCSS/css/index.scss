@@ -1,0 +1,107 @@
+//cambia solo 1 vez en todas las paginas web SCSS actualizando
+//solicitar menos peticiones https:// ESTILO CSS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Montserrat&display=swap');
+
+* {
+    margin    : 0;
+    box-sizing: border-box;
+    padding   : 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+/*variables*/
+
+$mainColor    : #163cb8;
+$tipoletra    : "Montserrat, sans-serif";
+$titulos1     : 2.5rem;
+$colortitulos1: #fff;
+$titulos2     : 2rem;
+$colortitulos2: #ff0000;
+$parrafos     : 1.2rem;
+$coloriconos  : #fef15e;
+
+body {
+    overflow-x     : hidden;
+    scroll-behavior: smooth;
+    font-family    : $tipoletra;
+}
+
+h1,
+h2 {
+    font-size     : $titulos1;
+    color         : $colortitulos1;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size     : $titulos2;
+    color         : $colortitulos2;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: $parrafos;
+}
+
+header {
+    padding: 20px;
+}
+
+footer {
+    /* si se quita la posición fija el pie de página dejará de estar al final de la página */
+    /* position: fixed; */
+    padding: 20px;
+    bottom : 0;
+    right  : 0;
+    left   : 0;
+}
+
+footer h2 {
+    color: $colortitulos1;
+}
+
+
+/* funciones = permiten agrupar propiedades */
+
+@mixin boton_base {
+    border-radius  : 10px;
+    color          : #fff;
+    cursor         : pointer;
+    font-size      : 1.5rem;
+    padding        : 0.2rem 1.3rem;
+    text-decoration: none;
+    width          : fit-content;
+}
+
+.btnazul {
+    @include boton_base();
+    background-color: #0000ff;
+}
+
+.btnazul:hover {
+    @include boton_base();
+    background-color: #000000;
+}
+
+.btnverde {
+    @include boton_base();
+    background-color: #008000;
+}
+
+.btnverde:hover {
+    @include boton_base();
+    background-color: #000000;
+}
+
+.btnnaranja {
+    @include boton_base();
+    background-color: #ff9d00;
+}
+
+.btnnaranja:hover {
+    @include boton_base();
+    background-color: #560759;
+}
