@@ -38,32 +38,88 @@
             <img src="assets/images/logo.webp" alt="Flyover logo" class="logo-img">
             <nav class="main-navbar d-flex align-items-center justify-content-end w-100">
                 <!-- Menú en desktop -->
-                <ul class="menu-list d-none d-md-flex mb-0 ms-auto">
-                    <li><a href="#explore">Explore</a></li>
-                    <li><a href="#dealsCarousel">Deals</a></li>
-                    <li><a href="#video">Video</a></li>
-                    <li><a href="#map">Location</a></li>
+                <ul class="menu-list d-flex mb-0 gap-4">
+                    <li><a href="#deals">Deals and Packages</a></li>
+                    <li class="dropdown" tabindex="0">
+                        <a href="#">Explore</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#awaken">Awaken your Senses</a></li>
+                            <li><a href="#chicago">Believe Chicago</a></li>
+                            <li><a href="#windborne">Windborne</a></li>
+                            <li><a href="#iceland">Legendary Iceland</a></li>
+                            <li><a href="#west">American West</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#cocktails">Our Cocktails</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
-                <!-- Botón menú hamburguesa en móvil -->
-                <button id="menu-toggle" class="d-md-none btn text-white fs-1 border-0 bg-transparent ms-auto">
-                    <i class="bi bi-list"></i>
-                </button>
-            </nav>
 
+            </nav>
+            <!-- Saca el botón aquí, fuera del nav -->
+            <button id="menu-toggle" class="d-md-none btn bg-transparent text-white fs-1 border-0 ms-auto"
+                aria-label="Abrir menú">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
+
+
         <!-- Menú lateral móvil (offcanvas right) -->
         <div id="mobile-menu" class="mobile-menu">
             <div class="mobile-menu-header d-flex align-items-center justify-content-between w-100 px-3 pt-3">
                 <img src="assets/images/logo.webp" alt="Flyover logo" class="logo-img-mobile"
                     style="width: 140px; height: auto;">
-                <button id="close-menu" class="close-x" aria-label="Cerrar menú" style="background:none;border:none;outline:none;font-size:2.5rem;color:#fff;line-height:1;cursor:pointer;">×</button>
+                <button id="close-menu" class="close-x" aria-label="Cerrar menú"
+                    style="background:none;border:none;outline:none;font-size:2.5rem;color:#fff;line-height:1;cursor:pointer;">×</button>
 
             </div>
             <ul class="mobile-menu-list list-unstyled mt-5">
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="#dealsCarousel">Deals</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#map">Location</a></li>
+                <li><a href="#deals">Deals and Packages</a></li>
+                <li class="dropdown" tabindex="0">
+                    <a href="#" class="dropdown-toggle-mobile d-flex align-items-center justify-content-between w-100">
+                        <span>Explore</span>
+                        <img src="/assets/icons/circular_plus_icon.svg" alt="Abrir submenú" class="dropdown-toggle-icon"
+                            width="22" height="22">
+                    </a>
+                    <ul class="dropdown-menu-mobile list-unstyled ps-4">
+                        <li><a href="#awaken">Awaken your Senses</a></li>
+                        <li><a href="#chicago">Believe Chicago</a></li>
+                        <li><a href="#windborne">Windborne</a></li>
+                        <li><a href="#iceland">Legendary Iceland</a></li>
+                        <li><a href="#west">American West</a></li>
+                    </ul>
+                </li>
+                <li><a href="#cocktails">Our Cocktails</a></li>
+                <li><a href="#location">Location</a></li>
+                <li class="dropdown" tabindex="0">
+                    <a href="#" class="dropdown-toggle-mobile d-flex align-items-center justify-content-between w-100">
+                        <span>More info</span>
+                        <img src="/assets/icons/circular_plus_icon.svg" alt="Abrir submenú" class="dropdown-toggle-icon"
+                            width="22" height="22">
+                    </a>
+                    <ul class="dropdown-menu-mobile list-unstyled ps-4">
+                        <li><a href="https://www.flyoverlasvegas.com/faqs/">Frequently Asked Questions</a></li>
+                        <li><a href="https://www.flyoverlasvegas.com/behind-the-scenes/">Behind the Scenes</a></li>
+                        <li><a href="https://www.flyoverlasvegas.com/group-events/">Group Experiences</a></li>
+                        <li><a href="https://www.flyoverlasvegas.com/fundraising/">Fundraise Opportunities</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li class="mobile-socials pt-2 pb-2">
+                    <div class="d-flex text-center justify-content-center align-items-center">
+                        <a href="https://facebook.com" class="text-white" aria-label="Facebook">
+                            <i class="bi bi-facebook" style="font-size:1.25rem;"></i>
+                        </a>
+                        <a href="https://twitter.com" class="text-white" aria-label="Twitter">
+                            <i class="bi bi-twitter" style="font-size:1.25rem;"></i>
+                        </a>
+                        <a href="https://instagram.com" class="text-white" aria-label="Instagram">
+                            <i class="bi bi-instagram" style="font-size:1.25rem;"></i>
+                        </a>
+                        <!-- Otras redes aquí -->
+                    </div>
+
+                </li>
             </ul>
         </div>
 
@@ -197,7 +253,7 @@
     </section>
 
     <!-- SECCIÓN 4: Slide show ofertas -->
-    <section class="bg-f5 py-5 mx-0 px-0 flex-column justify-content-center align-items-center">
+    <section id="deals" class="bg-f5 py-5 mx-0 px-0 flex-column justify-content-center align-items-center">
         <div class="container px-0">
             <h2 class="text-center mb-5 display-4 fw-bold text-black">DEALS AND PACKAGES</h2>
 
@@ -284,7 +340,7 @@
     </section>
 
     <!-- SECCIÓN 5: Awaken your senses -->
-    <section class="bg-black py-5">
+    <section id="awaken" class="bg-black py-5">
         <div class="container-fluid p-0 m-0">
             <div class="row p-0 m-0 justify-content-start align-items-center">
                 <div
@@ -474,7 +530,7 @@
     </section>
 
     <!-- SECCIÓN 6: Belive Chicago -->
-    <section class="bg-black py-5">
+    <section id="chicago" class="bg-black py-5">
         <div class="container-fluid py-5 p-0">
             <div class="row p-0 m-0 justify-content-start align-items-center">
 
@@ -529,7 +585,7 @@
     </section>
 
     <!-- SECCIÓN 7: Windborne -->
-    <section class="bg-black py-3">
+    <section id="windborne" class="bg-black py-3">
         <div class="container-fluid py-5 p-0">
             <div class="row p-0 m-0 justify-content-start align-items-center">
 
@@ -570,7 +626,7 @@
     </section>
 
     <!-- SECCIÓN 8: Legendary Iceland -->
-    <section class="bg-black py-5">
+    <section id="iceland" class="bg-black py-5">
         <div class="container-fluid py-5 p-0">
             <div class="row p-0 m-0 justify-content-start align-items-center">
 
@@ -610,7 +666,7 @@
     </section>
 
     <!-- SECCIÓN 9: Wonders of the American West -->
-    <section class="bg-black py-3">
+    <section id="west" class="bg-black py-3">
         <div class="container-fluid py-5 p-0">
             <div class="row p-0 m-0 justify-content-start align-items-center">
 
@@ -668,7 +724,7 @@
     </section>
 
     <!-- SECCÓN 11: Cocktails -->
-    <section class="position-relative overflow-hidden m-0 p-0">
+    <section id="cocktails" class="position-relative overflow-hidden m-0 p-0">
 
         <div class="cw-100 container-fluid bg-white pt-5 d-flex align-items-center justify-content-center">
             <div class="container py-4 ta cw-100">
@@ -726,7 +782,7 @@
     </section>
 
     <!-- SECCIÓN 12: Location -->
-    <section class="container-fluid bg-white w-100 m-0 p-0 text-black">
+    <section id="location" class="container-fluid bg-white w-100 m-0 p-0 text-black">
 
         <div class="container vp">
             <div class="row">
@@ -776,6 +832,29 @@
                     SUBMIT
                 </button>
             </form>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 14: Get In Touch With Us -->
+    <section id="contact" class="bg-black text-white py-5 py-md-3">
+        <div class="container text-center my-5">
+            <h3 class="">Get In Touch With Us</h3>
+            <p class="py-4">
+                We welcome any comments, inquiries or suggestions you may have that will allow us to serve you better.
+            </p>
+            <p>Email: inquiries@flyover.com</p>
+            <p>Tel: 1.866.498.2023</p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center gap-4 my-4">
+            <a href="https://facebook.com" class="text-white" aria-label="Facebook">
+                <i class="bi bi-facebook" style="font-size:3.5rem;"></i>
+            </a>
+            <a href="https://twitter.com" class="text-white" aria-label="Twitter">
+                <i class="bi bi-twitter" style="font-size:3rem;"></i>
+            </a>
+            <a href="https://instagram.com" class="text-white" aria-label="Instagram">
+                <i class="bi bi-instagram" style="font-size:3.5rem;"></i>
+            </a>
         </div>
     </section>
 
