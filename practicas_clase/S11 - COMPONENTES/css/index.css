@@ -1,0 +1,159 @@
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: "Roboto", sans-serif;
+        /* permite hacer el desplazamiento de secciones mas suave */
+        scroll-behavior: smooth;
+    }
+    
+    nav {
+        background-color: #ffd433;
+    }
+    
+    .nav-item a {
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #000;
+        margin: 0 10px;
+        transition: all 0.7s ease-in;
+    }
+    
+    .nav-item a:hover {
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    /* hacemos espacio entre cada opcion del menu  */
+    
+    .navigation-wrap .nav-item {
+        padding: 10px 0;
+    }
+    
+    .navbar-toggler {
+        /* le quitamos el borde que trae por defecto al icono hamburguesa  */
+        border: none;
+    }
+    /* le decimos que no tenga sombra el icono del menu hamburguesa  */
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    /* estilo al icono hamburguesa  */
+    
+    .navbar-toggler i {
+        color: #000;
+        font-size: 27px;
+    }
+    /* centra el menu cuando esta en dispositivos mas pequeños  */
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    /* Estilos al dropdown */
+    /* le damos estilos al menu tipo dropdown  */
+    
+    .dropdown-menu {
+        background-color: #fff;
+        border: none;
+    }
+    
+    .seccion {
+        background-image: url("../img/banner.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 650px;
+    }
+    
+    .seccion h1 {
+        padding-top: 260px;
+        font-size: 85px;
+        color: #000;
+        text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+        font-weight: bold;
+    }
+    
+    .seccion1 {
+        background-color: #ffd433;
+    }
+    
+    .seccion1 h2 {
+        color: #000;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    .seccion2 .tituloSeccion2 {
+        padding-top: 25px;
+        padding-bottom: 45px;
+        font-size: 45px;
+    }
+    /*forma usando CLIPATH*/
+    
+    .seccion2 .icon {
+        clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        background-color: #ffd433;
+        width: 110px;
+        padding: 25px;
+        text-align: center;
+        color: #000;
+    }
+    /* efecto parallax  */
+    
+    .seccion3 {
+        background-image: url("../img/banner2.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 300px;
+        background-attachment: fixed;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    }
+    
+    .seccion3 h2 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 45px;
+        padding-top: 100px;
+    }
+    
+    .seccion4 .tituloSeccion4 {
+        padding-top: 25px;
+        padding-bottom: 45px;
+        font-size: 45px;
+    }
+    
+    .seccion4 .card {
+        border: none;
+    }
+    /* estilos al boton scrollTop  */
+    
+    .botonScrollTop {
+        /* hacemos que el boton scroll top se mantenga fijo mientras se hace scroll  */
+        position: fixed;
+        height: 45px;
+        width: 42px;
+        background-color: #ffd433;
+        right: 30px;
+        bottom: 30px;
+        text-align: center;
+        line-height: 45px;
+        color: #000;
+        font-size: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    footer {
+        background-color: #ffd433;
+    }
+    
+    footer p {
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        padding-top: 15px;
+    }

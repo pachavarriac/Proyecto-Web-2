@@ -36,11 +36,40 @@
 
         <div class="logo">
             <img src="assets/images/logo.webp" alt="Flyover logo" class="logo-img">
+            <nav class="main-navbar d-flex align-items-center justify-content-end w-100">
+                <!-- Menú en desktop -->
+                <ul class="menu-list d-none d-md-flex mb-0 ms-auto">
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#dealsCarousel">Deals</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#map">Location</a></li>
+                </ul>
+                <!-- Botón menú hamburguesa en móvil -->
+                <button id="menu-toggle" class="d-md-none btn text-white fs-1 border-0 bg-transparent ms-auto">
+                    <i class="bi bi-list"></i>
+                </button>
+            </nav>
+
+        </div>
+        <!-- Menú lateral móvil (offcanvas right) -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-header d-flex align-items-center justify-content-between w-100 px-3 pt-3">
+                <img src="assets/images/logo.webp" alt="Flyover logo" class="logo-img-mobile"
+                    style="width: 140px; height: auto;">
+                <button id="close-menu" class="close-x" aria-label="Cerrar menú" style="background:none;border:none;outline:none;font-size:2.5rem;color:#fff;line-height:1;cursor:pointer;">×</button>
+
+            </div>
+            <ul class="mobile-menu-list list-unstyled mt-5">
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#dealsCarousel">Deals</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#map">Location</a></li>
+            </ul>
         </div>
 
-        <!-- <button id="menu-toggle" class="d-sm-none btn text-white fs-1 border-0 bg-transparent">
-            <i class="bi bi-list"></i>
-        </button> -->
+
+
+
 
         <div class="h-75 text-center text-white d-flex flex-column align-items-center justify-content-center">
             <h1 class="px-3 animate__animated animate__slideInRight animate__fast" style="font-family: 'oswald';">LET

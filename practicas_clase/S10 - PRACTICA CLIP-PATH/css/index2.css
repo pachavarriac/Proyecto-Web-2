@@ -1,0 +1,33 @@
+header {
+    background-color: #2137b3;
+}
+
+
+
+
+h1 {
+    line-height: 200px !important;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+}
+
+header {
+    margin-bottom: 170px;
+}
+
+footer {
+    background-color: #2137b3;
+    margin-top: 40px;
+}
+
+
+
+

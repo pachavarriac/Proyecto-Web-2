@@ -1,0 +1,46 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: 16px;
+        }
+        
+        body {
+            background-color: #eee;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+        
+        ul {
+            /*list-style: none;*/
+            font-size: 1.2rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px 20px;
+        }
+       
+
+
+
+
+
+        /*regla para dejar las 3 fotos de manera normal en celular */
+        
+        @media (max-width: 576px) {
+            .foto1, .foto2, .foto3 {
+                clip-path: none;
+                width: auto;
+                height: auto;
+                display: flex;
+                justify-content: center;
+            }
+        }

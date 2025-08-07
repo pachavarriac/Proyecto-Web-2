@@ -1,0 +1,95 @@
+                html {
+                    font-size: 16px;
+                }
+                
+                header {
+                    padding: 50px;
+                }
+                
+                header h1 {
+                    font-size: 3rem;
+                    font-family: 'Manjari', sans-serif;
+                    margin-top: 15px;
+                }
+                
+                h2 {
+                    font-size: 2rem;
+                    font-family: 'Manjari', sans-serif;
+                }
+                
+                h3 {
+                    font-size: 1.3rem;
+                    font-family: 'Manjari', sans-serif;
+                }
+                
+                p {
+                    font-size: 1.3rem;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                /*ondas*/
+                
+                .fondo {
+                    background-color: #2137b3;
+                }
+                
+                .footer__wave {
+                    position: relative;
+                    z-index: 4;
+                }
+                
+                .footer__container {
+                    padding: 100px;
+                    color: white;
+                    text-align: center;
+                    font-family: #273036;
+                    font-weight: 300;
+                    letter-spacing: 0.25px;
+                    font-size: 12px;
+                    position: relative;
+                    background-color: #2137b3;
+                }
+                
+                footer {
+                    /*si se quita la posicion fija el pie de pagina dejara de estar al final de la pagina*/
+                    /*position: relative;*/
+                    /*position: relative;*/
+                    /*padding: 20px;*/
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                }
+                /**/
+                /* Extra Small devices (landscape phones, 576px and down)*/
+                
+                @media (max-width: 576px) {
+                    footer {
+                        position: relative;
+                    }
+                    /*permite agrandar la letra en celular es un ID del texto SVG */
+                    #letra {
+                        font-size: 50px;
+                    }
+                }
+                /* Small devices (landscape phones, 576px and up)*/
+                
+                @media (min-width: 576px) {
+                    footer {
+                        position: relative;
+                    }
+                }
+                /* Medium devices (tablets, 768px and up) */
+                
+                @media (min-width: 768px) {
+                    footer {
+                        position: relative;
+                    }
+                }
+                /* Large devices (desktops, 992px and up) */
+                
+                @media (min-width: 992px) {
+                    footer {
+                        bottom: 0;
+                        /*position: relative;*/
+                        /* position: relative;*/
+                    }
+                }

@@ -1,0 +1,117 @@
+/*cursor interactivo*/
+
+.cursor {
+    cursor: pointer;
+}
+
+
+/*alerta*/
+
+.alert-warning {
+    font-size: 24px;
+}
+
+
+/*tarjetas*/
+
+.card {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width: 575px) {
+    .card {
+        width: 60%;
+        margin-bottom: 40px;
+    }
+}
+
+
+/*popover*/
+
+.popover {
+    background-color: beige;
+}
+
+
+/*tooltip*/
+
+.tooltip>.tooltip-inner {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    padding: 1rem;
+}
+
+
+/*acordeon*/
+
+
+/*color de fondo de cada seccion*/
+
+.accordion-body {
+    background-color: #e4e4e4;
+}
+
+
+/*justificar textos*/
+
+.justificar {
+    text-align: justify;
+    text-indent: 0rem;
+    margin: 0;
+}
+
+
+/*cambiar color a las flechas finales de cada seccion*/
+
+.accordion-button:is(.collapsed)::after {
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.accordion-button:not(.collapsed)::after {
+    box-shadow: none;
+    background-color: #fff;
+}
+
+
+/*estado actual*/
+
+.accordion-button {
+    color: #fff !important;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+
+/*La pseudo-clase :last-child de CSS representa el último elemento entre un grupo de elementos hermanos.*/
+
+.accordion-button:last-child {
+    background-color: rgb(0, 0, 0);
+}
+
+
+/*estado sobre*/
+
+.accordion-button:hover {
+    color: #000 !important;
+    background-color: rgb(185, 227, 240);
+}
+
+
+/*estado activo*/
+
+.accordion-button:focus {
+    color: #fff !important;
+    background-color: rgb(24, 54, 187);
+}
+
+
+/*grupo de listas*/
+
+.lista:hover {
+    color: rgb(17, 50, 143);
+    background-color: #e4e4e4;
+    border-color: rgb(17, 50, 143);
+    border-width: 2px;
+}

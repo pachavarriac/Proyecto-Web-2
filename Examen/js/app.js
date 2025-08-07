@@ -31,3 +31,4 @@ const closeMenu = document.getElementById('close-menu');
 menuToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
 closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
 
+
