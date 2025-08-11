@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+$dark_red         : #7F001E;
+$moderate_yellow  : #D2AE35;
+$medium_light_grey: #a9a9a9;
+$very_dark_grey   : #090909;
+$pure_white       : #ffffff;
+$montserrat       : "Montserrat",
+sans-serif;
+$cinzel: "Cinzel",
+serif;
+$muted_white: rgba(255, 255, 255, .6);
+
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: $montserrat;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background: $pure_white;
+}
+
+// —— Navbar con “punta” clip-path
+.navbar-clip {
+    position     : sticky;
+    top          : 0;
+    z-index      : 1030;
+    background   : $very_dark_grey;
+    min-height   : 120px;
+    padding-block: 14px 16px;
+    /* padding arriba y abajo */
+    box-shadow   : 0 8px 20px rgba(0, 0, 0, .08);
+
+    /* crea contexto y manda la “punta” al fondo */
+    &::after {
+        content       : "";
+        position      : absolute;
+        left          : 50%;
+        transform     : translateX(-50%);
+        bottom        : -36px;
+        width         : 240px;
+        height        : 72px;
+        background    : $very_dark_grey;
+        clip-path     : polygon(0 0, 50% 100%, 100% 0);
+        box-shadow    : 0 8px 20px rgba(0, 0, 0, .08);
+        pointer-events: none;
+        z-index       : 0;
+        /* <-- detrás de todo */
+    }
+
+    /* todo el contenido por encima del clip */
+    >.container,
+    .navbar-brand,
+    .navbar-nav {
+        position: relative;
+        z-index : 1;
+    }
+
+    /* centra verticalmente los items */
+    .navbar,
+    .navbar-collapse,
+    .navbar-nav {
+        align-items: center;
+    }
+
+    .nav-link {
+        font-weight   : 600;
+        letter-spacing: .06em;
+        opacity       : .85;
+        color         : #fff;
+
+        &:hover,
+        &.active {
+            opacity: 1;
+            color  : #fff;
+        }
+    }
+
+    /* LOGO 100px */
+    .navbar-brand img {
+        margin-top: 30px;
+        height    : 120px;
+        display   : block;
+    }
+
+    /* BRAND centrado absoluto en ESCRITORIO:
+     céntralo también VERTICALMENTE dentro de la barra */
+    .brand-center {
+        position      : absolute;
+        left          : 50%;
+        top           : 50%;
+        /* <-- ancla vertical */
+        transform     : translate(-50%, -50%);
+        /* <-- centrado real */
+        pointer-events: auto;
+    }
+}
+
+
+
+.footer-dark {
+    background : $very_dark_grey;
+    color      : $pure_white;
+    padding    : 72px 0;
+    font-family: $montserrat;
+
+    .city-code {
+        font-size     : clamp(40px, 6vw, 72px);
+        /* OC / SD / CHI grandes */
+        line-height   : 1;
+        margin        : 0 0 16px;
+        font-weight   : 700;
+        letter-spacing: 0.02em;
+    }
+
+    address {
+        margin         : 0;
+        font-style     : normal;
+        line-height    : 1.5;
+        opacity        : 0.9;
+        text-decoration: none;
+    }
+
+    .label {
+        color         : $muted_white;
+        font-weight   : 600;
+        font-size     : 0.95rem;
+        letter-spacing: 0.02em;
+    }
+
+    .link {
+        color          : $pure_white;
+        text-decoration: none;
+        opacity        : 0.95;
+        transition     : 0.2s ease;
+        border-bottom  : 1px solid transparent;
+
+        &:hover {
+            opacity            : 1;
+            border-bottom-color: $pure_white;
+            /* coincide con color del texto */
+        }
+    }
+
+    /* separación vertical entre las 3 filas */
+    .footer-row-1+.footer-row-2 {
+        margin-top: 24px;
+    }
+
+    .footer-row-2+.footer-row-3 {
+        margin-top: 40px;
+    }
+
+    /* tipografía/contraste consistente en toda la zona */
+    .footer-row-3 {
+        color: $muted_white;
+    }
+
+    .copyright {
+        color     : $muted_white;
+        margin-top: 24px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap    : 16px; // separación horizontal entre iconos
+
+        a {
+            color          : $pure_white; // color inicial de los iconos
+            font-size      : 1.5rem; // tamaño del icono
+            line-height    : 1;
+            display        : inline-flex;
+            align-items    : center;
+            justify-content: center;
+            transition     : color 0.2s ease;
+
+            &:hover {
+                color: $muted_white; // color al pasar el mouse
+            }
+        }
+    }
+}

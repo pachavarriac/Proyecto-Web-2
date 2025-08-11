@@ -1,0 +1,63 @@
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+
+// Reset mínimos
+*{box-sizing:border-box}
+body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: $light; background:$dark; line-height:1.6}
+a{text-decoration:none}
+img{max-width:100%; display:block}
+
+.container-narrow{max-width:$container-max; margin-inline:auto; padding-inline:1rem}
+
+.navbar-glass{
+  @include glass;
+  border-radius: $radius-2xl;
+}
+
+.hero{
+  @include cover-bg('../img/hero.jpg', .35);
+  min-height: 80vh;
+  display:grid; place-items:center; text-align:center;
+  h1{font-size: clamp(2.2rem, 6vw, 4rem); margin-bottom:$sp-3}
+  p{max-width: 65ch; margin: 0 auto $sp-4}
+  .cta{
+    display:flex; gap:$sp-3; justify-content:center; flex-wrap:wrap;
+    .btn-primary{@include btn-pill($brand)}
+    .btn-outline{ @include btn-pill(transparent); border:1px solid $light; color:$light}
+  }
+}
+
+// Clip-path shapes
+.clip-divider{height:100px; background:$light}
+.clip-wave{height:80px; background:$brand; clip-path: polygon(0 60%, 10% 70%, 25% 55%, 40% 75%, 60% 50%, 75% 70%, 90% 60%, 100% 70%, 100% 100%, 0 100%);}
+
+.section{padding: 4rem 0;}
+
+.card-lite{
+  background:$light; color:#111; border:0; border-radius:$radius-2xl; box-shadow:$shadow-soft;
+  overflow:hidden;
+  .price{color:$brand; font-weight:700; font-size: rem(28)}
+}
+
+// Animaciones
+.reveal{
+  opacity:0; transform: translateY(18px);
+  transition: .6s ease;
+  &.visible{opacity:1; transform:none;}
+}
+
+.whatsapp-float{
+  position: fixed; right: 22px; bottom: 22px; z-index: 1040;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366; color: white; display:grid; place-items:center; box-shadow:$shadow-soft
+}
+
+.footer{
+  background:#0b0b0b; color:$muted; padding:2rem 0
+}
+
+// Utilidades rápidas
+.text-brand{color:$brand}
+.bg-brand{background:$brand}
+.round-2xl{border-radius:$radius-2xl}
+.shadow-soft{box-shadow:$shadow-soft}

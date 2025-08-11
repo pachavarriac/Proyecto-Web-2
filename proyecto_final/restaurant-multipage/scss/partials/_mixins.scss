@@ -1,0 +1,25 @@
+// _mixins.scss
+@mixin cover-bg($url, $overlay:.45){
+  background: linear-gradient(rgba(0,0,0,$overlay), rgba(0,0,0,$overlay)), url(#{$url}) center/cover no-repeat;
+}
+
+@function rem($px){
+  @return ($px / 16) * 1rem;
+}
+
+@mixin btn-pill($bg){
+  background: $bg;
+  color: white;
+  border-radius: 999px;
+  padding: .7rem 1.2rem;
+  box-shadow: $shadow-soft;
+  &:hover{ filter: brightness(1.05); transform: translateY(-2px);}
+  transition: .2s ease;
+}
+
+@mixin glass {
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: $shadow-soft;
+}

@@ -1,0 +1,17 @@
+/* reglas.css: solo media queries */
+@media (max-width: 1200px){
+  .hero h1{font-size: clamp(1.8rem, 4vw, 2.6rem);}
+}
+@media (max-width: 992px){
+  .navbar-brand img{height: 40px;}
+  .catalogo .card{margin-bottom: 1rem;}
+  .clip-divider{clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);}
+}
+@media (max-width: 768px){
+  .full-width-embed iframe{height: 320px;}
+  .hero{min-height: 60vh;}
+}
+@media (max-width: 576px){
+  .section{padding: 2rem 0;}
+  .whatsapp-float{bottom: 14px; right: 14px;}
+}
