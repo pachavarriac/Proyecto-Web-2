@@ -28,3 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         submenus().forEach(el => bootstrap.Collapse.getOrCreateInstance(el).hide());
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggler = document.querySelector('.navbar-toggler');
+    const offcanvasEl = document.getElementById('mobileNav');
+
+    if (toggler && offcanvasEl) {
+        offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+            toggler.blur(); // quita el foco para que no se muestre outline
+        });
+    }
+});

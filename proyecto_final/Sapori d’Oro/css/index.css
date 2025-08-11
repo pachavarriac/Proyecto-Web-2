@@ -61,10 +61,26 @@ body {
   letter-spacing: 0.06em;
   color: #fff;
   opacity: 0.85;
+  position: relative;
+}
+.navbar-clip .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  /* distancia desde el texto */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D2AE35;
+  transition: width 0.3s ease;
+}
+.navbar-clip .nav-link:hover::after, .navbar-clip .nav-link.active::after {
+  width: 100%;
 }
 .navbar-clip .nav-link:hover, .navbar-clip .nav-link.active {
-  color: #fff;
   opacity: 1;
+  color: #fff;
+  /* mantiene texto blanco */
 }
 .navbar-clip .brand-center {
   position: absolute;
@@ -196,4 +212,10 @@ body {
 }
 .footer-dark .social-icons a:hover {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  outline: none;
+  box-shadow: none;
 }/*# sourceMappingURL=index.css.map */
