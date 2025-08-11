@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-$dark_red         : #7F001E;
-$moderate_yellow  : #D2AE35;
-$medium_light_grey: #a9a9a9;
-$very_dark_grey   : #090909;
-$pure_white       : #ffffff;
-$montserrat       : "Montserrat",
+/* ===== Vars */
+$dark_red          : #7F001E;
+$moderate_yellow   : #D2AE35;
+$medium_light_grey : #a9a9a9;
+$very_dark_grey    : #090909;
+$pure_white        : #ffffff;
+$muted_white       : rgba(255, 255, 255, .6);
+$montserrat        : "Montserrat",
 sans-serif;
-$cinzel: "Cinzel",
+$cinzel : "Cinzel",
 serif;
-$muted_white: rgba(255, 255, 255, .6);
 
+/* ===== Reset mínimo */
 * {
-    margin     : 0;
-    padding    : 0;
-    box-sizing : border-box;
-    font-family: $montserrat;
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -24,10 +25,11 @@ html {
 }
 
 body {
-    background: $pure_white;
+    background : $pure_white;
+    font-family: $montserrat;
 }
 
-// —— Navbar con “punta” clip-path
+/* ========================= NAVBAR (desktop base) ========================= */
 .navbar-clip {
     position     : sticky;
     top          : 0;
@@ -35,10 +37,9 @@ body {
     background   : $very_dark_grey;
     min-height   : 120px;
     padding-block: 14px 16px;
-    /* padding arriba y abajo */
     box-shadow   : 0 8px 20px rgba(0, 0, 0, .08);
 
-    /* crea contexto y manda la “punta” al fondo */
+    /* “punta” */
     &::after {
         content       : "";
         position      : absolute;
@@ -52,10 +53,9 @@ body {
         box-shadow    : 0 8px 20px rgba(0, 0, 0, .08);
         pointer-events: none;
         z-index       : 0;
-        /* <-- detrás de todo */
     }
 
-    /* todo el contenido por encima del clip */
+    /* contenido por encima del clip */
     >.container,
     .navbar-brand,
     .navbar-nav {
@@ -63,7 +63,6 @@ body {
         z-index : 1;
     }
 
-    /* centra verticalmente los items */
     .navbar,
     .navbar-collapse,
     .navbar-nav {
@@ -73,38 +72,98 @@ body {
     .nav-link {
         font-weight   : 600;
         letter-spacing: .06em;
-        opacity       : .85;
         color         : #fff;
+        opacity       : .85;
 
         &:hover,
         &.active {
-            opacity: 1;
             color  : #fff;
+            opacity: 1;
         }
     }
 
-    /* LOGO 100px */
-    .navbar-brand img {
-        margin-top: 30px;
-        height    : 120px;
-        display   : block;
-    }
-
-    /* BRAND centrado absoluto en ESCRITORIO:
-     céntralo también VERTICALMENTE dentro de la barra */
+    /* Logo del brand CENTRADO en escritorio */
     .brand-center {
         position      : absolute;
         left          : 50%;
         top           : 50%;
-        /* <-- ancla vertical */
         transform     : translate(-50%, -50%);
-        /* <-- centrado real */
         pointer-events: auto;
+
+        img {
+            height : 100px;
+            display: block;
+        }
     }
 }
 
+/* ========================= OFFCANVAS (móvil) ========================= */
+.offcanvas-mobile {
+    width     : 100vw;
+    max-width : 100%;
+    background: $very_dark_grey;
+    color     : #fff;
 
+    .offcanvas-header {
+        position       : relative;
+        justify-content: center;
+        align-items    : center;
+        border-bottom  : 1px solid rgba(255, 255, 255, .08);
+        padding-bottom : 1rem;
 
+        .navbar-brand {
+            display   : block;
+            margin-top: 15px;
+
+            img {
+                height : 80px;
+                display: block;
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            right   : 1rem;
+            top     : 1rem;
+        }
+    }
+
+    .offcanvas-body {
+        overflow-y: auto;
+        padding   : 1.25rem 1rem 2rem;
+    }
+
+    .nav-link {
+        color         : #fff;
+        font-weight   : 600;
+        letter-spacing: .04em;
+        padding       : .5rem 0;
+
+        &:hover,
+        &:focus {
+            color  : #fff;
+            opacity: .9;
+        }
+    }
+
+    .mobile-submenu {
+        .btn.nav-link {
+            background  : transparent;
+            border      : 0;
+            color       : #fff;
+            font-weight : 600;
+            padding-left: 0;
+        }
+
+        .collapse .nav-link {
+            font-weight: 500;
+            opacity    : .9;
+            padding    : .35rem 0;
+        }
+    }
+}
+
+/* ========================= FOOTER ========================= */
 .footer-dark {
     background : $very_dark_grey;
     color      : $pure_white;
@@ -113,43 +172,38 @@ body {
 
     .city-code {
         font-size     : clamp(40px, 6vw, 72px);
-        /* OC / SD / CHI grandes */
         line-height   : 1;
         margin        : 0 0 16px;
         font-weight   : 700;
-        letter-spacing: 0.02em;
+        letter-spacing: .02em;
     }
 
     address {
         margin         : 0;
         font-style     : normal;
         line-height    : 1.5;
-        opacity        : 0.9;
+        opacity        : .9;
         text-decoration: none;
     }
 
     .label {
         color         : $muted_white;
         font-weight   : 600;
-        font-size     : 0.95rem;
-        letter-spacing: 0.02em;
+        font-size     : .95rem;
+        letter-spacing: .02em;
     }
 
     .link {
         color          : $pure_white;
         text-decoration: none;
-        opacity        : 0.95;
-        transition     : 0.2s ease;
-        border-bottom  : 1px solid transparent;
+        opacity        : .8;
+        transition     : .2s;
 
         &:hover {
-            opacity            : 1;
-            border-bottom-color: $pure_white;
-            /* coincide con color del texto */
+            color: $moderate_yellow;
         }
     }
 
-    /* separación vertical entre las 3 filas */
     .footer-row-1+.footer-row-2 {
         margin-top: 24px;
     }
@@ -158,7 +212,6 @@ body {
         margin-top: 40px;
     }
 
-    /* tipografía/contraste consistente en toda la zona */
     .footer-row-3 {
         color: $muted_white;
     }
@@ -170,19 +223,19 @@ body {
 
     .social-icons {
         display: flex;
-        gap    : 16px; // separación horizontal entre iconos
+        gap    : 16px;
 
         a {
-            color          : $pure_white; // color inicial de los iconos
-            font-size      : 1.5rem; // tamaño del icono
+            color          : $pure_white;
+            font-size      : 1.5rem;
             line-height    : 1;
             display        : inline-flex;
             align-items    : center;
             justify-content: center;
-            transition     : color 0.2s ease;
+            transition     : color .2s;
 
             &:hover {
-                color: $muted_white; // color al pasar el mouse
+                color: $muted_white;
             }
         }
     }

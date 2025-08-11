@@ -1,11 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+/* ===== Vars */
+/* ===== Reset mínimo */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
 }
 
 html {
@@ -14,8 +15,10 @@ html {
 
 body {
   background: #ffffff;
+  font-family: "Montserrat", sans-serif;
 }
 
+/* ========================= NAVBAR (desktop base) ========================= */
 .navbar-clip {
   position: sticky;
   top: 0;
@@ -23,14 +26,10 @@ body {
   background: #090909;
   min-height: 120px;
   padding-block: 14px 16px;
-  /* padding arriba y abajo */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  /* crea contexto y manda la “punta” al fondo */
-  /* todo el contenido por encima del clip */
-  /* centra verticalmente los items */
-  /* LOGO 100px */
-  /* BRAND centrado absoluto en ESCRITORIO:
-   céntralo también VERTICALMENTE dentro de la barra */
+  /* “punta” */
+  /* contenido por encima del clip */
+  /* Logo del brand CENTRADO en escritorio */
 }
 .navbar-clip::after {
   content: "";
@@ -45,7 +44,6 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   pointer-events: none;
   z-index: 0;
-  /* <-- detrás de todo */
 }
 .navbar-clip > .container,
 .navbar-clip .navbar-brand,
@@ -61,39 +59,88 @@ body {
 .navbar-clip .nav-link {
   font-weight: 600;
   letter-spacing: 0.06em;
-  opacity: 0.85;
   color: #fff;
+  opacity: 0.85;
 }
 .navbar-clip .nav-link:hover, .navbar-clip .nav-link.active {
-  opacity: 1;
   color: #fff;
-}
-.navbar-clip .navbar-brand img {
-  margin-top: 30px;
-  height: 120px;
-  display: block;
+  opacity: 1;
 }
 .navbar-clip .brand-center {
   position: absolute;
   left: 50%;
   top: 50%;
-  /* <-- ancla vertical */
   transform: translate(-50%, -50%);
-  /* <-- centrado real */
   pointer-events: auto;
 }
+.navbar-clip .brand-center img {
+  height: 100px;
+  display: block;
+}
 
+/* ========================= OFFCANVAS (móvil) ========================= */
+.offcanvas-mobile {
+  width: 100vw;
+  max-width: 100%;
+  background: #090909;
+  color: #fff;
+}
+.offcanvas-mobile .offcanvas-header {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1rem;
+}
+.offcanvas-mobile .offcanvas-header .navbar-brand {
+  display: block;
+  margin-top: 15px;
+}
+.offcanvas-mobile .offcanvas-header .navbar-brand img {
+  height: 80px;
+  display: block;
+}
+.offcanvas-mobile .offcanvas-header .btn-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.offcanvas-mobile .offcanvas-body {
+  overflow-y: auto;
+  padding: 1.25rem 1rem 2rem;
+}
+.offcanvas-mobile .nav-link {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 0;
+}
+.offcanvas-mobile .nav-link:hover, .offcanvas-mobile .nav-link:focus {
+  color: #fff;
+  opacity: 0.9;
+}
+.offcanvas-mobile .mobile-submenu .btn.nav-link {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  padding-left: 0;
+}
+.offcanvas-mobile .mobile-submenu .collapse .nav-link {
+  font-weight: 500;
+  opacity: 0.9;
+  padding: 0.35rem 0;
+}
+
+/* ========================= FOOTER ========================= */
 .footer-dark {
   background: #090909;
   color: #ffffff;
   padding: 72px 0;
   font-family: "Montserrat", sans-serif;
-  /* separación vertical entre las 3 filas */
-  /* tipografía/contraste consistente en toda la zona */
 }
 .footer-dark .city-code {
   font-size: clamp(40px, 6vw, 72px);
-  /* OC / SD / CHI grandes */
   line-height: 1;
   margin: 0 0 16px;
   font-weight: 700;
@@ -115,14 +162,11 @@ body {
 .footer-dark .link {
   color: #ffffff;
   text-decoration: none;
-  opacity: 0.95;
-  transition: 0.2s ease;
-  border-bottom: 1px solid transparent;
+  opacity: 0.8;
+  transition: 0.2s;
 }
 .footer-dark .link:hover {
-  opacity: 1;
-  border-bottom-color: #ffffff;
-  /* coincide con color del texto */
+  color: #D2AE35;
 }
 .footer-dark .footer-row-1 + .footer-row-2 {
   margin-top: 24px;
@@ -148,7 +192,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
+  transition: color 0.2s;
 }
 .footer-dark .social-icons a:hover {
   color: rgba(255, 255, 255, 0.6);

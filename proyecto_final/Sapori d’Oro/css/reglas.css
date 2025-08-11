@@ -1,17 +1,50 @@
+/* ====== MÓVIL (Samsung Galaxy S8+ y <=360px) ====== */
 @media screen and (max-width: 360px) {
+
+    /* Oculta la “punta” */
     .navbar-clip::after {
         display: none;
     }
 
+    /* Compacta la barra y elimina espacio heredado de escritorio */
+    .navbar-clip {
+        position     : relative;
+        min-height   : 80px;
+        padding-block: 6px 10px;
+    }
+
+    /* Centra el logo en la barra móvil (y lo sube) */
+    .navbar-brand.d-lg-none {
+        position       : absolute;
+        left           : 50%;
+        top            : 4px;
+        transform      : translateX(-50%);
+        margin-top     : 0;
+        width          : auto;
+        display        : flex;
+        justify-content: center;
+    }
+
+    .navbar-brand.d-lg-none img {
+        height : 120px;
+        display: block;
+    }
+
+    /* Hamburguesa a la derecha del logo */
+    .navbar-toggler.d-lg-none {
+        position   : absolute;
+        right      : 1rem;
+        top        : 10px;
+        margin-left: 0;
+    }
+
+    /* Desactiva el centrado absoluto del brand de escritorio */
     .navbar-clip .brand-center {
         position : static;
         transform: none;
     }
 
-    .navbar-clip .navbar-brand img {
-        height: 70px;
-    }
-
+    /* Ajustes táctiles y padding lateral */
     .navbar-clip .navbar-collapse .navbar-nav {
         gap        : 12px;
         align-items: center;
@@ -27,21 +60,32 @@
         padding-right: 12px;
     }
 
+    /* Offcanvas: logo con mt 15px y botón cerrar a la derecha ya están en index.scss */
+    .offcanvas-mobile .offcanvas-header .navbar-brand {
+        margin-top: 15px;
+    }
+
+    .offcanvas-mobile .offcanvas-header .btn-close {
+        position  : absolute;
+        right     : 1rem;
+        top       : 1rem;
+        margin-top: 0;
+    }
+
+    /* Footer móvil */
     .footer-dark {
         padding: 48px 0;
     }
 
     .footer-dark .city-code {
         font-size    : 40px;
-        /* reduce los títulos */
         margin-bottom: 12px;
     }
 
     .footer-dark address {
-        font-size: 0.95rem;
+        font-size: .95rem;
     }
 
-    /* columnas apiladas y centradas en las 3 filas */
     .footer-row-1>[class*="col-"],
     .footer-row-2>[class*="col-"],
     .footer-row-3>[class*="col-"] {
@@ -49,12 +93,21 @@
         margin-bottom: 16px;
     }
 
-    /* un poco más de espacio entre filas */
     .footer-row-2 {
         margin-top: 28px !important;
     }
 
     .footer-row-3 {
         margin-top: 36px !important;
+    }
+}
+
+/* ====== ESCRITORIO (ajuste tamaño logo centrado) ====== */
+@media (min-width: 992px) {
+    .navbar-clip .brand-center img {
+        height    : 120px;
+        /* tamaño deseado en escritorio */
+        display   : block;
+        margin-top: 30px;
     }
 }

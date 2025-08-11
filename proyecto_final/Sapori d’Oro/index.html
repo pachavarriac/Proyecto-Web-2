@@ -18,16 +18,19 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-clip">
             <div class="container">
 
-                <!-- Brand móvil -->
+                <!-- Brand móvil (fuera del menú, en barra) -->
                 <a class="navbar-brand d-lg-none" href="index.html">
                     <img src="assets/images/logo.png" alt="Logo">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Abrir menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="mainNav">
+                <!-- Menú escritorio -->
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
                     <!-- Izquierda -->
                     <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
                         <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
@@ -35,25 +38,70 @@
                         <li class="nav-item"><a class="nav-link" href="#">Reservaciones</a></li>
                     </ul>
 
-                    <!-- Brand centrado (solo escritorio) -->
-                    <a class="navbar-brand d-none d-lg-block brand-center" href="index.html" aria-label="Inicio">
+                    <!-- Brand centrado -->
+                    <a class="navbar-brand brand-center" href="index.html" aria-label="Inicio">
                         <img src="assets/images/logo.png" alt="Logo">
                     </a>
 
                     <!-- Derecha -->
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" data-bs-toggle="dropdown">Galería</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" data-bs-toggle="dropdown">Acerca</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contactenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Acerca</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
                     </ul>
                 </div>
+
+                <!-- Menú móvil (offcanvas) -->
+                <div class="offcanvas offcanvas-end offcanvas-mobile d-lg-none" tabindex="-1" id="mobileNav"
+                    aria-labelledby="mobileNavLabel" data-bs-scroll="false" data-bs-backdrop="true">
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="navbar-brand m-0">
+                            <img src="assets/images/logo.png" alt="Logo" style="height: 120px;">
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <nav class="nav flex-column gap-2">
+                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="#">Reservaciones</a>
+
+                            <!-- Submenú ejemplo -->
+                            <div class="mobile-submenu">
+                                <button class="btn w-100 text-start nav-link px-0" data-bs-toggle="collapse"
+                                    data-bs-target="#subGaleria" aria-expanded="false" aria-controls="subGaleria">
+                                    Galería
+                                </button>
+                                <div id="subGaleria" class="collapse ps-3">
+                                    <a class="nav-link" href="#">Fotos</a>
+                                    <a class="nav-link" href="#">Videos</a>
+                                </div>
+                            </div>
+
+                            <div class="mobile-submenu">
+                                <button class="btn w-100 text-start nav-link px-0" data-bs-toggle="collapse"
+                                    data-bs-target="#subAcerca" aria-expanded="false" aria-controls="subAcerca">
+                                    Acerca
+                                </button>
+                                <div id="subAcerca" class="collapse ps-3">
+                                    <a class="nav-link" href="#">Historia</a>
+                                    <a class="nav-link" href="#">Equipo</a>
+                                </div>
+                            </div>
+
+                            <a class="nav-link" href="#">Contáctenos</a>
+                        </nav>
+                    </div>
+                </div>
+
             </div>
         </nav>
+
     </header>
+
+    <section style="min-height: 200px;"></section>
 
     <footer class="footer-dark w-100 d-flex align-items-center justify-content-center text-center">
         <div class="container">
@@ -94,7 +142,7 @@
             <!-- Fila 2: Títulos + emails/teléfonos -->
             <div class="row g-5 footer-row-2 mt-4">
                 <div class="col-lg-4">
-                    <div class="label mb-1">New Business</div>
+                    <div class="label mb-1 fs-5 text-white">New Business</div>
                     <div>
                         <a class="link" href="#">negocios@saporidioro.com</a><br>
                         <a class="link" href="#">+506-2251-0016</a>
@@ -102,7 +150,7 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="label mb-1">Consultas Generales</div>
+                    <div class="label mb-1 fs-5 text-white">Consultas Generales</div>
                     <div>
                         <a class="link" href="#">consultas@saporidioro.com</a><br>
                         <a class="link" href="#">+506-2251-0021</a>
@@ -110,7 +158,7 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="label mb-1">Reclutamiento</div>
+                    <div class="label mb-1 fs-5 text-white">Reclutamiento</div>
                     <div>
                         <a class="link" href="#">reclutamiento@saporidioro.com</a><br>
                         <a class="link" href="#">Ver puestos</a>
@@ -129,7 +177,7 @@
             </div>
             <div>
                 <div class="d-flex align-items-center justify-content-center text-center p-2">
-                    <a class="link col-lg-6 px-2 text-lg-end" href="#">Privacy </a>, 
+                    <a class="link col-lg-6 px-2 text-lg-end" href="#">Privacy </a>,
                     <a class="link col-lg-6 px-2 text-lg-start" href="#"> Terms</a>
                 </div>
             </div>
@@ -144,7 +192,8 @@
         </div>
     </footer>
 
-
+    <script src="/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
