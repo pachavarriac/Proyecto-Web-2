@@ -14,10 +14,11 @@ html {
 body {
   background: #ffffff;
   font-family: "Montserrat", sans-serif;
+  padding-top: 120px;
 }
 
 .navbar-clip {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1030;
   background: #090909;
@@ -83,8 +84,9 @@ body {
   pointer-events: auto;
 }
 .navbar-clip .brand-center img {
-  height: 100px;
+  height: 120px;
   display: block;
+  margin-top: 35px;
 }
 
 .offcanvas-mobile {

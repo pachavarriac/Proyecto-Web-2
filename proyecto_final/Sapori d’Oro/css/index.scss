@@ -25,10 +25,11 @@ html {
 body {
     background : $pure_white;
     font-family: $montserrat;
+    padding-top: 120px;
 }
 
 .navbar-clip {
-    position     : sticky;
+    position     : fixed;
     top          : 0;
     z-index      : 1030;
     background   : $very_dark_grey;
@@ -105,8 +106,9 @@ body {
         pointer-events: auto;
 
         img {
-            height : 100px;
+            height : 120px;
             display: block;
+            margin-top: 35px;
         }
     }
 }
