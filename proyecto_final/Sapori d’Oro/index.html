@@ -62,14 +62,34 @@
                             aria-label="Cerrar"></button>
                     </div>
 
-                    <div class="offcanvas-body">
-                        <nav class="nav flex-column gap-2">
-                            <a class="nav-link" href="#">Inicio</a>
-                            <a class="nav-link" href="#">Menu</a>
-                            <a class="nav-link" href="#">Reservaciones</a>
+                    <div class="offcanvas-body fs-3">
+                        <nav class="nav flex-column text-center">
+
+                            <ul class="menu-list">
+                                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Reservaciones</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+                                <li class="dropdown nav-item" tabindex="0">
+                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
+                                        Acerca
+                                        <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="#">Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="#">Equipo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
+                            </ul>
+
+
+
+
+
 
                             <!-- Submenú ejemplo -->
-                            <div class="mobile-submenu">
+                            <!-- <div class="mobile-submenu d-flex justify-content-center">
                                 <button class="btn w-100 text-start nav-link px-0" data-bs-toggle="collapse"
                                     data-bs-target="#subGaleria" aria-expanded="false" aria-controls="subGaleria">
                                     Galería
@@ -89,9 +109,9 @@
                                     <a class="nav-link" href="#">Historia</a>
                                     <a class="nav-link" href="#">Equipo</a>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <a class="nav-link" href="#">Contáctenos</a>
+
                         </nav>
                     </div>
                 </div>

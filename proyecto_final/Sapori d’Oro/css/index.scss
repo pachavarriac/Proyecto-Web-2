@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-/* ===== Vars */
 $dark_red          : #7F001E;
 $moderate_yellow   : #D2AE35;
 $medium_light_grey : #a9a9a9;
@@ -13,7 +12,6 @@ sans-serif;
 $cinzel : "Cinzel",
 serif;
 
-/* ===== Reset mínimo */
 * {
     margin    : 0;
     padding   : 0;
@@ -29,7 +27,6 @@ body {
     font-family: $montserrat;
 }
 
-/* ========================= NAVBAR (desktop base) ========================= */
 .navbar-clip {
     position     : sticky;
     top          : 0;
@@ -39,23 +36,23 @@ body {
     padding-block: 14px 16px;
     box-shadow   : 0 8px 20px rgba(0, 0, 0, .08);
 
-    /* “punta” */
     &::after {
-        content       : "";
-        position      : absolute;
-        left          : 50%;
-        transform     : translateX(-50%);
-        bottom        : -36px;
-        width         : 240px;
-        height        : 72px;
-        background    : $very_dark_grey;
-        clip-path     : polygon(0 0, 50% 100%, 100% 0);
+        content   : "";
+        position  : absolute;
+        left      : 50%;
+        transform : translateX(-50%);
+        bottom    : -36px;
+        width     : 300px;
+        height    : 80px;
+        background: $very_dark_grey;
+        clip-path : ellipse(50% 100% at 50% 0%);
+
+
         box-shadow    : 0 8px 20px rgba(0, 0, 0, .08);
         pointer-events: none;
         z-index       : 0;
     }
 
-    /* contenido por encima del clip */
     >.container,
     .navbar-brand,
     .navbar-nav {
@@ -75,12 +72,12 @@ body {
         color         : #fff;
         opacity       : .85;
         position      : relative;
+        list-style    : none;
 
         &::after {
             content         : "";
             position        : absolute;
             bottom          : -4px;
-            /* distancia desde el texto */
             left            : 0;
             width           : 0;
             height          : 2px;
@@ -97,11 +94,9 @@ body {
         &.active {
             opacity: 1;
             color  : #fff;
-            /* mantiene texto blanco */
         }
     }
 
-    /* Logo del brand CENTRADO en escritorio */
     .brand-center {
         position      : absolute;
         left          : 50%;
@@ -116,7 +111,6 @@ body {
     }
 }
 
-/* ========================= OFFCANVAS (móvil) ========================= */
 .offcanvas-mobile {
     width     : 100vw;
     max-width : 100%;
@@ -157,6 +151,7 @@ body {
         font-weight   : 600;
         letter-spacing: .04em;
         padding       : .5rem 0;
+        list-style    : none;
 
         &:hover,
         &:focus {
@@ -178,11 +173,78 @@ body {
             font-weight: 500;
             opacity    : .9;
             padding    : .35rem 0;
+            list-style : none;
+        }
+    }
+
+    .menu-list {
+        list-style  : none;
+        margin      : 0;
+        padding-left: 30px;
+        text-align  : start;
+    }
+
+    .menu-list>li {
+        margin: .25rem 0;
+    }
+
+    .menu-list .nav-link {
+        color          : #fff;
+        text-decoration: none;
+        display        : inline-flex;
+        /* inline para centrar con icono */
+        align-items    : center;
+        justify-content: start;
+        padding        : .35rem 0;
+    }
+
+    .menu-list .dropdown .dropdown-menu {
+        display     : none;
+        list-style  : none;
+        margin      : .25rem 0 0;
+        padding-left: 0;
+        position    : static;
+        transform   : none;
+        background  : transparent;
+        border      : 0;
+    }
+
+    .menu-list .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .menu-list .dropdown.open .dropdown-menu .nav-link {
+        padding-left: 1rem;
+        opacity     : .9;
+    }
+
+    .menu-list .submenu-toggle {
+        display        : flex;
+        justify-content: start;
+        /* centra el texto en el enlace */
+        align-items    : center;
+        position       : relative;
+        padding-right  : 2rem;
+        /* espacio para el icono */
+    }
+
+    .menu-list .submenu-toggle .toggle-icon {
+        position : absolute;
+        right    : 0;
+        /* pega el icono a la derecha del enlace */
+        font-size: 1.2em;
+    }
+
+    .menu-list .submenu-toggle:not([aria-expanded="true"]) {
+        &::after {
+            width: 0 !important;
+            /* anula la línea */
         }
     }
 }
 
-/* ========================= FOOTER ========================= */
+
+
 .footer-dark {
     background : $very_dark_grey;
     color      : $pure_white;
