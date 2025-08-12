@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const off = new bootstrap.Offcanvas(mobileNavEl);
     const submenus = () => mobileNavEl.querySelectorAll('.collapse.show');
 
-    // Cerrar menú al hacer click en un enlace "final"
     mobileNavEl.addEventListener('click', (e) => {
         const a = e.target.closest('a.nav-link');
         if (a && !a.hasAttribute('data-bs-toggle')) {
@@ -13,17 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Cerrar menú y submenús al presionar TAB en cualquier enlace o botón del offcanvas
     mobileNavEl.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
-            // cierra submenús abiertos
             submenus().forEach(el => bootstrap.Collapse.getOrCreateInstance(el).hide());
-            // cierra el offcanvas
             off.hide();
         }
     });
 
-    // Al ocultar el offcanvas, colapsa submenús abiertos por si acaso
     mobileNavEl.addEventListener('hidden.bs.offcanvas', () => {
         submenus().forEach(el => bootstrap.Collapse.getOrCreateInstance(el).hide());
     });
@@ -35,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (toggler && offcanvasEl) {
         offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
-            toggler.blur(); // quita el foco para que no se muestre outline
+            toggler.blur();
         });
     }
 });
@@ -54,16 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!menuList) return;
 
-    // Toggle del submenú (Acerca) por tap/click
     menuList.addEventListener('click', (e) => {
         const trigger = e.target.closest('li.dropdown > a.submenu-toggle');
         if (trigger) {
             e.preventDefault();
-            e.stopPropagation(); // que no “se propague” como click de enlace normal
-            const li = trigger.parentElement; // <li class="dropdown">
+            e.stopPropagation();
+            const li = trigger.parentElement;
             const isOpen = li.classList.contains('open');
 
-            // Cierra otros submenús y restaura sus íconos a "plus"
             menuList.querySelectorAll('li.dropdown.open').forEach(d => {
                 if (d !== li) {
                     d.classList.remove('open');
@@ -77,11 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Toggle del actual
             li.classList.toggle('open', !isOpen);
             trigger.setAttribute('aria-expanded', String(!isOpen));
 
-            // Cambiar ícono del trigger actual
             const icon = trigger.querySelector('.toggle-icon');
             if (icon) {
                 if (!isOpen) {
@@ -90,20 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     icon.classList.remove('bi-dash-circle');
                     icon.classList.add('bi-plus-circle');
-                    trigger.blur(); // quita el foco cuando se cierra para evitar línea activa
+                    trigger.blur();
                 }
             }
-            return; // ¡no cierres el offcanvas!
+            return;
         }
 
-        // Si es un enlace hoja (no trigger), cierra el offcanvas
         const leaf = e.target.closest('a.nav-link');
         if (leaf && !leaf.classList.contains('submenu-toggle')) {
             offcanvas.hide();
         }
     });
 
-    // Teclado: Enter o Space abren/cierran submenú; Tab cierra el offcanvas
     menuList.addEventListener('keydown', (e) => {
         const trigger = e.target.closest('li.dropdown > a.submenu-toggle');
         if (trigger && (e.key === 'Enter' || e.key === ' ')) {
@@ -115,11 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Quita el foco del botón hamburguesa al cerrar (evita borde activo)
     const toggler = document.querySelector('.navbar-toggler');
     mobileNav.addEventListener('hidden.bs.offcanvas', () => {
         if (toggler) toggler.blur();
-        // Cierra submenús y restaura íconos por si acaso
         menuList.querySelectorAll('li.dropdown.open').forEach(d => d.classList.remove('open'));
         menuList.querySelectorAll('a.submenu-toggle[aria-expanded="true"]').forEach(a => a.setAttribute('aria-expanded', 'false'));
         menuList.querySelectorAll('a.submenu-toggle .toggle-icon').forEach(i => {
@@ -130,14 +117,76 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar-clip');
-    if (!navbar) return;
+// document.addEventListener('scroll', () => {
+//     const navbar = document.querySelector('.navbar-clip');
+//     const offcanvasMobile = document.querySelector('.offcanvas-mobile');
+//     if (!navbar) return;
 
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+//     if (window.scrollY > 5) {
+//         navbar.classList.add('scrolled');
+//         document.body.classList.add('nav-scrolled');
+//         if (offcanvasMobile) offcanvasMobile.classList.add('scrolled');
+//     } else {
+//         navbar.classList.remove('scrolled');
+//         document.body.classList.remove('nav-scrolled');
+//         if (offcanvasMobile) offcanvasMobile.classList.remove('scrolled');
+//     }
+// });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const checkNavbarClass = () => {
+        const navbar = document.querySelector('.navbar');
+        if (!navbar) return;
+        if (window.matchMedia('(max-width: 991px)').matches) {
+            navbar.classList.remove('navbar-expand-lg');
+        } else {
+            navbar.classList.add('navbar-expand-lg');
+        }
+    };
+
+    window.addEventListener('resize', checkNavbarClass);
+    document.addEventListener('DOMContentLoaded', checkNavbarClass);
 });
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let lastY = window.scrollY;
+    const navbar = document.querySelector('.navbar-clip');
+    const offcanvasMobile = document.querySelector('.offcanvas-mobile');
+
+    if (!navbar) return;
+
+    const onScroll = () => {
+        const y = window.scrollY;
+        const isMobile = window.matchMedia('(max-width: 360px)').matches;
+
+        if (isMobile) {
+            // Bajar: reduce al pasar 5px
+            if (y > lastY && y > 5) {
+                document.body.classList.add('nav-scrolled');
+                navbar.classList.add('scrolled');
+                offcanvasMobile && offcanvasMobile.classList.add('scrolled');
+            }
+            // Subir: solo vuelve al grande si llega al top
+            if (y === 0) {
+                document.body.classList.remove('nav-scrolled');
+                navbar.classList.remove('scrolled');
+                offcanvasMobile && offcanvasMobile.classList.remove('scrolled');
+            }
+        } else {
+            // Escritorio: tu lógica normal
+            if (y > 5) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+
+        lastY = y <= 0 ? 0 : y;
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // estado inicial
+});

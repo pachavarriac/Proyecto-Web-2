@@ -6,21 +6,54 @@
 }
 
 @media screen and (max-width: 360px) {
+    body {
+        margin-top: 120px;
+    }
+
+    .navbar-clip {
+        position     : fixed;
+        /* <-- antes relative */
+        top          : 0;
+        left         : 0;
+        right        : 0;
+        width        : 100%;
+        z-index      : 1045;
+        /* sobre el contenido y el clip */
+        min-height   : 100px;
+        /* alto inicial */
+        padding-block: 6px 10px;
+        transition   : min-height .25s ease;
+    }
 
     .navbar-clip::after {
         display: none;
     }
 
-    .navbar-clip {
-        position     : relative;
-        min-height   : 80px;
-        padding-block: 6px 10px;
+    /* Estado scrolleado en móvil */
+    .navbar-clip.scrolled {
+        padding-top: 30px;
+        min-height : 60px;
+        /* antes 120px */
+    }
+
+    /* body.nav-scrolled{ padding-top: 80px; } */
+
+    .navbar-clip.scrolled .navbar-brand.d-lg-none img {
+
+        height    : 80px;
+        margin-top: 0;
+        /* antes 120px */
+    }
+
+    .offcanvas-mobile.scrolled .offcanvas-header .navbar-brand img {
+        height: 80px !important;
+        /* logo dentro del offcanvas */
     }
 
     .navbar-brand.d-lg-none {
         position       : absolute;
         left           : 50%;
-        top            : 4px;
+        top            : 2px;
         transform      : translateX(-50%);
         margin-top     : 0;
         width          : auto;
@@ -29,8 +62,8 @@
     }
 
     .navbar-brand.d-lg-none img {
-        height : 120px;
-        display: block;
+        height    : 120px;
+        transition: height .25s ease, margin-top .25s ease;
     }
 
     .navbar-toggler.d-lg-none {
@@ -62,6 +95,75 @@
 
     .offcanvas-mobile .offcanvas-header .navbar-brand {
         margin-top: 15px;
+    }
+
+    .offcanvas-mobile .offcanvas-header .navbar-brand img {
+        height    : 120px !important;
+        transition: height .25s ease;
+    }
+
+    /* Lista móvil sin viñetas y centrada */
+    .offcanvas-mobile .menu-list {
+        list-style  : none;
+        padding-left: 0;
+        margin      : 0;
+        text-align  : center;
+    }
+
+    .offcanvas-mobile .menu-list>li {
+        margin: .25rem 0;
+    }
+
+    .offcanvas-mobile .menu-list .nav-link {
+        display        : inline-flex;
+        align-items    : center;
+        justify-content: center;
+        padding        : .35rem 0;
+        text-decoration: none;
+    }
+
+    /* Submenú: cerrado por defecto / abierto con .open (JS ya lo gestiona) */
+    .offcanvas-mobile .menu-list .dropdown .dropdown-menu {
+        display     : none;
+        list-style  : none;
+        padding-left: 0;
+        margin      : .25rem 0 0;
+        background  : transparent;
+        /* en móvil el panel ya es oscuro */
+        border      : 0;
+    }
+
+    .offcanvas-mobile .menu-list .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    /* Icono +/− a la derecha del trigger */
+    .offcanvas-mobile .menu-list .submenu-toggle {
+        position     : relative;
+        padding-right: 2rem;
+        /* espacio para el icono a la derecha */
+    }
+
+    .offcanvas-mobile .menu-list .submenu-toggle .toggle-icon {
+        position : absolute;
+        right    : 0;
+        font-size: 1.2em;
+    }
+
+    /* Ajustes de navegación ya existentes */
+    .navbar-clip .navbar-collapse .navbar-nav {
+        gap        : 12px;
+        align-items: center;
+    }
+
+    .navbar-clip .nav-link {
+        padding       : 8px 6px;
+        letter-spacing: .04em;
+    }
+
+    .navbar-clip .container {
+        padding-left : 12px;
+        padding-right: 12px;
     }
 
     .offcanvas-mobile .offcanvas-header .btn-close {
@@ -127,7 +229,7 @@
         width     : 250px;
         height    : 60px;
         transition: all 0.3s ease;
-        bottom: -20px;
+        bottom    : -20px;
     }
 
     /* Submenú en hover: color del texto de Acerca */
