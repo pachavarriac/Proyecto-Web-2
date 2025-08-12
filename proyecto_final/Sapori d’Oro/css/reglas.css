@@ -1,3 +1,10 @@
+:root {
+    --moderate_yellow  : #D2AE35;
+    --medium_light_grey: #a9a9a9;
+    --very-dark-grey   : #090909;
+    --pure-white       : #fff;
+}
+
 @media screen and (max-width: 360px) {
 
     .navbar-clip::after {
@@ -98,5 +105,32 @@
         height    : 120px;
         display   : block;
         margin-top: 30px;
+    }
+
+    /* Submenú en hover: color del texto de Acerca */
+    .navbar-nav .dropdown:hover>.nav-link {
+        color: var(--pure-white);
+    }
+
+    /* Fondo del submenú */
+    .navbar-nav .dropdown:hover>.dropdown-menu {
+        display         : block;
+        margin-top      : -10px;
+        margin-left: -20px;
+        padding: 10px;
+        background-color: var(--very-dark-grey);
+        min-width: 120px;
+        z-index: -1;
+    }
+
+    /* Color de texto y hover en items del submenú */
+    .navbar-nav .dropdown-menu .dropdown-item {
+        color: var(--pure-white);
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item:hover {
+        background-color: var(--pure-white);
+        /* un sutil hover */
     }
 }
