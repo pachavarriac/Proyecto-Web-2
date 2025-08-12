@@ -6,9 +6,6 @@
 }
 
 @media screen and (max-width: 360px) {
-    body {
-        margin-top: 120px;
-    }
 
     .navbar-clip {
         position     : fixed;
@@ -32,7 +29,7 @@
     /* Estado scrolleado en móvil */
     .navbar-clip.scrolled {
         padding-top: 30px;
-        min-height : 60px;
+        min-height : 40px;
         /* antes 120px */
     }
 
@@ -40,14 +37,9 @@
 
     .navbar-clip.scrolled .navbar-brand.d-lg-none img {
 
-        height    : 80px;
+        height    : 60px;
         margin-top: 0;
         /* antes 120px */
-    }
-
-    .offcanvas-mobile.scrolled .offcanvas-header .navbar-brand img {
-        height: 80px !important;
-        /* logo dentro del offcanvas */
     }
 
     .navbar-brand.d-lg-none {
@@ -93,6 +85,31 @@
         padding-right: 12px;
     }
 
+
+    /* Offcanvas por encima del navbar fijo */
+    .offcanvas-mobile {
+        z-index   : 1100;
+        /* > 1045 del navbar */
+        background: var(--very-dark-grey);
+        color     : var(--pure-white);
+    }
+
+    /* Backdrop también por encima del contenido pero debajo del panel */
+    .offcanvas-backdrop {
+        z-index: 1090;
+        /* un poco menor que el panel */
+    }
+
+    /* Header del offcanvas siempre visible y pegado arriba */
+    .offcanvas-mobile .offcanvas-header {
+        position     : sticky;
+        top          : 0;
+        z-index      : 1;
+        background   : var(--very-dark-grey);
+        padding      : 12px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
     .offcanvas-mobile .offcanvas-header .navbar-brand {
         margin-top: 15px;
     }
@@ -100,6 +117,28 @@
     .offcanvas-mobile .offcanvas-header .navbar-brand img {
         height    : 120px !important;
         transition: height .25s ease;
+    }
+
+    .offcanvas-mobile .offcanvas-header .btn-close {
+            filter : invert(1);
+            /* asegura ícono claro si no usas .btn-close-white */
+            opacity: .9;
+        }
+
+        .offcanvas-mobile .offcanvas-header .btn-close:hover {
+            opacity: 1;
+        }
+
+    /* Logo y botón de cierre visibles */
+    .offcanvas-mobile .offcanvas-header .navbar-brand img {
+        height : 60px !important;
+        /* tu tamaño fijo en móvil */
+        display: block;
+    }
+
+    .offcanvas-mobile.scrolled .offcanvas-header .navbar-brand img {
+        height: 60px !important;
+        /* logo dentro del offcanvas */
     }
 
     /* Lista móvil sin viñetas y centrada */

@@ -23,9 +23,9 @@ html {
 }
 
 body {
-    background : $pure_white;
-    font-family: $montserrat;
-    padding-top: 120px;
+    background    : $pure_white;
+    font-family   : $montserrat;
+    // padding-top: 120px;
 }
 
 .navbar-clip {
@@ -106,8 +106,8 @@ body {
         pointer-events: auto;
 
         img {
-            height : 120px;
-            display: block;
+            height    : 120px;
+            display   : block;
             margin-top: 35px;
         }
     }
@@ -328,4 +328,49 @@ body {
 .btn-close:focus {
     outline   : none;
     box-shadow: none;
+}
+
+
+
+
+
+
+.banner-full {
+    position       : relative;
+    height         : 100vh;
+    /* ocupa todo el alto de la ventana */
+    background     : url('/assets/images/banner1-min.png') center center / cover no-repeat;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    text-align     : center;
+    color          : $pure_white;
+    overflow       : hidden;
+    /* asegura que el overlay no se salga */
+}
+
+.banner-overlay {
+    position        : absolute;
+    inset           : 0;
+    /* top          :0; right:0; bottom:0; left:0 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* oscurece un 50% */
+    z-index         : 1;
+}
+
+.banner-content {
+    position : relative;
+    z-index  : 2;
+    /* encima del overlay */
+    max-width: 800px;
+    padding  : 0 1rem;
+}
+
+.banner-content h1 {
+    font-size    : clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.banner-content p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
 }
