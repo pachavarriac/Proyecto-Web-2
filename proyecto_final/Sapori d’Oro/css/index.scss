@@ -556,3 +556,212 @@ body {
         }
     }
 }
+
+
+
+.color-bg {
+    background-color: $light_grayish_yellow;
+}
+
+
+.restaurant-menu {
+    background: $light_grayish_yellow;
+    margin-top: 120px;
+
+    h1,
+    h2,
+    h3 {
+        font-family: $cinzel;
+        color      : $very_dark_grey;
+    }
+
+    .list-group-item {
+        background-color: $light_grayish_yellow;
+        // max-width: 800px;
+
+        .thumb {
+            transition: all 0.3s ease; // transición suave en tamaño y otros cambios
+        }
+
+        &:hover .thumb {
+            width : 256px;
+            height: 256px;
+
+        }
+    }
+
+    .menu-item .thumb {
+        width        : 96px;
+        height       : 96px;
+        object-fit   : cover;
+        border-radius: 25px;
+        margin-right : 12px;
+        flex         : 0 0 56px;
+    }
+
+    .menu-item h6 {
+        margin     : 0;
+        font-weight: 600;
+        color      : $very_dark_grey;
+    }
+
+
+    .menu-item small {
+        display: block;
+    }
+
+    .price-left,
+    .price-bottom {
+        font-weight: 700;
+        color      : $very_dark_grey;
+        white-space: nowrap;
+        // text-align: end;
+    }
+}
+
+
+
+
+
+.food-allergy-warning {
+    background-color: rgba(210, 174, 53, 0.1); // tono suave del $moderate_yellow
+    border-top      : 3px solid $moderate_yellow;
+    border-bottom   : 3px solid $moderate_yellow;
+
+    .alert-content {
+        max-width: 900px;
+        margin   : 0 auto;
+    }
+
+    .alert-icon {
+        font-size  : 2rem;
+        color      : $moderate_yellow;
+        flex-shrink: 0;
+    }
+
+    .alert-text {
+        h5 {
+            font-family: $cinzel;
+            font-weight: 700;
+            color      : $very_dark_grey;
+        }
+
+        p {
+            font-family: $montserrat;
+            font-size  : 0.95rem;
+            color      : $very_dark_grey;
+            opacity    : 0.9;
+        }
+    }
+}
+
+
+
+.back-to-top {
+    position        : fixed;
+    bottom          : 24px;
+    right           : 24px;
+    width           : 48px;
+    height          : 48px;
+    border-radius   : 50%;
+    background-color: $moderate_yellow;
+    color           : $very_dark_grey;
+    border          : none;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 1.25rem;
+    cursor          : pointer;
+    box-shadow      : 0 4px 8px rgba(0, 0, 0, 0.25);
+    opacity         : 0;
+    visibility      : hidden;
+    transition      : opacity 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+        transform       : translateY(-3px);
+        background-color: darken($moderate_yellow, 10%);
+    }
+
+    &.show {
+        opacity   : 1;
+        visibility: visible;
+    }
+}
+
+.whatsapp-button {
+    position        : fixed;
+    bottom          : 84px; // un poco más arriba del Back to Top
+    right           : 24px;
+    width           : 48px;
+    height          : 48px;
+    border-radius   : 50%;
+    background-color: #25D366; // color oficial WhatsApp
+    color           : white;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    font-size       : 1.4rem;
+    text-decoration : none;
+    box-shadow      : 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition      : transform 0.3s ease, opacity 0.3s ease;
+    opacity         : 0;
+    visibility      : hidden;
+    z-index         : 999;
+
+    &:hover {
+        transform       : translateY(-3px);
+        background-color: darken(#25D366, 5%);
+    }
+
+    &.show {
+        opacity   : 1;
+        visibility: visible;
+    }
+}
+
+
+
+
+
+.menu-banner {
+    position       : relative;
+    width          : 100%;
+    height         : 360px; // ocupa toda la altura de la pantalla
+    background     : url('/assets/images/banner2.png') center center / cover no-repeat;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    text-align     : center;
+
+    .banner-overlay {
+        position  : absolute;
+        inset     : 0;
+        background: rgba(0, 0, 0, 0.7); // oscurece la imagen para que el texto resalte
+    }
+
+    .banner-content {
+        position: relative;
+        z-index : 1;
+        color   : $pure_white;
+
+        h1 {
+            padding-top: 120px;
+            font-family: $cinzel;
+
+            margin-bottom: 1rem;
+        }
+
+        .shape-section {
+            display         : flex;
+            justify-content : center;
+            background-color: transparent;
+
+            .shape {
+                width           : 800px;
+                height          : 00px;
+                background-color: $moderate_yellow;
+                clip-path       : polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
+            }
+        }
+    }
+}

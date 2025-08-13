@@ -241,7 +241,7 @@
         margin-top: 36px !important;
     }
 
-    #banner_dishes {
+    #banner_item-es {
         display: none;
     }
 
@@ -287,6 +287,27 @@
     .open-kitchen p {
         text-align: center;
     }
+
+    .price-left {
+        display: none;
+    }
+
+    .price-bottom {
+        display: block;
+        margin-left: 0;
+    }
+
+    /* Forzar que el contenido de los ítems de menú se alinee arriba en móvil */
+    .restaurant-menu .list-group-item {
+        align-items: flex-start !important;
+    }
+
+    /* Asegurar que la imagen no se estire */
+    .restaurant-menu .list-group-item .thumb {
+        align-self: flex-start;
+    }
+
+
 }
 
 
@@ -377,5 +398,18 @@
         height          : 300px;
         background-color: var(--moderate_yellow);
         clip-path       : polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
+    }
+
+    .ok-py-5 {
+        padding-top   : 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .price-left {
+        display: block;
+    }
+
+    .price-bottom {
+        display: none;
     }
 }

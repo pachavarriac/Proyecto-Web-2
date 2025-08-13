@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 let lastScrollTop = 0;
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     let st = window.pageYOffset || document.documentElement.scrollTop;
     if (st < lastScrollTop) {
         // Scroll hacia arriba
@@ -204,3 +204,53 @@ window.addEventListener("scroll", function() {
     }
     lastScrollTop = st <= 0 ? 0 : st;
 }, false);
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
+const whatsappButton = document.getElementById('whatsappButton');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTop.classList.add('show');
+        whatsappButton.classList.add('show');
+    } else {
+        backToTop.classList.remove('show');
+        whatsappButton.classList.remove('show');
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.list-group-item').forEach(item => {
+        const priceLeft = item.querySelector('.price-left');
+        const description = item.querySelector('.text-muted');
+
+        if (priceLeft && description) {
+            const priceBottom = priceLeft.cloneNode(true);
+            priceBottom.classList.remove('price-left');
+            priceBottom.classList.add('price-bottom');
+            description.insertAdjacentElement('afterend', priceBottom);
+        }
+    });
+});

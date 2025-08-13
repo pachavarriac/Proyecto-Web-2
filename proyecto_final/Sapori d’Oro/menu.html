@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/reglas.css">
@@ -13,51 +12,44 @@
     <title>Sapori d’Oro</title>
 </head>
 
-<body>
+<body class="color-bg">
     <header class="site-header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-clip">
             <div class="container">
 
-                <!-- Brand móvil (fuera del menú, en barra) -->
                 <a class="navbar-brand d-lg-none" href="index.html">
                     <img src="assets/images/logo.png" alt="Logo">
                 </a>
 
-                <!-- Botón hamburguesa -->
                 <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Abrir menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- Menú escritorio -->
                 <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
-                    <!-- Izquierda -->
                     <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Reservaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
                     </ul>
 
-                    <!-- Brand centrado -->
                     <a class="navbar-brand brand-center" href="index.html" aria-label="Inicio">
                         <img src="assets/images/logo.png" alt="Logo">
                     </a>
 
-                    <!-- Derecha -->
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
                         <li class="dropdown nav-item" tabindex="0">
                             <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item px-1"><a class="nav-link" href="#">Historia</a></li>
-                                <li class="nav-item px-1"><a class="nav-link" href="#">Equipo</a></li>
+                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Historia</a></li>
+                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Equipo</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
                     </ul>
                 </div>
 
-                <!-- Menú móvil (offcanvas) -->
                 <div class="offcanvas offcanvas-end offcanvas-mobile d-lg-none" tabindex="-1" id="mobileNav"
                     aria-labelledby="mobileNavLabel" data-bs-scroll="false" data-bs-backdrop="true">
                     <div class="offcanvas-header">
@@ -70,54 +62,26 @@
 
                     <div class="offcanvas-body fs-3">
                         <nav class="nav flex-column text-center">
-
                             <ul class="menu-list">
-                                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Reservaciones</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
+                                <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
                                 <li class="dropdown nav-item" tabindex="0">
                                     <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
                                         Acerca
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="#">Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="#">Equipo</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
+                                                href="historia.html">Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Equipo</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
                             </ul>
-
-
-
-
-
-
-                            <!-- Submenú ejemplo -->
-                            <!-- <div class="mobile-submenu d-flex justify-content-center">
-                                <button class="btn w-100 text-start nav-link px-0" data-bs-toggle="collapse"
-                                    data-bs-target="#subGaleria" aria-expanded="false" aria-controls="subGaleria">
-                                    Galería
-                                </button>
-                                <div id="subGaleria" class="collapse ps-3">
-                                    <a class="nav-link" href="#">Fotos</a>
-                                    <a class="nav-link" href="#">Videos</a>
-                                </div>
-                            </div>
-
-                            <div class="mobile-submenu">
-                                <button class="btn w-100 text-start nav-link px-0" data-bs-toggle="collapse"
-                                    data-bs-target="#subAcerca" aria-expanded="false" aria-controls="subAcerca">
-                                    Acerca
-                                </button>
-                                <div id="subAcerca" class="collapse ps-3">
-                                    <a class="nav-link" href="#">Historia</a>
-                                    <a class="nav-link" href="#">Equipo</a>
-                                </div>
-                            </div> -->
-
-
                         </nav>
                     </div>
                 </div>
@@ -125,28 +89,380 @@
             </div>
         </nav>
 
-        <!-- <div class="banner-full">
-            <div class="banner-overlay"></div>
-            <div class="banner-content fw-bold">
-                <h1>Bienvenido a Nuestro Restaurante</h1>
-                <p>Disfruta de la mejor comida italiana</p>
-            </div>
-        </div> -->
 
     </header>
 
-    <section class="banner-full">
+    <section class="menu-banner">
         <div class="banner-overlay"></div>
-        <div class="banner-content fw-bold">
-            <h1>Bienvenido a Nuestro Restaurante</h1>
-            <p>Disfruta de la mejor comida italiana</p>
+        <div class="banner-content text-center">
+            <h1>Nuestro Menú</h1>
+            <!-- <div class="shape-section">
+                <div class="shape"></div>
+            </div> -->
         </div>
     </section>
+
+
+    <section class="restaurant-menu">
+        <div class="container">
+
+            <!-- ENTRADAS -->
+            <div class="mb-5">
+                <h3 class="mb-3">Entradas</h3>
+                <ul class="list-group">
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/bruschetta_tradicional.png"
+                            alt="Bruschetta al Pomodoro">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Bruschetta al Pomodoro</h6>
+                            <small class="text-muted">Pan rústico con tomate, ajo, aceite de oliva y albahaca.</small>
+                        </div>
+                        <span class="price-left">₡3 500</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/carpaccio_res.png" alt="Carpaccio di Manzo">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Carpaccio di Manzo</h6>
+                            <small class="text-muted">Láminas de lomo, rúcula, parmesano</small>
+                        </div>
+                        <span class="price-left">₡5 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/ensalada_caprese.png" alt="Insalata Caprese">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Insalata Caprese</h6>
+                            <small class="text-muted">Mozzarella fresca, tomate y albahaca con aceite de oliva</small>
+                        </div>
+                        <span class="price-left">₡4 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/ensalada_caprese_salmon.png"
+                            alt="Insalata Caprese con Salmone">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Insalata Caprese con Salmone</h6>
+                            <small class="text-muted">Mozzarella fresca, tomate, salmón y albahaca con aceite de
+                                oliva</small>
+                        </div>
+                        <span class="price-left">₡4 200</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- PLATOS FUERTES -->
+            <div class="mb-5">
+                <h3 class="mb-3">Platos Fuertes</h3>
+                <ul class="list-group">
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/lasagna_bolognese.png" alt="Lasagna alla Bolognese">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Lasagna alla Bolognese</h6>
+                            <small class="text-muted">Capas de pasta, ragù, bechamel y queso</small>
+                        </div>
+                        <span class="price-left">₡9 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/risotto_alla_milanese.png"
+                            alt="Risotto alla Milanese">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Risotto alla Milanese</h6>
+                            <small class="text-muted">Arroz cremoso con azafrán</small>
+                        </div>
+                        <span class="price-left">₡10 500</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/risotto_ai_frutti_di_mare.png"
+                            alt="Risotto ai Frutti di Mare">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Risotto ai Frutti di Mare</h6>
+                            <small class="text-muted">Arroz cremoso con mariscos</small>
+                        </div>
+                        <span class="price-left">₡12 500</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/pasta_alla_norma.png" alt="Pasta alla Norma">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Pasta alla Norma</h6>
+                            <small class="text-muted">Pasta con berenjena, ricotta salada y salsa de tomate</small>
+                        </div>
+                        <span class="price-left">₡10 900</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/pasta_alla_nerano.png" alt="Pasta alla Nerano">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Pasta alla Nerano</h6>
+                            <small class="text-muted">Pasta y calabacines fritos, mezclados con mantequilla, albahaca
+                                fresca y queso Provolone del Monaco</small>
+                        </div>
+                        <span class="price-left">₡10 900</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/tagliatelle_al_ragu_bolognese.png"
+                            alt="Tagliatelle al Ragù Bolognese">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Tagliatelle al Ragù Bolognese</h6>
+                            <small class="text-muted">Pasta fresca con salsa de carne a fuego lento.</small>
+                        </div>
+                        <span class="price-left">₡8 900</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/penne_alla_arrabbiata.png"
+                            alt="Penne all’Arrabbiata">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Penne all’Arrabbiata</h6>
+                            <small class="text-muted">Pasta corta en salsa de tomate picante.</small>
+                        </div>
+                        <span class="price-left">₡7 500</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/fettuccine_alfredo.png" alt="Fettuccine Alfredo">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Fettuccine Alfredo</h6>
+                            <small class="text-muted">Pasta con crema, mantequilla y parmesano.</small>
+                        </div>
+                        <span class="price-left">₡8 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/gnocchi_al_pesto_genovese.png"
+                            alt="Gnocchi al Pesto Genovese">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Gnocchi al Pesto Genovese</h6>
+                            <small class="text-muted">Ñoquis con salsa de albahaca y piñones.</small>
+                        </div>
+                        <span class="price-left">₡8 500</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/ravioli_di_ricotta_e_spinaci.png"
+                            alt="Ravioli di Ricotta e Spinaci">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Ravioli di Ricotta e Spinaci</h6>
+                            <small class="text-muted">Pasta rellena de ricotta y espinaca en salsa de mantequilla y
+                                salvia.</small>
+                        </div>
+                        <span class="price-left">₡9 200</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="mb-5">
+                <h3 class="mb-3">Postres</h3>
+                <ul class="list-group">
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/tiramisu.png" alt="Tiramisú">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Tiramisú</h6>
+                            <small class="text-muted">Mascarpone, espresso, cacao</small>
+                        </div>
+                        <span class="price-left">₡3 900</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/panna_cotta.png" alt="Panna Cotta">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Panna Cotta</h6>
+                            <small class="text-muted">Vainilla, coulis de frutos rojos</small>
+                        </div>
+                        <span class="price-left">₡3 600</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/cannoli_siciliani.png" alt="Cannoli Siciliano">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Cannoli Siciliani</h6>
+                            <small class="text-muted">Ricotta dulce,ceresa y naranja confitada</small>
+                        </div>
+                        <span class="price-left">₡3 800</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center menu-item">
+                        <img class="thumb" src="/assets/images/menu/cassata_siciliana.png" alt="Cassata Siciliana">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Cassata Siciliana</h6>
+                            <small class="text-muted">Pastel helado con ricotta, frutas confitadas y bizcocho.</small>
+                        </div>
+                        <span class="price-left">₡4 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item">
+                        <img class="thumb" src="/assets/images/menu/gelato_artigianale.png" alt="Gelato Artigianale">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Gelato Artigianale</h6>
+                            <small class="text-muted">Helado artesanal en sabores clásicos italianos.</small>
+                        </div>
+                        <span class="price-left">₡3 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item">
+                        <img class="thumb" src="/assets/images/menu/zabaglione.png" alt="Zabaglione">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Zabaglione</h6>
+                            <small class="text-muted">Crema batida con yema, azúcar y vino Marsala.</small>
+                        </div>
+                        <span class="price-left">₡4 000</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item">
+                        <img class="thumb" src="/assets/images/menu/baba _al_rum.png" alt="Baba al Rum">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Baba al Rum</h6>
+                            <small class="text-muted">Bizcocho empapado en ron con crema pastelera.</small>
+                        </div>
+                        <span class="price-left">₡4 500</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div>
+                <h3 class="mb-3">Bebidas</h3>
+                <ul class="list-group">
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/acqua_frizzante.png" alt="Acqua Frizzante">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Acqua Frizzante</h6>
+                            <small class="text-muted">Agua con gas</small>
+                        </div>
+                        <span class="price-left">₡1 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/chinotto.png" alt="Chinotto">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Chinotto</h6>
+                            <small class="text-muted">Refresco amargo hecho con cítrico chinotto</small>
+                        </div>
+                        <span class="price-left">₡1 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/cappuccino.png" alt="Cappuccino">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Cappuccino</h6>
+                            <small class="text-muted">Espuma sedosa</small>
+                        </div>
+                        <span class="price-left">₡1 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/espresso.png" alt="Espresso">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Espresso</h6>
+                            <small class="text-muted">Café corto y concentrado, emblema de Italia</small>
+                        </div>
+                        <span class="price-left">₡1 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/caffe_latte.png" alt="Caffè Latte">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Caffè Latte</h6>
+                            <small class="text-muted">Café espresso con abundante leche caliente</small>
+                        </div>
+                        <span class="price-left">₡1 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/marocchino.png" alt="Marocchino">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Marocchino</h6>
+                            <small class="text-muted">Espresso con cacao y espuma de leche, servido en vaso
+                                pequeño</small>
+                        </div>
+                        <span class="price-left">₡1 800</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/prosecco.png" alt="Prosecco">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Prosecco</h6>
+                            <small class="text-muted">Vino espumoso seco, originario de Veneto</small>
+                        </div>
+                        <span class="price-left">₡3 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/chianti.png" alt="Chianti">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Chianti</h6>
+                            <small class="text-muted">Vino tinto de la Toscana</small>
+                        </div>
+                        <span class="price-left">₡3 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/barolo.png" alt="Barolo">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Barolo</h6>
+                            <small class="text-muted">Vino tinto robusto del Piamonte</small>
+                        </div>
+                        <span class="price-left">₡3 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/negroni.png" alt="Vino Tinto (copa)">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Negroni</h6>
+                            <small class="text-muted">Ginebra, Campari y vermut rojo</small>
+                        </div>
+                        <span class="price-left">₡3 200</span>
+                    </li>
+
+                    <li class="list-group-item d-flex align-items-center menu-item py-3">
+                        <img class="thumb" src="/assets/images/menu/bellini.png" alt="Vino Tinto (copa)">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">Bellini</h6>
+                            <small class="text-muted">Prosecco y puré de durazno, originario de Venecia</small>
+                        </div>
+                        <span class="price-left">₡3 200</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="food-allergy-warning py-4">
+        <div class="container">
+            <div class="alert-content d-flex align-items-center">
+                <div class="alert-icon me-3">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                </div>
+                <div class="alert-text">
+                    <h5 class="mb-1">Advertencia de Alergias</h5>
+                    <p class="mb-0">
+                        Algunos de nuestros platos pueden contener alérgenos como gluten, lácteos, frutos secos,
+                        mariscos o huevo.
+                        Si usted tiene alguna alergia o intolerancia, por favor informe a nuestro personal antes de
+                        ordenar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
     <footer class="footer-dark w-100 d-flex align-items-center justify-content-center text-center">
         <div class="container">
 
-            <!-- Fila 1: Ciudad + dirección -->
             <div class="row g-5 footer-row-1">
                 <div class="col-lg-4">
                     <h2 class="city-code">AL</h2>
@@ -179,7 +495,6 @@
                 </div>
             </div>
 
-            <!-- Fila 2: Títulos + emails/teléfonos -->
             <div class="row g-5 footer-row-2 mt-4">
                 <div class="col-lg-4">
                     <div class="label mb-1 fs-5 text-white">New Business</div>
@@ -206,7 +521,6 @@
                 </div>
             </div>
 
-            <!-- Fila 3: redes / legal -->
             <div class="row mt-5">
                 <div class="d-flex align-items-center justify-content-center text-center social-icons p-2">
                     <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
@@ -222,7 +536,6 @@
                 </div>
             </div>
 
-            <!-- Fila 4: © -->
             <div class="row d-flex align-items-center justify-content-center text-center">
                 <div class="text-lg-center text-center">
                     <span class="copyright">©2025 Sapori D'Oro</span>
@@ -231,6 +544,18 @@
 
         </div>
     </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/506XXXXXXXX" target="_blank" id="whatsappButton" class="whatsapp-button"
+        aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Botón Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
 
     <script src="/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
