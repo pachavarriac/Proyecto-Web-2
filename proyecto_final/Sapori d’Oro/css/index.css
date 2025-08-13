@@ -376,7 +376,7 @@ body {
 }
 
 .open-kitchen {
-  background-color: #f8f5e4;
+  background-color: #f1eee2;
 }
 .open-kitchen h2 {
   font-family: "Cinzel", serif;
@@ -396,25 +396,8 @@ body {
   height: auto;
 }
 
-.shape-section {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f8f5e4;
-}
-.shape-section .shape {
-  width: 80vw;
-  height: 300px;
-  background-color: #D2AE35;
-  clip-path: polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
 .awards-section {
-  background: #f8f5e4;
+  background: #f1eee2;
   color: #090909;
 }
 .awards-section .awards-title {
@@ -427,9 +410,8 @@ body {
   opacity: 0.9;
 }
 .awards-section .award-card {
-  background: #f8f5e4;
+  background: #f1eee2;
   border-radius: 16px;
-  padding: 2rem 1.5rem;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -469,8 +451,4 @@ body {
   padding: 0.3rem 0.6rem;
   border-radius: 999px;
   font-weight: 600;
-}
-
-.card-top {
-  margin-top: 15rem;
 }/*# sourceMappingURL=index.css.map */
