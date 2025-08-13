@@ -373,7 +373,7 @@
     }
 
     .shape {
-        width           : 80vw;
+        width           : 60vw;
         height          : 300px;
         background-color: var(--moderate_yellow);
         clip-path       : polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
