@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 * {
@@ -169,7 +168,6 @@ body {
   color: #fff;
   text-decoration: none;
   display: inline-flex;
-  /* inline para centrar con icono */
   align-items: center;
   justify-content: start;
   padding: 0.35rem 0;
@@ -194,21 +192,17 @@ body {
 .offcanvas-mobile .menu-list .submenu-toggle {
   display: flex;
   justify-content: start;
-  /* centra el texto en el enlace */
   align-items: center;
   position: relative;
   padding-right: 2rem;
-  /* espacio para el icono */
 }
 .offcanvas-mobile .menu-list .submenu-toggle .toggle-icon {
   position: absolute;
   right: 0;
-  /* pega el icono a la derecha del enlace */
   font-size: 1.2em;
 }
 .offcanvas-mobile .menu-list .submenu-toggle:not([aria-expanded=true])::after {
   width: 0 !important;
-  /* anula la línea */
 }
 
 .footer-dark {
@@ -285,7 +279,6 @@ body {
 .banner-full {
   position: relative;
   height: 100vh;
-  /* ocupa todo el alto de la ventana */
   background: url("/assets/images/banner1.png") center center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -293,22 +286,18 @@ body {
   text-align: center;
   color: #ffffff;
   overflow: hidden;
-  /* asegura que el overlay no se salga */
 }
 
 .banner-overlay {
   position: absolute;
   inset: 0;
-  /* top          :0; right:0; bottom:0; left:0 */
   background-color: rgba(0, 0, 0, 0.5);
-  /* oscurece un 50% */
   z-index: 1;
 }
 
 .banner-content {
   position: relative;
   z-index: 2;
-  /* encima del overlay */
   max-width: 1000px;
   padding: 0 1rem;
 }
@@ -617,7 +606,34 @@ body {
 }
 .menu-banner .banner-content .shape-section .shape {
   width: 800px;
-  height: 0px;
+  height: 40px;
   background-color: #D2AE35;
-  clip-path: polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
+}
+
+.reservation-form {
+  background: #f1eee2;
+}
+.reservation-form .form-label span[data-bs-toggle=tooltip] {
+  cursor: help;
+  font-weight: 600;
+}
+
+.form-label.required::before {
+  content: "*";
+  color: red;
+  margin-right: 4px;
+}
+
+.form-control:required:invalid:focus,
+.form-select:required:invalid:focus {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+.reservation-intro {
+  background: #f1eee2;
+}
+.reservation-intro .lead strong {
+  font-size: 1.75rem;
 }/*# sourceMappingURL=index.css.map */

@@ -254,3 +254,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Tooltips
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+
+    // Fecha mínima = hoy
+    const fecha = document.getElementById('resFecha');
+    if (fecha) {
+        const today = new Date();
+        fecha.min = today.toISOString().split('T')[0];
+    }
+
+    // Activar/desactivar botón según validez
+    const form = document.getElementById('formReserva');
+    const btn = document.getElementById('btnReservar');
+
+    if (form) {
+        form.addEventListener('input', () => {
+            btn.disabled = !form.checkValidity();
+        });
+
+        form.addEventListener('submit', (e) => {
+            if (!form.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    }
+});
