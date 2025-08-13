@@ -7,6 +7,20 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: clamp(1.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
 html {
   font-size: 18px;
 }
@@ -272,7 +286,7 @@ body {
   position: relative;
   height: 100vh;
   /* ocupa todo el alto de la ventana */
-  background: url("/assets/images/banner1-min.png") center center/cover no-repeat;
+  background: url("/assets/images/banner1.png") center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,15 +309,168 @@ body {
   position: relative;
   z-index: 2;
   /* encima del overlay */
-  max-width: 800px;
+  max-width: 1000px;
   padding: 0 1rem;
 }
 
 .banner-content h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 5rem);
   margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.banner-content p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+.bottom-images {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.bottom-images img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.experience-philosophy {
+  background-color: #090909;
+  color: #ffffff;
+}
+.experience-philosophy .section-title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: #D2AE35;
+}
+.experience-philosophy .section-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.experience-philosophy .exp-item {
+  padding: 1rem;
+}
+.experience-philosophy .exp-item .icon {
+  font-size: 3rem;
+  color: #D2AE35;
+}
+.experience-philosophy .exp-item h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.experience-philosophy .exp-item p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.open-kitchen {
+  background-color: #f8f5e4;
+}
+.open-kitchen h2 {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: #090909;
+}
+.open-kitchen h5 {
+  color: #090909;
+}
+.open-kitchen p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.open-kitchen img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shape-section {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f5e4;
+}
+.shape-section .shape {
+  width: 80vw;
+  height: 300px;
+  background-color: #D2AE35;
+  clip-path: polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.awards-section {
+  background: #f8f5e4;
+  color: #090909;
+}
+.awards-section .awards-title {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #090909;
+}
+.awards-section .awards-subtitle {
+  font-family: "Montserrat", sans-serif;
+  opacity: 0.9;
+}
+.awards-section .award-card {
+  background: #f8f5e4;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.awards-section .award-card .award-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.awards-section .award-card .award-icon img {
+  max-width: 128px;
+  max-height: 128px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.awards-section .award-card .award-heading {
+  font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.awards-section .award-card .award-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+.awards-section .award-card .award-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background: #D2AE35;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.card-top {
+  margin-top: 15rem;
 }/*# sourceMappingURL=index.css.map */

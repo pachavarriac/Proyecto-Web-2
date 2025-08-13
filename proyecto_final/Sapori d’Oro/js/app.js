@@ -190,3 +190,17 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // estado inicial
 });
+
+
+let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st < lastScrollTop) {
+        // Scroll hacia arriba
+        document.body.setAttribute("data-scroll-dir", "up");
+    } else {
+        // Scroll hacia abajo
+        document.body.setAttribute("data-scroll-dir", "down");
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+}, false);
