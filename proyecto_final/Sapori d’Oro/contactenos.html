@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/reglas.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Sapori d’Oro</title>
+</head>
+
+<body class="color-bg">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-clip">
+            <div class="container">
+
+                <a class="navbar-brand d-lg-none" href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
+                    <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
+                    </ul>
+
+                    <a class="navbar-brand brand-center" href="index.html" aria-label="Inicio">
+                        <img src="assets/images/logo.png" alt="Logo">
+                    </a>
+
+                    <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                        <li class="dropdown nav-item" tabindex="0">
+                            <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Historia</a></li>
+                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Equipo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Contáctenos</a></li>
+                    </ul>
+                </div>
+
+                <div class="offcanvas offcanvas-end offcanvas-mobile d-lg-none" tabindex="-1" id="mobileNav"
+                    aria-labelledby="mobileNavLabel" data-bs-scroll="false" data-bs-backdrop="true">
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="navbar-brand m-0">
+                            <img src="assets/images/logo.png" alt="Logo">
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="offcanvas-body fs-3">
+                        <nav class="nav flex-column text-center">
+                            <ul class="menu-list">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                                <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                                <li class="dropdown nav-item" tabindex="0">
+                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
+                                        Acerca
+                                        <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
+                                                href="historia.html">Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Equipo</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link active" href="#">Contáctenos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="menu-banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content text-center">
+            <h1>Contactenos</h1>
+
+        </div>
+    </section>
+
+    <section class="reservation-intro py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <p class="lead text-center m-0">
+                        <strong>Reserva tu asiento en el corazón de la auténtica cocina italiana</strong><br>
+                        Disfruta de creaciones cuidadosamente elaboradas para deleitar a los paladares más exigentes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="shape-section">
+        <div class="shape"></div>
+    </div> -->
+
+
+    <section class="reservation-form py-5">
+        <div class="container">
+            <form id="formReserva" class="needs-validation" novalidate>
+                <div class="row g-4"> <!-- más gap vertical/horizontal -->
+
+                    <!-- Nombre -->
+                    <div class="col-md-6">
+                        <label for="resNombre" class="form-label required">
+                            Nombre
+                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
+                                title="Solo letras y espacios."></i>
+                        </label>
+                        <input type="text" class="form-control" id="resNombre" name="nombre" pattern="^[A-Za-zÀ-ÿ\s]+$"
+                            required placeholder="Ej: Marco Bianchi">
+                        <div class="invalid-feedback">Ingrese un nombre válido (solo letras y espacios).</div>
+                    </div>
+
+                    <!-- Teléfono -->
+                    <div class="col-md-6">
+                        <label for="resTelefono" class="form-label required">
+                            Teléfono
+                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
+                                title="Solo números, espacios y guiones."></i>
+                        </label>
+                        <input type="tel" class="form-control" id="resTelefono" name="telefono" pattern="^[0-9\s-]+$"
+                            required placeholder="Ej: 8888-8888">
+                        <div class="invalid-feedback">Use solo números, espacios o guiones.</div>
+                    </div>
+
+                    <!-- Correo -->
+                    <div class="col-md-6">
+                        <label for="resCorreo" class="form-label required">
+                            Correo electrónico
+                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
+                                title="Usa un correo válido."></i>
+                        </label>
+                        <input type="email" class="form-control" id="resCorreo" name="correo" required
+                            placeholder="tu@correo.com">
+                        <div class="invalid-feedback">Ingrese un correo válido.</div>
+                    </div>
+
+                    <!-- Comentarios -->
+                    <div class="col-12">
+                        <label for="resComentarios" class="form-label required">
+                            Comentarios
+                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Escriba su mensaje o consulta."></i>
+                        </label>
+                        <textarea class="form-control" id="resComentarios" name="comentarios" rows="5" required></textarea>
+                        <div class="invalid-feedback">Por favor ingrese sus comentarios.</div>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="col-12 mt-5 text-center">
+                        <button type="submit" id="btnReservar" class="btn btn-warning fw-semibold" disabled>Confirmar
+                            reservación</button>
+                    </div>
+
+                    <!-- Leyenda -->
+                    <div class="col-12 mt-2 text-center">
+                        <small class="text-muted">(*) Campos obligatorios</small>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <footer class="footer-dark w-100 d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+
+            <div class="row g-5 footer-row-1">
+                <div class="col-lg-4">
+                    <h2 class="city-code">AL</h2>
+                    <address>
+                        <div>Alajuela</div>
+                        <div>Boulevard Versailles, Local 17</div>
+                        <div>Av. 16, C. 11,</div>
+                        <div>Alajuela, 20101</div>
+                    </address>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="city-code">ES</h2>
+                    <address>
+                        <div>Escazú</div>
+                        <div>TerraLux, Local 51</div>
+                        <div>Av. 2, C. 134,</div>
+                        <div>Escazu, 10201</div>
+                    </address>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="city-code">LR</h2>
+                    <address>
+                        <div>La Rivera</div>
+                        <div>Plaza Bosque Alto, Local 15</div>
+                        <div>Rns. 129, C. El Avión</div>
+                        <div>Heredia, 40702</div>
+                    </address>
+                </div>
+            </div>
+
+            <div class="row g-5 footer-row-2 mt-4">
+                <div class="col-lg-4">
+                    <div class="label mb-1 fs-5 text-white">New Business</div>
+                    <div>
+                        <a class="link" href="#">negocios@saporidioro.com</a><br>
+                        <a class="link" href="#">+506-2251-0016</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="label mb-1 fs-5 text-white">Consultas Generales</div>
+                    <div>
+                        <a class="link" href="#">consultas@saporidioro.com</a><br>
+                        <a class="link" href="#">+506-2251-0021</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="label mb-1 fs-5 text-white">Reclutamiento</div>
+                    <div>
+                        <a class="link" href="#">reclutamiento@saporidioro.com</a><br>
+                        <a class="link" href="#">Ver puestos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="d-flex align-items-center justify-content-center text-center social-icons p-2">
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex align-items-center justify-content-center text-center p-2">
+                    <a class="link col-lg-6 px-2 text-lg-end" href="#">Privacy </a>,
+                    <a class="link col-lg-6 px-2 text-lg-start" href="#"> Terms</a>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center text-center">
+                <div class="text-lg-center text-center">
+                    <span class="copyright">©2025 Sapori D'Oro</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/506XXXXXXXX" target="_blank" id="whatsappButton" class="whatsapp-button"
+        aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Botón Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+    <script src="/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

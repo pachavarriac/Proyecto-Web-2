@@ -1015,3 +1015,24 @@ body {
     position: relative;
     width   : 256px;
 }
+
+.contact-form-section {
+    button.btn {
+        background-color: $moderate_yellow;
+        color           : $very_dark_grey;
+        border          : none;
+        font-weight     : 600;
+        transition      : background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: darken($moderate_yellow, 8%);
+            transform       : translateY(-2px);
+        }
+
+        &:disabled {
+            background-color: lighten($moderate_yellow, 20%);
+            color           : lighten($very_dark_grey, 25%);
+            cursor          : not-allowed;
+        }
+    }
+}

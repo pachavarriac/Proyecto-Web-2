@@ -840,4 +840,21 @@ body {
 .m-logo {
   position: relative;
   width: 256px;
+}
+
+.contact-form-section button.btn {
+  background-color: #D2AE35;
+  color: #090909;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contact-form-section button.btn:hover {
+  background-color: rgb(181.7182186235, 149.3327935223, 40.4817813765);
+  transform: translateY(-2px);
+}
+.contact-form-section button.btn:disabled {
+  background-color: rgb(228.5829959514, 207.4493927126, 136.4170040486);
+  color: rgb(72.75, 72.75, 72.75);
+  cursor: not-allowed;
 }/*# sourceMappingURL=index.css.map */
