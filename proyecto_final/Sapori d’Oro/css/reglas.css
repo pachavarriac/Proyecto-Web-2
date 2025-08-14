@@ -13,7 +13,7 @@
     --light_grayish_yellow: #f1eee2;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (min-width: 200px) {
 
     .navbar-clip {
         position     : fixed;
@@ -395,4 +395,9 @@
     }
 
 
+}
+
+.cinzel {
+    font-family: var(--cinzel);
+    font-size: clamp(2.5rem, 5vw, 5rem);
 }
