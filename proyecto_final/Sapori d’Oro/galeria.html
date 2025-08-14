@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/reglas.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Sapori d’Oro</title>
+</head>
+
+<body class="color-bg">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-clip">
+            <div class="container">
+
+                <a class="navbar-brand d-lg-none" href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
+                    <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
+                    </ul>
+
+                    <a class="navbar-brand brand-center" href="index.html" aria-label="Inicio">
+                        <img src="assets/images/logo.png" alt="Logo">
+                    </a>
+
+                    <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
+                        <li class="nav-item"><a class="nav-link active" href="#">Galería</a></li>
+                        <li class="dropdown nav-item" tabindex="0">
+                            <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Historia</a></li>
+                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Equipo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
+                    </ul>
+                </div>
+
+                <div class="offcanvas offcanvas-end offcanvas-mobile d-lg-none" tabindex="-1" id="mobileNav"
+                    aria-labelledby="mobileNavLabel" data-bs-scroll="false" data-bs-backdrop="true">
+                    <div class="offcanvas-header">
+                        <a href="index.html" class="navbar-brand m-0">
+                            <img src="assets/images/logo.png" alt="Logo">
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar"></button>
+                    </div>
+
+                    <div class="offcanvas-body fs-3">
+                        <nav class="nav flex-column text-center">
+                            <ul class="menu-list">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                                <li class="nav-item"><a class="nav-link active"
+                                        href="reservaciones.html">Reservaciones</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="#">Galería</a></li>
+                                <li class="dropdown nav-item" tabindex="0">
+                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
+                                        Acerca
+                                        <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
+                                                href="historia.html">Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Equipo</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <section class="menu-banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content text-center">
+            <h1>Galería</h1>
+
+        </div>
+    </section>
+
+
+
+
+
+    <section class="galeria-grid py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Galería del Menú</h1>
+
+            <div class="row g-4">
+
+                <!-- 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/bruschetta_tradicional.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Bruschetta al Pomodoro"
+                            data-title="Bruschetta al Pomodoro"
+                            data-desc="Pan rústico con tomate, ajo, aceite de oliva y albahaca.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Bruschetta al Pomodoro</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/carpaccio_res.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Carpaccio di Manzo" data-title="Carpaccio di Manzo"
+                            data-desc="Láminas de lomo, rúcula y parmesano.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Carpaccio di Manzo</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/ensalada_caprese.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Insalata Caprese"
+                            data-title="Insalata Caprese"
+                            data-desc="Mozzarella fresca, tomate y albahaca con aceite de oliva.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Insalata Caprese</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/ensalada_caprese_salmon.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Insalata Caprese con Salmone"
+                            data-title="Insalata Caprese con Salmone"
+                            data-desc="Mozzarella fresca, tomate, salmón y albahaca con aceite de oliva.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Insalata Caprese con Salmone</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 5 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/lasagna_bolognese.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Lasagna alla Bolognese"
+                            data-title="Lasagna alla Bolognese" data-desc="Capas de pasta, ragù, bechamel y queso.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Lasagna alla Bolognese</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/risotto_alla_milanese.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Risotto alla Milanese"
+                            data-title="Risotto alla Milanese" data-desc="Arroz cremoso con azafrán.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Risotto alla Milanese</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 7 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/risotto_ai_frutti_di_mare.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Risotto ai Frutti di Mare"
+                            data-title="Risotto ai Frutti di Mare" data-desc="Arroz cremoso con mariscos.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Risotto ai Frutti di Mare</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 8 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/pasta_alla_norma.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Pasta alla Norma"
+                            data-title="Pasta alla Norma" data-desc="Berenjena, ricotta salada y salsa de tomate.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Pasta alla Norma</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 9 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/pasta_alla_nerano.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Pasta alla Nerano"
+                            data-title="Pasta alla Nerano"
+                            data-desc="Calabacines fritos, mantequilla, albahaca y Provolone del Monaco.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Pasta alla Nerano</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 10 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/tagliatelle_al_ragu_bolognese.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Tagliatelle al Ragù Bolognese"
+                            data-title="Tagliatelle al Ragù Bolognese"
+                            data-desc="Pasta fresca con salsa de carne a fuego lento.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Tagliatelle al Ragù Bolognese</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 11 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/penne_alla_arrabbiata.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Penne all’Arrabbiata"
+                            data-title="Penne all’Arrabbiata" data-desc="Pasta corta en salsa de tomate picante.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Penne all’Arrabbiata</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 12 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/fettuccine_alfredo.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Fettuccine Alfredo"
+                            data-title="Fettuccine Alfredo" data-desc="Pasta con crema, mantequilla y parmesano.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Fettuccine Alfredo</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 13 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/gnocchi_al_pesto_genovese.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Gnocchi al Pesto Genovese"
+                            data-title="Gnocchi al Pesto Genovese" data-desc="Ñoquis con salsa de albahaca y piñones.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Gnocchi al Pesto Genovese</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 14 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/ravioli_di_ricotta_e_spinaci.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Ravioli di Ricotta e Spinaci"
+                            data-title="Ravioli di Ricotta e Spinaci"
+                            data-desc="Relleno de ricotta y espinaca en mantequilla y salvia.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Ravioli di Ricotta e Spinaci</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 15 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/tiramisu.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Tiramisú" data-title="Tiramisú" data-desc="Mascarpone, espresso y cacao.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Tiramisú</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 16 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/panna_cotta.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Panna Cotta" data-title="Panna Cotta" data-desc="Vainilla con coulis de frutos rojos.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Panna Cotta</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 17 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/cannoli_siciliani.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Cannoli Siciliani"
+                            data-title="Cannoli Siciliani" data-desc="Ricotta dulce, cereza y naranja confitada.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Cannoli Siciliani</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 18 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/cassata_siciliana.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Cassata Siciliana"
+                            data-title="Cassata Siciliana" data-desc="Ricotta, frutas confitadas y bizcocho.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Cassata Siciliana</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 19 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/gelato_artigianale.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Gelato Artigianale"
+                            data-title="Gelato Artigianale" data-desc="Helado artesanal en sabores clásicos italianos.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Gelato Artigianale</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 20 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/zabaglione.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Zabaglione" data-title="Zabaglione"
+                            data-desc="Crema batida con yema, azúcar y vino Marsala.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Zabaglione</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 21 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/baba_al_rum.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Baba al Rum" data-title="Baba al Rum"
+                            data-desc="Bizcocho empapado en ron con crema pastelera.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Baba al Rum</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 22 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/acqua_frizzante.png"
+                            class="card-img-top gallery-open gallery-1024" alt="Acqua Frizzante"
+                            data-title="Acqua Frizzante" data-desc="Agua con gas.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Acqua Frizzante</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 23 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/chinotto.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Chinotto" data-title="Chinotto" data-desc="Refresco amargo de cítrico chinotto.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Chinotto</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 24 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/cappuccino.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Cappuccino" data-title="Cappuccino" data-desc="Espresso con espuma de leche.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Cappuccino</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 25 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/espresso.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Espresso" data-title="Espresso" data-desc="Café corto y concentrado.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Espresso</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 26 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/caffe_latte.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Caffè Latte" data-title="Caffè Latte"
+                            data-desc="Espresso con abundante leche caliente.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Caffè Latte</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 27 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/marocchino.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Marocchino" data-title="Marocchino" data-desc="Espresso con cacao y espuma de leche.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Marocchino</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 28 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/prosecco.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Prosecco" data-title="Prosecco" data-desc="Vino espumoso seco de Veneto.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Prosecco</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 29 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/chianti.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Chianti" data-title="Chianti" data-desc="Vino tinto de la Toscana.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Chianti</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 30 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/barolo.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Barolo" data-title="Barolo" data-desc="Vino tinto robusto del Piamonte.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Barolo</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 31 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/negroni.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Negroni" data-title="Negroni" data-desc="Ginebra, Campari y vermut rojo.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Negroni</h6>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 32 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card h-100 shadow-sm">
+                        <img src="/assets/images/menu/bellini.png" class="card-img-top gallery-open gallery-1024"
+                            alt="Bellini" data-title="Bellini"
+                            data-desc="Prosecco con puré de durazno, originario de Venecia.">
+                        <div class="card-body">
+                            <h6 class="card-title m-0">Bellini</h6>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal reutilizable -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row g-3 align-items-start">
+                        <div class="col-12 col-md-6">
+                            <img id="gmImg" src="" alt="" class="img-fluid rounded">
+                        </div>
+                        <div class="col-12 col-md-6 h-100">
+                            <h4 id="gmTitle" class="mb-2"></h4>
+                            <p id="gmDesc" class="mb-0 text-muted"></p>
+                            <div class="w-100 d-flex justify-content-center align-items-end py-3">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--  -->
+
+
+    <section class="shape-section py-5">
+        <div class="shape"></div>
+    </section>
+
+
+
+    <section class="gallery-responsive py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Galería</h1>
+
+            <!-- ===== MOBILE: Carousel Bootstrap ===== -->
+            <div id="galleryMobile" class="carousel slide gallery-mobile" data-bs-ride="carousel" data-bs-wrap="true">
+                <div class="carousel-inner">
+
+                    <!-- Item 1 -->
+                    <div class="carousel-item active">
+                        <figure class="card-photo m-0">
+                            <img src="/assets/images/menu/bruschetta_tradicional.png" class="d-block w-100"
+                                alt="Bruschetta al Pomodoro">
+                            <figcaption>Bruschetta al Pomodoro</figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="carousel-item">
+                        <figure class="card-photo m-0">
+                            <img src="/assets/images/menu/carpaccio_res.png" class="d-block w-100"
+                                alt="Carpaccio di Manzo">
+                            <figcaption>Carpaccio di Manzo</figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="carousel-item">
+                        <figure class="card-photo m-0">
+                            <img src="/assets/images/menu/ensalada_caprese.png" class="d-block w-100"
+                                alt="Insalata Caprese">
+                            <figcaption>Insalata Caprese</figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- Agrega más items según necesites -->
+                </div>
+
+                <!-- Controles SOLO móvil -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryMobile" data-bs-slide="prev"
+                    aria-label="Anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryMobile" data-bs-slide="next"
+                    aria-label="Siguiente">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
+
+
+        </div>
+        <!-- ===== DESKTOP: Tira infinita sin controles, con fade laterales ===== -->
+        <div class="gallery-desktop position-relative">
+            <!-- overlays de difuminado -->
+            <div class="fade-left" aria-hidden="true"></div>
+            <div class="fade-right" aria-hidden="true"></div>
+
+            <div class="gallery-viewport">
+                <div class="gallery-track" id="galleryTrack">
+                    <!-- SET A -->
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/bruschetta_tradicional.png" alt="Bruschetta al Pomodoro">
+                        <figcaption>Bruschetta al Pomodoro</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/carpaccio_res.png" alt="Carpaccio di Manzo">
+                        <figcaption>Carpaccio di Manzo</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/ensalada_caprese.png" alt="Insalata Caprese">
+                        <figcaption>Insalata Caprese</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/lasagna_bolognese.png" alt="Lasagna alla Bolognese">
+                        <figcaption>Lasagna alla Bolognese</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/risotto_alla_milanese.png" alt="Risotto alla Milanese">
+                        <figcaption>Risotto alla Milanese</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/fettuccine_alfredo.png" alt="Fettuccine Alfredo">
+                        <figcaption>Fettuccine Alfredo</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/tiramisu.png" alt="Tiramisú">
+                        <figcaption>Tiramisú</figcaption>
+                    </figure>
+
+                    <!-- SET B (duplicado para loop) -->
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/bruschetta_tradicional.png" alt="Bruschetta al Pomodoro">
+                        <figcaption>Bruschetta al Pomodoro</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/carpaccio_res.png" alt="Carpaccio di Manzo">
+                        <figcaption>Carpaccio di Manzo</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/ensalada_caprese.png" alt="Insalata Caprese">
+                        <figcaption>Insalata Caprese</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/lasagna_bolognese.png" alt="Lasagna alla Bolognese">
+                        <figcaption>Lasagna alla Bolognese</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/risotto_alla_milanese.png" alt="Risotto alla Milanese">
+                        <figcaption>Risotto alla Milanese</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/fettuccine_alfredo.png" alt="Fettuccine Alfredo">
+                        <figcaption>Fettuccine Alfredo</figcaption>
+                    </figure>
+                    <figure class="card-photo">
+                        <img src="/assets/images/menu/tiramisu.png" alt="Tiramisú">
+                        <figcaption>Tiramisú</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer-dark w-100 d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+
+            <div class="row g-5 footer-row-1">
+                <div class="col-lg-4">
+                    <h2 class="city-code">AL</h2>
+                    <address>
+                        <div>Alajuela</div>
+                        <div>Boulevard Versailles, Local 17</div>
+                        <div>Av. 16, C. 11,</div>
+                        <div>Alajuela, 20101</div>
+                    </address>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="city-code">ES</h2>
+                    <address>
+                        <div>Escazú</div>
+                        <div>TerraLux, Local 51</div>
+                        <div>Av. 2, C. 134,</div>
+                        <div>Escazu, 10201</div>
+                    </address>
+                </div>
+
+                <div class="col-lg-4">
+                    <h2 class="city-code">LR</h2>
+                    <address>
+                        <div>La Rivera</div>
+                        <div>Plaza Bosque Alto, Local 15</div>
+                        <div>Rns. 129, C. El Avión</div>
+                        <div>Heredia, 40702</div>
+                    </address>
+                </div>
+            </div>
+
+            <div class="row g-5 footer-row-2 mt-4">
+                <div class="col-lg-4">
+                    <div class="label mb-1 fs-5 text-white">New Business</div>
+                    <div>
+                        <a class="link" href="#">negocios@saporidioro.com</a><br>
+                        <a class="link" href="#">+506-2251-0016</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="label mb-1 fs-5 text-white">Consultas Generales</div>
+                    <div>
+                        <a class="link" href="#">consultas@saporidioro.com</a><br>
+                        <a class="link" href="#">+506-2251-0021</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="label mb-1 fs-5 text-white">Reclutamiento</div>
+                    <div>
+                        <a class="link" href="#">reclutamiento@saporidioro.com</a><br>
+                        <a class="link" href="#">Ver puestos</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="d-flex align-items-center justify-content-center text-center social-icons p-2">
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex align-items-center justify-content-center text-center p-2">
+                    <a class="link col-lg-6 px-2 text-lg-end" href="#">Privacy </a>,
+                    <a class="link col-lg-6 px-2 text-lg-start" href="#"> Terms</a>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center text-center">
+                <div class="text-lg-center text-center">
+                    <span class="copyright">©2025 Sapori D'Oro</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/506XXXXXXXX" target="_blank" id="whatsappButton" class="whatsapp-button"
+        aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Botón Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+    <script src="/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

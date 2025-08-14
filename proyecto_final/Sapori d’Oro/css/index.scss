@@ -768,3 +768,250 @@ body {
         }
     }
 }
+
+
+
+
+
+
+
+.gallery-responsive {
+    width: 100vw;
+
+    h1 {
+        font-family: $cinzel;
+    }
+
+    /* Tarjeta genérica */
+    .card-photo {
+        position     : relative;
+        aspect-ratio : 4/3;
+        border-radius: 14px;
+        overflow     : hidden;
+        background   : #000;
+
+        img {
+            width           : 100%;
+            height          : 100%;
+            object-fit      : cover;
+            transform-origin: center;
+            transition      : transform .35s ease;
+            /* zoom suave */
+        }
+
+        &:hover img,
+        &:focus-within img {
+            transform: scale(1.1);
+            /* +10% SOLO imagen */
+        }
+
+        figcaption {
+            position      : absolute;
+            left          : 0;
+            right         : 0;
+            bottom        : 0;
+            padding       : .5rem .75rem;
+            background    : linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0));
+            color         : $pure_white;
+            font-weight   : 600;
+            letter-spacing: .02em;
+            font-size     : 1rem;
+            text-shadow   : 0 1px 2px rgba(0, 0, 0, .6);
+        }
+    }
+
+    /* ===== MOBILE: Bootstrap Carousel ===== */
+    .gallery-mobile {
+        display: none;
+    }
+
+    /* por defecto oculto; se muestra en <=360px */
+
+    /* ===== DESKTOP: tira infinita ===== */
+    .gallery-desktop {
+        width   : 100vw;
+        /* todo el ancho de la ventana */
+        overflow: hidden;
+        position: relative;
+
+        .gallery-viewport {
+            overflow: hidden;
+            width   : 100%;
+        }
+
+        .gallery-track {
+            display  : flex;
+            animation: scroll 40s linear infinite;
+            width    : max-content;
+        }
+
+        .card-photo {
+            flex      : 0 0 auto;
+            width     : 512px;
+            /* ancho fijo */
+            text-align: center;
+
+            img {
+                width     : 512px;
+                height    : auto;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+                /* zoom 10% */
+            }
+
+            figcaption {
+                margin-top : 8px;
+                font-weight: 500;
+            }
+        }
+
+        /* Fade laterales */
+        .fade-left,
+        .fade-right {
+            position      : absolute;
+            top           : 0;
+            width         : 80px;
+            height        : 100%;
+            z-index       : 2;
+            pointer-events: none;
+        }
+
+        .fade-left {
+            left      : 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+
+        .fade-right {
+            right     : 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+        }
+    }
+
+    /* Animación */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+
+    .card-photo {
+        flex: 0 0 clamp(220px, 28vw, 320px);
+    }
+
+    /* Fades laterales */
+    .fade-left,
+    .fade-right {
+        position      : absolute;
+        top           : 0;
+        bottom        : 0;
+        width         : 80px;
+        pointer-events: none;
+        z-index       : 2;
+    }
+
+    .fade-left {
+        left      : 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
+    .fade-right {
+        right     : 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
+    /* Si usas fondo oscuro, cambia el color del fade a tu background */
+    /* .fade-left  { background: linear-gradient(to right, $very_dark_grey, rgba(9,9,9,0)); }
+       .fade-right { background: linear-gradient(to left,  $very_dark_grey, rgba(9,9,9,0)); } */
+}
+
+/* ===== BREAKPOINTS ===== */
+@media (max-width: 360px) {
+    .gallery-mobile {
+        display: block;
+    }
+
+    .gallery-desktop {
+        display: none;
+    }
+
+    /* Ajustes de tamaño en móvil */
+    .card-photo {
+        aspect-ratio : 4/3;
+        border-radius: 12px;
+    }
+}
+
+
+.galeria-grid .card {
+    border-radius   : 14px;
+    overflow        : hidden;
+    background-color: $pure_white;
+    text-align      : center;
+}
+
+.galeria-grid .card-img-top {
+    transition: transform .35s ease;
+}
+
+.galeria-grid .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* zoom sutil solo imagen */
+.galeria-grid .card-title {
+    font-weight: 600;
+}
+
+
+
+.modal-body {
+    background-color: $moderate_yellow;
+    color           : $light_grayish_yellow;
+
+    #gmTitle {
+        color     : $light_grayish_yellow;
+        text-align: center;
+        font-size : clamp(1.75rem, 5vw, 2.5rem);
+        ;
+        font-family  : $cinzel;
+        margin-bottom: 40px;
+    }
+
+    #gmDesc {
+        font-weight : 600;
+        margin-left : 20px;
+        margin-right: 10px;
+    }
+
+    .modal-backdrop.show {
+        opacity: 0.8;
+    }
+
+    .modal-footer {
+        background-color: $light_grayish_yellow;
+    }
+
+    .btn-secondary {
+        background-color: $moderate_yellow;
+        color           : $very_dark_grey;
+
+        &:hover {
+            background-color: $dark_red;
+            color           : $light_grayish_yellow;
+        }
+    }
+
+}
+
+.m-logo {
+    position: relative;
+    width   : 256px;
+}

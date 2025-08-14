@@ -288,3 +288,83 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // ===== Desktop: pausa/reanuda con retardo en tira
+    const track = document.getElementById('galleryTrack');
+    const desktopShell = track?.closest('.gallery-desktop');
+
+    const isMobile = () => window.matchMedia('(max-width: 360px)').matches;
+
+    if (track && desktopShell) {
+        let resumeTimer = null;
+        const pause = () => {
+            track.style.animationPlayState = 'paused';
+            if (resumeTimer) clearTimeout(resumeTimer);
+        };
+        const resumeWithDelay = (ms = 1800) => {
+            if (resumeTimer) clearTimeout(resumeTimer);
+            resumeTimer = setTimeout(() => {
+                track.style.animationPlayState = 'running';
+                resumeTimer = null;
+            }, ms);
+        };
+
+        const bindDesktopHandlers = () => {
+            if (isMobile()) return;
+            desktopShell.addEventListener('mouseenter', pause);
+            desktopShell.addEventListener('mouseleave', () => resumeWithDelay(1800));
+            desktopShell.addEventListener('focusin', pause);
+            desktopShell.addEventListener('focusout', () => resumeWithDelay(1800));
+        };
+        bindDesktopHandlers();
+    }
+
+    // ===== Mobile: (opcional) autorun suave
+    const mobileCarousel = document.getElementById('galleryMobile');
+    if (mobileCarousel && isMobile()) {
+        const bsCarousel = new bootstrap.Carousel(mobileCarousel, {
+            interval: 3000,   // cambia cada 3s
+            ride: 'carousel', // auto
+            pause: 'hover',   // pausa en hover/touch
+            wrap: true        // infinito
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modalEl = document.getElementById('galleryModal');
+    if (!modalEl) return;
+    const modal = new bootstrap.Modal(modalEl);
+    const imgEl = document.getElementById('gmImg');
+    const titleEl = document.getElementById('gmTitle');
+    const descEl = document.getElementById('gmDesc');
+
+    document.querySelectorAll('.gallery-open').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+            const src = img.getAttribute('src');
+            const title = img.dataset.title || img.alt || '';
+            const desc = img.dataset.desc || '';
+            imgEl.src = src;
+            imgEl.alt = title;
+            titleEl.textContent = title;
+            descEl.textContent = desc;
+            modal.show();
+        });
+    });
+
+    // Limpia al cerrar
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        imgEl.src = '';
+        imgEl.alt = '';
+        titleEl.textContent = '';
+        descEl.textContent = '';
+    });
+});
+// 

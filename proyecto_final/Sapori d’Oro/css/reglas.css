@@ -17,15 +17,12 @@
 
     .navbar-clip {
         position     : fixed;
-        /* <-- antes relative */
         top          : 0;
         left         : 0;
         right        : 0;
         width        : 100%;
         z-index      : 1045;
-        /* sobre el contenido y el clip */
         min-height   : 100px;
-        /* alto inicial */
         padding-block: 6px 10px;
         transition   : min-height .25s ease;
     }
@@ -34,20 +31,16 @@
         display: none;
     }
 
-    /* Estado scrolleado en móvil */
     .navbar-clip.scrolled {
         padding-top: 30px;
         min-height : 40px;
-        /* antes 120px */
     }
 
-    /* body.nav-scrolled{ padding-top: 80px; } */
 
     .navbar-clip.scrolled .navbar-brand.d-lg-none img {
 
         height    : 60px;
         margin-top: 0;
-        /* antes 120px */
     }
 
     .navbar-brand.d-lg-none {
@@ -94,21 +87,16 @@
     }
 
 
-    /* Offcanvas por encima del navbar fijo */
     .offcanvas-mobile {
         z-index   : 1100;
-        /* > 1045 del navbar */
         background: var(--very-dark-grey);
         color     : var(--pure-white);
     }
 
-    /* Backdrop también por encima del contenido pero debajo del panel */
     .offcanvas-backdrop {
         z-index: 1090;
-        /* un poco menor que el panel */
     }
 
-    /* Header del offcanvas siempre visible y pegado arriba */
     .offcanvas-mobile .offcanvas-header {
         position     : sticky;
         top          : 0;
@@ -129,7 +117,6 @@
 
     .offcanvas-mobile .offcanvas-header .btn-close {
         filter : invert(1);
-        /* asegura ícono claro si no usas .btn-close-white */
         opacity: .9;
     }
 
@@ -137,19 +124,15 @@
         opacity: 1;
     }
 
-    /* Logo y botón de cierre visibles */
     .offcanvas-mobile .offcanvas-header .navbar-brand img {
         height : 60px !important;
-        /* tu tamaño fijo en móvil */
         display: block;
     }
 
     .offcanvas-mobile.scrolled .offcanvas-header .navbar-brand img {
         height: 60px !important;
-        /* logo dentro del offcanvas */
     }
 
-    /* Lista móvil sin viñetas y centrada */
     .offcanvas-mobile .menu-list {
         list-style  : none;
         padding-left: 0;
@@ -169,14 +152,12 @@
         text-decoration: none;
     }
 
-    /* Submenú: cerrado por defecto / abierto con .open (JS ya lo gestiona) */
     .offcanvas-mobile .menu-list .dropdown .dropdown-menu {
         display     : none;
         list-style  : none;
         padding-left: 0;
         margin      : .25rem 0 0;
         background  : transparent;
-        /* en móvil el panel ya es oscuro */
         border      : 0;
     }
 
@@ -184,11 +165,9 @@
         display: block;
     }
 
-    /* Icono +/− a la derecha del trigger */
     .offcanvas-mobile .menu-list .submenu-toggle {
         position     : relative;
         padding-right: 2rem;
-        /* espacio para el icono a la derecha */
     }
 
     .offcanvas-mobile .menu-list .submenu-toggle .toggle-icon {
@@ -197,7 +176,6 @@
         font-size: 1.2em;
     }
 
-    /* Ajustes de navegación ya existentes */
     .navbar-clip .navbar-collapse .navbar-nav {
         gap        : 12px;
         align-items: center;
@@ -277,9 +255,6 @@
         margin-top: 60px;
     }
 
-    /* .flex-lg-row-reverse {
-        flex-direction: row !important;
-    } */
 
     .award-card {
         padding-top: 2.5rem;
@@ -304,16 +279,23 @@
         margin-left: 0;
     }
 
-    /* Forzar que el contenido de los ítems de menú se alinee arriba en móvil */
     .restaurant-menu .list-group-item {
         align-items: flex-start !important;
     }
 
-    /* Asegurar que la imagen no se estire */
     .restaurant-menu .list-group-item .thumb {
         align-self: flex-start;
     }
+
+
+
+
+
+
+
+    
 }
+
 
 
 
@@ -326,11 +308,9 @@
 @media (min-width: 992px) {
     .navbar-clip {
         position  : fixed;
-        /* siempre fijo arriba */
         top       : 0;
         width     : 100%;
         transition: all 0.3s ease;
-        /* suaviza cambio de altura */
     }
 
     .navbar-clip .brand-center img {
@@ -353,12 +333,10 @@
         bottom    : -20px;
     }
 
-    /* Submenú en hover: color del texto de Acerca */
     .navbar-nav .dropdown:hover>.nav-link {
         color: var(--pure-white);
     }
 
-    /* Fondo del submenú */
     .navbar-nav .dropdown:hover>.dropdown-menu {
         display         : block;
         margin-top      : -10px;
@@ -369,7 +347,6 @@
         z-index         : -1;
     }
 
-    /* Color de texto y hover en items del submenú */
     .navbar-nav .dropdown-menu .dropdown-item {
         color  : var(--pure-white);
         padding: 0.5rem 1rem;
@@ -377,7 +354,6 @@
 
     .navbar-nav .dropdown-menu .dropdown-item:hover {
         background-color: var(--pure-white);
-        /* un sutil hover */
     }
 
     .award-card {
@@ -402,7 +378,7 @@
         width           : 60vw;
         height          : 20px !important;
         background-color: var(--moderate_yellow);
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
+        clip-path       : polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
     }
 
     .ok-py-5 {
@@ -417,4 +393,6 @@
     .price-bottom {
         display: none;
     }
+
+
 }
