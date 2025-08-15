@@ -299,9 +299,9 @@
     }
 
     .frase-text {
-        max-width: 100vw;
-        padding  : 30px 15px 5px;
-        font-size: clamp(1rem, 6vw, 1.5rem);
+        max-width     : 100vw;
+        padding       : 30px 15px 5px;
+        font-size     : clamp(1rem, 6vw, 1.5rem);
         padding-bottom: 30px;
     }
 
@@ -456,9 +456,9 @@
     }
 
     .frase-text {
-        font-size: clamp(1rem, 5vw, 2rem);
-        max-width: 60vw;
-        padding  : 60px 20px 10px;
+        font-size : clamp(1rem, 5vw, 2rem);
+        max-width : 60vw;
+        padding   : 60px 20px 10px;
         /* menos padding abajo para acercar el autor */
         text-align: left;
     }
@@ -466,9 +466,10 @@
     .frase-author {
         display  : block;
         font-size: clamp(0.85rem, 5vw, 1.5rem);
-        max-width: 50vw;
+        max-width: 60vw;
         padding  : 10px 20px 0;
     }
+
 
 }
 

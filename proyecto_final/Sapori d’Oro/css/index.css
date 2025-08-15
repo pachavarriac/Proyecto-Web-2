@@ -881,4 +881,10 @@ body {
   font-family: var(--homemade_apple);
   font-weight: 400;
   font-style: normal;
+}
+
+.gm-img {
+  width: 800px !important;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=index.css.map */

@@ -855,14 +855,14 @@ body {
             display  : flex;
             animation: scroll 40s linear infinite;
             width    : max-content;
-            gap: 10px;
+            gap      : 10px;
         }
 
         .card-photo {
-            flex      : 0 0 auto;
+            flex         : 0 0 auto;
             // width     : 600px;
             /* ancho fijo */
-            text-align: center;
+            text-align   : center;
 
             img {
                 width     : 512px;
@@ -1055,9 +1055,9 @@ body {
 }
 
 .frase-container {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    text-align: center;
+    text-align     : center;
 }
 
 
@@ -1065,8 +1065,12 @@ body {
 .homemade-apple {
     font-family: var(--homemade_apple);
     font-weight: 400;
-    font-style: normal;
+    font-style : normal;
 }
 
 
-
+.gm-img {
+    width    : 800px !important;
+    max-width: 100%;
+    height   : auto;
+}
