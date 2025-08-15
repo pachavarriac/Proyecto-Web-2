@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/reglas.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Sapori d’Oro</title>
 </head>
 
-<body class="color-bg">
+<body>
     <header class="site-header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black navbar-clip">
             <div class="container">
@@ -42,8 +43,9 @@
                         <li class="dropdown nav-item" tabindex="0">
                             <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Historia</a></li>
-                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Equipo</a></li>
+                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Nuestra Historia</a>
+                                </li>
+                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
@@ -65,8 +67,8 @@
                             <ul class="menu-list">
                                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                                <li class="nav-item"><a class="nav-link active"
-                                        href="reservaciones.html">Reservaciones</a></li>
+                                <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
+                                </li>
                                 <li class="nav-item"><a class="nav-link active" href="#">Galería</a></li>
                                 <li class="dropdown nav-item" tabindex="0">
                                     <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
@@ -74,9 +76,10 @@
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
-                                                href="historia.html">Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Equipo</a>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="historia.html">Nuestra
+                                                Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Nuestro
+                                                Equipo</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -102,9 +105,9 @@
 
 
 
-    <section class="galeria-grid py-5">
+    <section class="galeria-grid imgModal-head py-5">
         <div class="container">
-            <h1 class="text-center mb-4">Galería del Menú</h1>
+            <h3 class="text-center mb-4 cinzel py-lg-5">Galería del Menú</h3>
 
             <div class="row g-4">
 
@@ -112,8 +115,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/bruschetta_tradicional.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Bruschetta al Pomodoro"
-                            data-title="Bruschetta al Pomodoro"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Bruschetta al Pomodoro" data-title="Bruschetta al Pomodoro"
                             data-desc="Pan rústico con tomate, ajo, aceite de oliva y albahaca.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Bruschetta al Pomodoro</h6>
@@ -124,7 +127,8 @@
                 <!-- 2 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/carpaccio_res.png" class="card-img-top gallery-open gallery-1024"
+                        <img src="/assets/images/menu/carpaccio_res.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
                             alt="Carpaccio di Manzo" data-title="Carpaccio di Manzo"
                             data-desc="Láminas de lomo, rúcula y parmesano.">
                         <div class="card-body">
@@ -137,8 +141,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/ensalada_caprese.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Insalata Caprese"
-                            data-title="Insalata Caprese"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Insalata Caprese" data-title="Insalata Caprese"
                             data-desc="Mozzarella fresca, tomate y albahaca con aceite de oliva.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Insalata Caprese</h6>
@@ -150,8 +154,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/ensalada_caprese_salmon.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Insalata Caprese con Salmone"
-                            data-title="Insalata Caprese con Salmone"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Insalata Caprese con Salmone" data-title="Insalata Caprese con Salmone"
                             data-desc="Mozzarella fresca, tomate, salmón y albahaca con aceite de oliva.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Insalata Caprese con Salmone</h6>
@@ -163,8 +167,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/lasagna_bolognese.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Lasagna alla Bolognese"
-                            data-title="Lasagna alla Bolognese" data-desc="Capas de pasta, ragù, bechamel y queso.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Lasagna alla Bolognese" data-title="Lasagna alla Bolognese"
+                            data-desc="Capas de pasta, ragù, bechamel y queso.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Lasagna alla Bolognese</h6>
                         </div>
@@ -175,8 +180,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/risotto_alla_milanese.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Risotto alla Milanese"
-                            data-title="Risotto alla Milanese" data-desc="Arroz cremoso con azafrán.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Risotto alla Milanese" data-title="Risotto alla Milanese"
+                            data-desc="Arroz cremoso con azafrán.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Risotto alla Milanese</h6>
                         </div>
@@ -187,8 +193,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/risotto_ai_frutti_di_mare.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Risotto ai Frutti di Mare"
-                            data-title="Risotto ai Frutti di Mare" data-desc="Arroz cremoso con mariscos.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Risotto ai Frutti di Mare" data-title="Risotto ai Frutti di Mare"
+                            data-desc="Arroz cremoso con mariscos.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Risotto ai Frutti di Mare</h6>
                         </div>
@@ -199,8 +206,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/pasta_alla_norma.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Pasta alla Norma"
-                            data-title="Pasta alla Norma" data-desc="Berenjena, ricotta salada y salsa de tomate.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Pasta alla Norma" data-title="Pasta alla Norma"
+                            data-desc="Berenjena, ricotta salada y salsa de tomate.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Pasta alla Norma</h6>
                         </div>
@@ -211,8 +219,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/pasta_alla_nerano.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Pasta alla Nerano"
-                            data-title="Pasta alla Nerano"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Pasta alla Nerano" data-title="Pasta alla Nerano"
                             data-desc="Calabacines fritos, mantequilla, albahaca y Provolone del Monaco.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Pasta alla Nerano</h6>
@@ -224,8 +232,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/tagliatelle_al_ragu_bolognese.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Tagliatelle al Ragù Bolognese"
-                            data-title="Tagliatelle al Ragù Bolognese"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Tagliatelle al Ragù Bolognese" data-title="Tagliatelle al Ragù Bolognese"
                             data-desc="Pasta fresca con salsa de carne a fuego lento.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Tagliatelle al Ragù Bolognese</h6>
@@ -237,8 +245,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/penne_alla_arrabbiata.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Penne all’Arrabbiata"
-                            data-title="Penne all’Arrabbiata" data-desc="Pasta corta en salsa de tomate picante.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Penne all’Arrabbiata" data-title="Penne all’Arrabbiata"
+                            data-desc="Pasta corta en salsa de tomate picante.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Penne all’Arrabbiata</h6>
                         </div>
@@ -249,8 +258,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/fettuccine_alfredo.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Fettuccine Alfredo"
-                            data-title="Fettuccine Alfredo" data-desc="Pasta con crema, mantequilla y parmesano.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Fettuccine Alfredo" data-title="Fettuccine Alfredo"
+                            data-desc="Pasta con crema, mantequilla y parmesano.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Fettuccine Alfredo</h6>
                         </div>
@@ -261,8 +271,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/gnocchi_al_pesto_genovese.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Gnocchi al Pesto Genovese"
-                            data-title="Gnocchi al Pesto Genovese" data-desc="Ñoquis con salsa de albahaca y piñones.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Gnocchi al Pesto Genovese" data-title="Gnocchi al Pesto Genovese"
+                            data-desc="Ñoquis con salsa de albahaca y piñones.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Gnocchi al Pesto Genovese</h6>
                         </div>
@@ -273,8 +284,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/ravioli_di_ricotta_e_spinaci.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Ravioli di Ricotta e Spinaci"
-                            data-title="Ravioli di Ricotta e Spinaci"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Ravioli di Ricotta e Spinaci" data-title="Ravioli di Ricotta e Spinaci"
                             data-desc="Relleno de ricotta y espinaca en mantequilla y salvia.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Ravioli di Ricotta e Spinaci</h6>
@@ -285,8 +296,9 @@
                 <!-- 15 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/tiramisu.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Tiramisú" data-title="Tiramisú" data-desc="Mascarpone, espresso y cacao.">
+                        <img src="/assets/images/menu/tiramisu.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Tiramisú"
+                            data-title="Tiramisú" data-desc="Mascarpone, espresso y cacao.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Tiramisú</h6>
                         </div>
@@ -296,8 +308,9 @@
                 <!-- 16 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/panna_cotta.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Panna Cotta" data-title="Panna Cotta" data-desc="Vainilla con coulis de frutos rojos.">
+                        <img src="/assets/images/menu/panna_cotta.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Panna Cotta"
+                            data-title="Panna Cotta" data-desc="Vainilla con coulis de frutos rojos.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Panna Cotta</h6>
                         </div>
@@ -308,8 +321,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/cannoli_siciliani.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Cannoli Siciliani"
-                            data-title="Cannoli Siciliani" data-desc="Ricotta dulce, cereza y naranja confitada.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Cannoli Siciliani" data-title="Cannoli Siciliani"
+                            data-desc="Ricotta dulce, cereza y naranja confitada.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Cannoli Siciliani</h6>
                         </div>
@@ -320,8 +334,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/cassata_siciliana.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Cassata Siciliana"
-                            data-title="Cassata Siciliana" data-desc="Ricotta, frutas confitadas y bizcocho.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Cassata Siciliana" data-title="Cassata Siciliana"
+                            data-desc="Ricotta, frutas confitadas y bizcocho.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Cassata Siciliana</h6>
                         </div>
@@ -332,8 +347,9 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/gelato_artigianale.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Gelato Artigianale"
-                            data-title="Gelato Artigianale" data-desc="Helado artesanal en sabores clásicos italianos.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Gelato Artigianale" data-title="Gelato Artigianale"
+                            data-desc="Helado artesanal en sabores clásicos italianos.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Gelato Artigianale</h6>
                         </div>
@@ -343,9 +359,9 @@
                 <!-- 20 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/zabaglione.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Zabaglione" data-title="Zabaglione"
-                            data-desc="Crema batida con yema, azúcar y vino Marsala.">
+                        <img src="/assets/images/menu/zabaglione.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Zabaglione"
+                            data-title="Zabaglione" data-desc="Crema batida con yema, azúcar y vino Marsala.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Zabaglione</h6>
                         </div>
@@ -355,9 +371,9 @@
                 <!-- 21 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/baba_al_rum.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Baba al Rum" data-title="Baba al Rum"
-                            data-desc="Bizcocho empapado en ron con crema pastelera.">
+                        <img src="/assets/images/menu/baba_al_rum.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Baba al Rum"
+                            data-title="Baba al Rum" data-desc="Bizcocho empapado en ron con crema pastelera.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Baba al Rum</h6>
                         </div>
@@ -368,8 +384,8 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
                         <img src="/assets/images/menu/acqua_frizzante.png"
-                            class="card-img-top gallery-open gallery-1024" alt="Acqua Frizzante"
-                            data-title="Acqua Frizzante" data-desc="Agua con gas.">
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn"
+                            alt="Acqua Frizzante" data-title="Acqua Frizzante" data-desc="Agua con gas.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Acqua Frizzante</h6>
                         </div>
@@ -379,8 +395,9 @@
                 <!-- 23 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/chinotto.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Chinotto" data-title="Chinotto" data-desc="Refresco amargo de cítrico chinotto.">
+                        <img src="/assets/images/menu/chinotto.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Chinotto"
+                            data-title="Chinotto" data-desc="Refresco amargo de cítrico chinotto.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Chinotto</h6>
                         </div>
@@ -390,8 +407,9 @@
                 <!-- 24 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/cappuccino.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Cappuccino" data-title="Cappuccino" data-desc="Espresso con espuma de leche.">
+                        <img src="/assets/images/menu/cappuccino.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Cappuccino"
+                            data-title="Cappuccino" data-desc="Espresso con espuma de leche.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Cappuccino</h6>
                         </div>
@@ -401,8 +419,9 @@
                 <!-- 25 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/espresso.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Espresso" data-title="Espresso" data-desc="Café corto y concentrado.">
+                        <img src="/assets/images/menu/espresso.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Espresso"
+                            data-title="Espresso" data-desc="Café corto y concentrado.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Espresso</h6>
                         </div>
@@ -412,9 +431,9 @@
                 <!-- 26 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/caffe_latte.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Caffè Latte" data-title="Caffè Latte"
-                            data-desc="Espresso con abundante leche caliente.">
+                        <img src="/assets/images/menu/caffe_latte.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Caffè Latte"
+                            data-title="Caffè Latte" data-desc="Espresso con abundante leche caliente.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Caffè Latte</h6>
                         </div>
@@ -424,8 +443,9 @@
                 <!-- 27 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/marocchino.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Marocchino" data-title="Marocchino" data-desc="Espresso con cacao y espuma de leche.">
+                        <img src="/assets/images/menu/marocchino.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Marocchino"
+                            data-title="Marocchino" data-desc="Espresso con cacao y espuma de leche.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Marocchino</h6>
                         </div>
@@ -435,8 +455,9 @@
                 <!-- 28 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/prosecco.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Prosecco" data-title="Prosecco" data-desc="Vino espumoso seco de Veneto.">
+                        <img src="/assets/images/menu/prosecco.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Prosecco"
+                            data-title="Prosecco" data-desc="Vino espumoso seco de Veneto.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Prosecco</h6>
                         </div>
@@ -446,8 +467,9 @@
                 <!-- 29 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/chianti.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Chianti" data-title="Chianti" data-desc="Vino tinto de la Toscana.">
+                        <img src="/assets/images/menu/chianti.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Chianti"
+                            data-title="Chianti" data-desc="Vino tinto de la Toscana.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Chianti</h6>
                         </div>
@@ -457,8 +479,9 @@
                 <!-- 30 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/barolo.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Barolo" data-title="Barolo" data-desc="Vino tinto robusto del Piamonte.">
+                        <img src="/assets/images/menu/barolo.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Barolo"
+                            data-title="Barolo" data-desc="Vino tinto robusto del Piamonte.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Barolo</h6>
                         </div>
@@ -468,8 +491,9 @@
                 <!-- 31 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/negroni.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Negroni" data-title="Negroni" data-desc="Ginebra, Campari y vermut rojo.">
+                        <img src="/assets/images/menu/negroni.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Negroni"
+                            data-title="Negroni" data-desc="Ginebra, Campari y vermut rojo.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Negroni</h6>
                         </div>
@@ -479,9 +503,9 @@
                 <!-- 32 -->
                 <div class="col-12 col-sm-6 col-lg-3">
                     <article class="card h-100 shadow-sm">
-                        <img src="/assets/images/menu/bellini.png" class="card-img-top gallery-open gallery-1024"
-                            alt="Bellini" data-title="Bellini"
-                            data-desc="Prosecco con puré de durazno, originario de Venecia.">
+                        <img src="/assets/images/menu/bellini.png"
+                            class="card-img-top imgModal-open wow animate__animated animate__fadeIn" alt="Bellini"
+                            data-title="Bellini" data-desc="Prosecco con puré de durazno, originario de Venecia.">
                         <div class="card-body">
                             <h6 class="card-title m-0">Bellini</h6>
                         </div>
@@ -493,30 +517,26 @@
     </section>
 
     <!-- Modal reutilizable -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row g-3 align-items-start">
-                        <div class="col-12 col-md-6">
-                            <img id="gmImg" src="" alt="" class="img-fluid rounded">
-                        </div>
-                        <div class="col-12 col-md-6 h-100">
-                            <h4 id="gmTitle" class="mb-2"></h4>
-                            <p id="gmDesc" class="mb-0 text-muted"></p>
-                            <div class="w-100 d-flex justify-content-center align-items-end py-3">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0 shadow-none position-relative">
+
+                <div class="modal-body p-0 bg-transparent">
+                    <img id="mImg" src="" alt="" class="imgModal-img d-block mx-auto rounded-4 shadow bg-transparent">
                 </div>
-
-
-
             </div>
         </div>
+        <!-- X de cerrar -->
+        <button id="x-button" type="button" class="position-absolute top-0 end-0 z-index-x-button x-button"
+            data-bs-dismiss="modal" aria-label="Cerrar">
+            <i class="bi bi-x-octagon-fill x-button-bi"></i>
+        </button>
     </div>
-    </div>
+
+
+
+
+
     <!--  -->
 
 
@@ -528,7 +548,7 @@
 
     <section class="gallery-responsive py-5">
         <div class="container">
-            <h1 class="text-center mb-4">Galería</h1>
+            <h3 class="text-center mb-4 cinzel py-lg-5">Galería Infinita</h3>
 
             <!-- ===== MOBILE: Carousel Bootstrap ===== -->
             <div id="galleryMobile" class="carousel slide gallery-mobile" data-bs-ride="carousel" data-bs-wrap="true">
@@ -753,6 +773,10 @@
 
     <script src="/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW({ live: true }).init();
+    </script>
 
 
 </body>

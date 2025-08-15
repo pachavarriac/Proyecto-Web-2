@@ -1,19 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 
 :root {
     --montserrat          : "Montserrat", sans-serif;
     --cinzel              : "Cinzel", serif;
+    --homemade_apple      : "Homemade Apple", cursive;
     --moderate_yellow     : #D2AE35;
     --medium_light_grey   : #a9a9a9;
     --very-dark-grey      : #090909;
     --pure-white          : #fff;
     --light_grayish_yellow: #f1eee2;
+    --old-paper           : #ede6cd;
 }
 
-@media screen and (min-width: 200px) {
+@media screen and (min-width: 200px) and (max-width: 991px) {
 
     .navbar-clip {
         position     : fixed;
@@ -291,9 +293,24 @@
 
 
 
+    /* Fondo transparente del contenedor para que solo se vea la imagen */
+    #imgModal {
+        display: none;
+    }
 
+    .frase-text {
+        max-width: 100vw;
+        padding  : 30px 15px 5px;
+        font-size: clamp(1rem, 6vw, 1.5rem);
+        padding-bottom: 30px;
+    }
 
-    
+    .frase-author {
+        max-width: 100vw;
+        padding  : 5px 15px 20px;
+        font-size: clamp(0.7rem, 4vw, 1rem);
+    }
+
 }
 
 
@@ -311,6 +328,7 @@
         top       : 0;
         width     : 100%;
         transition: all 0.3s ease;
+
     }
 
     .navbar-clip .brand-center img {
@@ -345,6 +363,18 @@
         background-color: var(--very-dark-grey);
         min-width       : 120px;
         z-index         : -1;
+    }
+
+    .navbar-nav .dropdown-menu {
+        padding-bottom: 20px !important;
+        left          : 30% !important;
+        transform     : translateX(-30%) !important;
+        min-width     : 200px;
+        white-space   : nowrap;
+    }
+
+    .navbar-nav .dropdown-menu .dropdown-item {
+        white-space: nowrap;
     }
 
     .navbar-nav .dropdown-menu .dropdown-item {
@@ -395,9 +425,54 @@
     }
 
 
+    /* Imagen del modal: solo la foto, altura fija */
+    .imgModal-img {
+        height : 800px;
+        /* lo solicitado */
+        width  : auto;
+        display: block;
+    }
+
+    /* Fondo transparente del contenedor para que solo se vea la imagen */
+    #imgModal .modal-content {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .x-button {
+        margin: 2rem;
+    }
+
+    .x-button,
+    .x-button:focus,
+    .x-button:focus-visible,
+    .x-button:active {
+        outline   : none !important;
+        box-shadow: none !important;
+        border    : none !important;
+        background: none !important;
+        color     : white;
+        font-size : 2rem;
+    }
+
+    .frase-text {
+        font-size: clamp(1rem, 5vw, 2rem);
+        max-width: 60vw;
+        padding  : 60px 20px 10px;
+        /* menos padding abajo para acercar el autor */
+        text-align: left;
+    }
+
+    .frase-author {
+        display  : block;
+        font-size: clamp(0.85rem, 5vw, 1.5rem);
+        max-width: 50vw;
+        padding  : 10px 20px 0;
+    }
+
 }
 
 .cinzel {
     font-family: var(--cinzel);
-    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-size  : clamp(1.5rem, 7vw, 3rem);
 }

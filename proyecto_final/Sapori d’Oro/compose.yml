@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: pablodroopy/flyover-nginx
+    image: pablodroopy/cloudflared-nginx
     ports:
       - "8080:80"
     volumes:

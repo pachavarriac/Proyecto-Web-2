@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -21,12 +22,19 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font-size: clamp(0.85rem, 5vw, 1.5rem);
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
 html {
   font-size: 18px;
 }
 
 body {
-  background: #ffffff;
+  background: #f1eee2;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -539,7 +547,7 @@ body {
 }
 .back-to-top:hover {
   transform: translateY(-3px);
-  background-color: rgb(173.3765182186, 142.4777327935, 38.6234817814);
+  background-color: rgb(181.7182186235, 149.3327935223, 40.4817813765);
 }
 .back-to-top.show {
   opacity: 1;
@@ -706,10 +714,10 @@ body {
   animation: scroll 40s linear infinite;
   width: -moz-max-content;
   width: max-content;
+  gap: 10px;
 }
 .gallery-responsive .gallery-desktop .card-photo {
   flex: 0 0 auto;
-  width: 512px;
   /* ancho fijo */
   text-align: center;
 }
@@ -854,7 +862,23 @@ body {
   transform: translateY(-2px);
 }
 .contact-form-section button.btn:disabled {
-  background-color: rgb(228.5829959514, 207.4493927126, 136.4170040486);
+  background-color: rgb(233.2287449393, 215.8117408907, 157.2712550607);
   color: rgb(72.75, 72.75, 72.75);
   cursor: not-allowed;
+}
+
+.z-index-x-button {
+  z-index: 5;
+}
+
+.frase-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.homemade-apple {
+  font-family: var(--homemade_apple);
+  font-weight: 400;
+  font-style: normal;
 }/*# sourceMappingURL=index.css.map */

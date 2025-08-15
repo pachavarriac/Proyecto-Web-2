@@ -1,5 +1,7 @@
+@use "sass:color";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 $dark_red             : #7F001E;
 $moderate_yellow      : #D2AE35;
@@ -7,11 +9,14 @@ $light_grayish_yellow : #f1eee2;
 $medium_light_grey    : #a9a9a9;
 $very_dark_grey       : #090909;
 $pure_white           : #ffffff;
+$lime_green           : #25D366;
 $muted_white          : rgba(255, 255, 255, 0.6);
 $montserrat           : "Montserrat",
 sans-serif;
 $cinzel : "Cinzel",
 serif;
+$homemade_apple: "Homemade Apple",
+cursive;
 
 
 * {
@@ -34,12 +39,19 @@ h2 {
     font-weight  : 500;
 }
 
+h3 {
+    font-size    : clamp(0.85rem, 5vw, 1.5rem);
+    margin-bottom: 1rem;
+    font-family  : $montserrat;
+    font-weight  : 500;
+}
+
 html {
     font-size: 18px;
 }
 
 body {
-    background : $pure_white;
+    background : $light_grayish_yellow;
     font-family: $montserrat;
 }
 
@@ -654,7 +666,7 @@ body {
 
     &:hover {
         transform       : translateY(-3px);
-        background-color: darken($moderate_yellow, 10%);
+        background-color: color.adjust($moderate_yellow, $lightness: -8%);
     }
 
     &.show {
@@ -685,7 +697,7 @@ body {
 
     &:hover {
         transform       : translateY(-3px);
-        background-color: darken(#25D366, 5%);
+        background-color: color.adjust($lime_green, $lightness: -5%);
     }
 
     &.show {
@@ -843,11 +855,12 @@ body {
             display  : flex;
             animation: scroll 40s linear infinite;
             width    : max-content;
+            gap: 10px;
         }
 
         .card-photo {
             flex      : 0 0 auto;
-            width     : 512px;
+            // width     : 600px;
             /* ancho fijo */
             text-align: center;
 
@@ -1025,14 +1038,35 @@ body {
         transition      : background-color 0.3s ease, transform 0.2s ease;
 
         &:hover {
-            background-color: darken($moderate_yellow, 8%);
+            background-color: color.adjust($moderate_yellow, $lightness: -8%);
             transform       : translateY(-2px);
         }
 
         &:disabled {
-            background-color: lighten($moderate_yellow, 20%);
-            color           : lighten($very_dark_grey, 25%);
+            background-color: color.adjust($moderate_yellow, $lightness: 25%);
+            color           : color.adjust($very_dark_grey, $lightness: 25%);
             cursor          : not-allowed;
         }
     }
 }
+
+.z-index-x-button {
+    z-index: 5;
+}
+
+.frase-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.homemade-apple {
+    font-family: var(--homemade_apple);
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+

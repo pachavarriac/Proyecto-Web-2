@@ -368,3 +368,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // 
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modalEl = document.getElementById('imgModal');
+    if (!modalEl) return;
+
+    const modal = new bootstrap.Modal(modalEl);
+    const imgEl = document.getElementById('mImg');
+
+    // Abre el modal al hacer click en cualquier imagen marcada con .history-open
+    document.querySelector('.imgModal-head')?.addEventListener('click', (e) => {
+        const trigger = e.target.closest('.imgModal-open');
+        if (!trigger) return;
+
+        // Evita abrir modal en pantallas pequeñas
+        if (window.innerWidth <= 768) return;
+
+        imgEl.src = trigger.getAttribute('src') || '';
+        modal.show();
+    });
+
+    // Limpia al cerrar
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        imgEl.src = '';
+    });
+});
+

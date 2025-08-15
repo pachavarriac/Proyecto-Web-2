@@ -30,7 +30,7 @@
                     <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
                         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Reservaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
                     </ul>
 
                     <a class="navbar-brand brand-center" href="index.html" aria-label="Inicio">
@@ -40,13 +40,16 @@
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
                         <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
                         <li class="dropdown nav-item" tabindex="0">
-                            <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
+                            <a class="nav-link submenu-toggle active" href="#" role="button"
+                                aria-expanded="false">Acerca</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Nuestra Historia</a></li>
+                                <li class="nav-item px-1"><a class="nav-link active" href="historia.html">Nuestra
+                                        Historia</a>
+                                </li>
                                 <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
                     </ul>
                 </div>
 
@@ -65,22 +68,25 @@
                             <ul class="menu-list">
                                 <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="#">Reservaciones</a>
+                                <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
                                 <li class="dropdown nav-item" tabindex="0">
-                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
+                                    <a class="nav-link submenu-toggle active" href="#" role="button"
+                                        aria-expanded="false">
                                         Acerca
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
-                                                href="historia.html">Nuestra Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link active"
+                                                href="historia.html">Nuestra
+                                                Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Nuestro
+                                                Equipo</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -93,134 +99,110 @@
     <section class="menu-banner">
         <div class="banner-overlay"></div>
         <div class="banner-content text-center">
-            <h1>Reservaciones</h1>
+            <h1>Nuestra Historia</h1>
 
         </div>
     </section>
 
-    <section class="reservation-intro py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    <p class="lead text-center m-0">
-                        <strong>Reserva tu asiento en el corazón de la auténtica cocina italiana</strong><br>
-                        Disfruta de creaciones cuidadosamente elaboradas para deleitar a los paladares más exigentes
+    <section class="shape-section mt-lg-5">
+        <div class="shape"></div>
+    </section>
+
+
+    <section class="historia imgModal-head py-5">
+        <div class="container py-lg-5">
+            <h3 class="text-center mb-5 cinzel">Una Trayectoria de Sabores</h3>
+
+            <!-- Primer bloque -->
+            <div class="row align-items-center mb-5 mt-lg-5 mt-md-5">
+                <div class="col-lg-5 mb-3 mb-lg-0 mt-lg-5 mt-5">
+                    <img src="/assets/images/sapori_1954.png" alt="Sapori d'Oro - 1958. Montalcino, Tuscany,
+                        Italia" class="img-fluid rounded shadow imgModal-open" data-tittle="Sapori d'Oro"
+                        data-description="Sapori d'Oro - 1958. Montalcino, Tuscany,
+                        Italia">
+                    <small class="text-muted d-block text-center">Sapori d'Oro - 1958. Montalcino, Tuscany,
+                        Italia</small>
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        En el corazón de la Toscana, en un pequeño pueblo rodeado de colinas doradas y viñedos
+                        centenarios, nació en 1954
+                        <strong>Sapori d’Oro</strong>, un acogedor restaurante familiar fundado por Nonna Isabella y su
+                        esposo Marco. Inspirados por las recetas heredadas de generación en generación, su cocina
+                        combinaba ingredientes frescos de la región, aceite de oliva recién prensado y el inconfundible
+                        aroma del pan horneado cada mañana.
+                    </p>
+                    <p>
+                        Con el paso de los años, <strong>Sapori d’Oro</strong> se convirtió en un punto de encuentro
+                        para vecinos, viajeros y amantes de la auténtica gastronomía italiana. Las largas sobremesas, el
+                        tintinear de las copas y la calidez del servicio hicieron de aquel lugar algo más que un
+                        restaurante: un verdadero hogar para quienes lo visitaban.
                     </p>
                 </div>
+            </div>
+
+            <!-- Segundo bloque -->
+            <div class="row align-items-center mb-lg-5 flex-lg-row-reverse">
+                <div class="col-lg-5 mb-3 mb-lg-0">
+                    <img src="/assets/images/sapori_1998.png" alt="Sapori d’Oro 1998"
+                        class="img-fluid rounded shadow imgModal-open">
+                    <small class="text-muted d-block text-center">Sapori d'Oro - 2001. Alajuela, Costa Rica</small>
+                </div>
+                <div class="col-lg-7">
+                    <p>
+                        A finales de los años 90, la segunda generación de la familia, encabezada por Luca y Francesca,
+                        soñaba con llevar la esencia de
+                        <strong>Sapori d’Oro</strong> más allá de Italia. Después de explorar distintos países,
+                        encontraron en Costa Rica un lugar donde la hospitalidad, el amor por la buena mesa y el respeto
+                        por los ingredientes frescos coincidían con su filosofía culinaria.
+                    </p>
+                    <p>
+                        En 2001 abrieron sus puertas en <strong>Alajuela</strong>, llevando consigo no solo recetas,
+                        sino también historias, tradiciones y el compromiso de ofrecer una experiencia genuinamente
+                        italiana. Con el tiempo, se sumaron nuevas sucursales en Escazú y La Rivera, cada una cuidando
+                        hasta el más mínimo detalle para preservar la magia que nació en aquel pequeño pueblo toscano.
+                    </p>
+                </div>
+                <!-- <div class="justify-content-center">
+                    <img src="/assets/images/banner2.png" alt="">
+                </div> -->
+            </div>
+
+            <!-- Cierre -->
+            <div class="row">
+                <div class="col mb-lg-5">
+                    <p>
+                        Hoy, <strong>Sapori d’Oro</strong> sigue siendo fiel a sus raíces: pastas frescas hechas a mano,
+                        salsas preparadas lentamente, vinos seleccionados con esmero y un ambiente que invita a
+                        quedarse. Hemos crecido, sí, pero nunca hemos olvidado de dónde venimos. Cada plato que servimos
+                        es un puente entre Italia y Costa Rica, una invitación a compartir nuestra historia, nuestra
+                        pasión y nuestra mesa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-8 mb-3 mb-lg-0 mx-auto text-center">
+                <img src="/assets/images/banner2.png" alt="Sapori d’Oro 1998"
+                    class="img-fluid rounded shadow imgModal-open">
+                <small class="text-muted d-block">Sapori d'Oro - 2025. Alajuela, Costa Rica</small>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-lg-5">
+        <div class="container frase-container">
+            <div>
+                <p class="mb-0 homemade-apple frase-text">
+                    “Que cada plato que sirvamos lleve consigo el alma de nuestra Italia y el calor de nuestro hogar.”
+                </p>
+                <small class="text-muted frase-author text-end m-5 fw-bold">Isabella Conti Rossi</small>
             </div>
         </div>
     </section>
 
-    <!-- <div class="shape-section">
-        <div class="shape"></div>
-    </div> -->
-
-
-    <section class="reservation-form py-5">
-        <div class="container">
-            <form id="formReserva" class="needs-validation" novalidate>
-                <div class="row g-4"> <!-- más gap vertical/horizontal -->
-
-                    <!-- Nombre -->
-                    <div class="col-md-6">
-                        <label for="resNombre" class="form-label required">
-                            Nombre
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Solo letras y espacios."></i>
-                        </label>
-                        <input type="text" class="form-control" id="resNombre" name="nombre" pattern="^[A-Za-zÀ-ÿ\s]+$"
-                            required placeholder="Ej: Marco Bianchi">
-                        <div class="invalid-feedback">Ingrese un nombre válido (solo letras y espacios).</div>
-                    </div>
-
-                    <!-- Teléfono -->
-                    <div class="col-md-6">
-                        <label for="resTelefono" class="form-label required">
-                            Teléfono
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Solo números, espacios y guiones."></i>
-                        </label>
-                        <input type="tel" class="form-control" id="resTelefono" name="telefono" pattern="^[0-9\s-]+$"
-                            required placeholder="Ej: 8888-8888">
-                        <div class="invalid-feedback">Use solo números, espacios o guiones.</div>
-                    </div>
-
-                    <!-- Correo -->
-                    <div class="col-md-6">
-                        <label for="resCorreo" class="form-label">
-                            Correo electrónico
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Usa un correo válido."></i>
-                        </label>
-                        <input type="email" class="form-control" id="resCorreo" name="correo" required
-                            placeholder="tu@correo.com">
-                        <div class="invalid-feedback">Ingrese un correo válido.</div>
-                    </div>
-
-                    <!-- Sucursal -->
-                    <div class="col-md-6">
-                        <label for="resSucursal" class="form-label required">
-                            Sucursal
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Seleccione la sede de su preferencia."></i>
-                        </label>
-                        <select class="form-select" id="resSucursal" name="sucursal" required>
-                            <option value="" selected disabled>Elegir sucursal...</option>
-                            <option value="Alajuela">Alajuela (AL)</option>
-                            <option value="Escazú">Escazú (ES)</option>
-                            <option value="La Rivera">La Rivera (LR)</option>
-                        </select>
-                        <div class="invalid-feedback">Seleccione una sucursal.</div>
-                    </div>
-
-                    <!-- Fecha -->
-                    <div class="col-md-6">
-                        <label for="resFecha" class="form-label required">
-                            Fecha de reservación
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="No aceptamos fechas pasadas."></i>
-                        </label>
-                        <input type="date" class="form-control" id="resFecha" name="fecha" required>
-                        <div class="invalid-feedback">Seleccione una fecha válida.</div>
-                    </div>
-
-                    <!-- Hora -->
-                    <div class="col-md-6">
-                        <label for="resHora" class="form-label required">
-                            Hora de reservación
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Horario disponible según la sucursal."></i>
-                        </label>
-                        <input type="time" class="form-control" id="resHora" name="hora" required>
-                        <div class="invalid-feedback">Seleccione una hora.</div>
-                    </div>
-
-                    <!-- Personas -->
-                    <div class="col-md-6">
-                        <label for="resPersonas" class="form-label required">
-                            Cantidad de personas
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Entre 1 y 20 personas por reserva."></i>
-                        </label>
-                        <input type="number" class="form-control" id="resPersonas" name="personas" min="1" max="20"
-                            step="1" required placeholder="Ej: 4">
-                        <div class="invalid-feedback">Ingrese una cantidad entre 1 y 20.</div>
-                    </div>
-
-                    <!-- Botón -->
-                    <div class="col-12 mt-5 text-center">
-                        <button type="submit" id="btnReservar" class="btn btn-warning fw-semibold" disabled>Confirmar
-                            reservación</button>
-                    </div>
-
-                    <!-- Leyenda -->
-                    <div class="col-12 mt-2 text-center">
-                        <small class="text-muted">(*) Campos obligatorios</small>
-                    </div>
-
-                </div>
-            </form>
-        </div>
+    <section class="shape-section mb-lg-5">
+        <div class="shape mb-lg-5"></div>
     </section>
 
 
@@ -319,6 +301,26 @@
     <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
         <i class="bi bi-arrow-up"></i>
     </button>
+
+    <!-- Modal reutilizable -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0 shadow-none position-relative">
+
+                <div class="modal-body p-0 bg-transparent">
+                    <img id="mImg" src="" alt="" class="imgModal-img d-block mx-auto rounded-4 shadow bg-transparent">
+                </div>
+            </div>
+        </div>
+        <!-- X de cerrar -->
+        <button type="button" class="position-absolute top-0 end-0 z-index-x-button x-button" data-bs-dismiss="modal"
+            aria-label="Cerrar">
+            <i class="bi bi-x-octagon-fill x-button-bi"></i>
+        </button>
+    </div>
+
+
+
 
 
     <script src="/js/app.js"></script>
