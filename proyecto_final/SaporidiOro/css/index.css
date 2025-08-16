@@ -314,7 +314,6 @@ body {
 .banner-content h1 {
   font-size: clamp(2rem, 5vw, 5rem);
   margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -970,6 +969,9 @@ body {
   .brand-item figcaption {
     font-size: 0.85rem;
   }
+  .restaurant-menu {
+    margin-top: 20px;
+  }
   .carousel-control-prev,
   .carousel-control-next {
     display: none;
@@ -1041,6 +1043,9 @@ body {
     max-width: 95vw;
     font-size: 1rem;
   }
+  .maps-branches .chef-img {
+    max-height: 333px;
+  }
 }
 @media screen and (min-width: 992px) {
   .maps-branches .branch-map {
@@ -1058,6 +1063,11 @@ body {
   .maps-branches .maps-p {
     max-width: 70vw;
   }
+}
+
+.chef-img {
+  height: 550px;
+  width: auto;
 }
 
 .very_dark_grey {
