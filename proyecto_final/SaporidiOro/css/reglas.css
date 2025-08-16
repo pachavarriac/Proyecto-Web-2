@@ -442,6 +442,11 @@
         max-width: 60vw;
         padding  : 10px 20px 0;
     }
+
+    .chef-img {
+        height: 550px;
+        width : auto;
+    }
 }
 
 
