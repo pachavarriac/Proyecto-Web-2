@@ -656,8 +656,8 @@ body {
   /* Animación */
   /* Fades laterales */
   /* Si usas fondo oscuro, cambia el color del fade a tu background */
-  /* .fade-left  { background: linear-gradient(to right, $very_dark_grey, rgba(9,9,9,0)); }
-     .fade-right { background: linear-gradient(to left,  $very_dark_grey, rgba(9,9,9,0)); } */
+  /* .fade-left  { background: linear-gradient(to right, $very-dark-grey, rgba(9,9,9,0)); }
+     .fade-right { background: linear-gradient(to left,  $very-dark-grey, rgba(9,9,9,0)); } */
 }
 .gallery-responsive h1 {
   font-family: "Cinzel", serif;
@@ -878,7 +878,7 @@ body {
 }
 
 .homemade-apple {
-  font-family: var(--homemade_apple);
+  font-family: var(--homemade-apple);
   font-weight: 400;
   font-style: normal;
 }
@@ -1056,6 +1056,6 @@ body {
   }
 }
 
-.very_dark_grey {
+.very-dark-grey {
   background-color: #090909;
 }/*# sourceMappingURL=index (Copy).css.map */

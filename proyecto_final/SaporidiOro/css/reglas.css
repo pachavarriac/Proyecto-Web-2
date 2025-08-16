@@ -5,12 +5,12 @@
 :root {
     --montserrat          : "Montserrat", sans-serif;
     --cinzel              : "Cinzel", serif;
-    --homemade_apple      : "Homemade Apple", cursive;
-    --moderate_yellow     : #D2AE35;
-    --medium_light_grey   : #a9a9a9;
+    --homemade-apple      : "Homemade Apple", cursive;
+    --moderate-yellow     : #D2AE35;
+    --medium-light-grey   : #a9a9a9;
     --very-dark-grey      : #090909;
     --pure-white          : #fff;
-    --light_grayish_yellow: #f1eee2;
+    --light-grayish-yellow: #f1eee2;
     --old-paper           : #ede6cd;
 }
 
@@ -246,7 +246,7 @@
     .shape {
         width           : 90vw;
         height          : 100px;
-        background-color: var(--moderate_yellow);
+        background-color: var(--moderate-yellow);
         clip-path       : polygon(50% 45%, 100% 50%, 50% 55%, 0% 50%);
     }
 
@@ -398,7 +398,7 @@
     .shape {
         width           : 60vw;
         height          : 20px !important;
-        background-color: var(--moderate_yellow);
+        background-color: var(--moderate-yellow);
         clip-path       : polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
     }
 

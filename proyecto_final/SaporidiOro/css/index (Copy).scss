@@ -3,19 +3,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
-$dark_red             : #7F001E;
-$moderate_yellow      : #D2AE35;
-$light_grayish_yellow : #f1eee2;
-$medium_light_grey    : #a9a9a9;
-$very_dark_grey       : #090909;
-$pure_white           : #ffffff;
-$lime_green           : #25D366;
-$muted_white          : rgba(255, 255, 255, 0.6);
+$dark-red             : #7F001E;
+$moderate-yellow      : #D2AE35;
+$light-grayish-yellow : #f1eee2;
+$medium-light-grey    : #a9a9a9;
+$very-dark-grey       : #090909;
+$pure-white           : #ffffff;
+$lime-green           : #25D366;
+$muted-white          : rgba(255, 255, 255, 0.6);
 $montserrat           : "Montserrat",
 sans-serif;
 $cinzel : "Cinzel",
 serif;
-$homemade_apple: "Homemade Apple",
+$homemade-apple: "Homemade Apple",
 cursive;
 
 
@@ -51,7 +51,7 @@ html {
 }
 
 body {
-    background : $light_grayish_yellow;
+    background : $light-grayish-yellow;
     font-family: $montserrat;
 }
 
@@ -59,7 +59,7 @@ body {
     position     : fixed;
     top          : 0;
     z-index      : 1030;
-    background   : $very_dark_grey;
+    background   : $very-dark-grey;
     min-height   : 120px;
     padding-block: 14px 16px;
     box-shadow   : 0 8px 20px rgba(0, 0, 0, .08);
@@ -72,7 +72,7 @@ body {
         bottom    : -36px;
         width     : 300px;
         height    : 80px;
-        background: $very_dark_grey;
+        background: $very-dark-grey;
         clip-path : ellipse(50% 100% at 50% 0%);
 
 
@@ -109,7 +109,7 @@ body {
             left            : 0;
             width           : 0;
             height          : 2px;
-            background-color: $moderate_yellow;
+            background-color: $moderate-yellow;
             transition      : width 0.3s ease;
         }
 
@@ -143,7 +143,7 @@ body {
 .offcanvas-mobile {
     width     : 100vw;
     max-width : 100%;
-    background: $very_dark_grey;
+    background: $very-dark-grey;
     color     : #fff;
 
     .offcanvas-header {
@@ -270,8 +270,8 @@ body {
 
 
 .footer-dark {
-    background : $very_dark_grey;
-    color      : $pure_white;
+    background : $very-dark-grey;
+    color      : $pure-white;
     padding    : 72px 0;
     font-family: $montserrat;
 
@@ -292,20 +292,20 @@ body {
     }
 
     .label {
-        color         : $muted_white;
+        color         : $muted-white;
         font-weight   : 600;
         font-size     : .95rem;
         letter-spacing: .02em;
     }
 
     .link {
-        color          : $pure_white;
+        color          : $pure-white;
         text-decoration: none;
         opacity        : .8;
         transition     : .2s;
 
         &:hover {
-            color: $moderate_yellow;
+            color: $moderate-yellow;
         }
     }
 
@@ -318,11 +318,11 @@ body {
     }
 
     .footer-row-3 {
-        color: $muted_white;
+        color: $muted-white;
     }
 
     .copyright {
-        color     : $muted_white;
+        color     : $muted-white;
         margin-top: 24px;
     }
 
@@ -331,7 +331,7 @@ body {
         gap    : 16px;
 
         a {
-            color          : $pure_white;
+            color          : $pure-white;
             font-size      : 1.5rem;
             line-height    : 1;
             display        : inline-flex;
@@ -340,7 +340,7 @@ body {
             transition     : color .2s;
 
             &:hover {
-                color: $muted_white;
+                color: $muted-white;
             }
         }
     }
@@ -365,7 +365,7 @@ body {
     align-items    : center;
     justify-content: center;
     text-align     : center;
-    color          : $pure_white;
+    color          : $pure-white;
     overflow       : hidden;
 }
 
@@ -418,13 +418,13 @@ body {
 
 
 .experience-philosophy {
-    background-color: $very_dark_grey;
-    color           : $pure_white;
+    background-color: $very-dark-grey;
+    color           : $pure-white;
 
     .section-title {
         font-family: $cinzel;
         font-size  : clamp(1.8rem, 5vw, 2.5rem);
-        color      : $moderate_yellow;
+        color      : $moderate-yellow;
     }
 
     .section-subtitle {
@@ -439,7 +439,7 @@ body {
 
         .icon {
             font-size: 3rem;
-            color    : $moderate_yellow;
+            color    : $moderate-yellow;
         }
 
         h5 {
@@ -456,16 +456,16 @@ body {
 }
 
 .open-kitchen {
-    background-color: $light_grayish_yellow;
+    background-color: $light-grayish-yellow;
 
     h2 {
         font-family: $cinzel;
         font-size  : clamp(1.8rem, 5vw, 2.5rem);
-        color      : $very_dark_grey;
+        color      : $very-dark-grey;
     }
 
     h5 {
-        color: $very_dark_grey;
+        color: $very-dark-grey;
     }
 
     p {
@@ -486,13 +486,13 @@ body {
 
 
 .awards-section {
-    background: $light_grayish_yellow;
-    color     : $very_dark_grey;
+    background: $light-grayish-yellow;
+    color     : $very-dark-grey;
 
     .awards-title {
         font-family: $cinzel;
         font-size  : clamp(1.8rem, 4vw, 2.4rem);
-        color      : $very_dark_grey;
+        color      : $very-dark-grey;
     }
 
     .awards-subtitle {
@@ -501,7 +501,7 @@ body {
     }
 
     .award-card {
-        background   : $light_grayish_yellow;
+        background   : $light-grayish-yellow;
         border-radius: 16px;
         text-align   : center;
         transition   : transform .2s ease, box-shadow .2s ease;
@@ -543,8 +543,8 @@ body {
             display       : inline-block;
             font-size     : 0.85rem;
             letter-spacing: .02em;
-            color         : $pure_white;
-            background    : $moderate_yellow;
+            color         : $pure-white;
+            background    : $moderate-yellow;
             padding       : .3rem .6rem;
             border-radius : 999px;
             font-weight   : 600;
@@ -555,23 +555,23 @@ body {
 
 
 .color-bg {
-    background-color: $light_grayish_yellow;
+    background-color: $light-grayish-yellow;
 }
 
 
 .restaurant-menu {
-    background: $light_grayish_yellow;
+    background: $light-grayish-yellow;
     margin-top: 120px;
 
     h1,
     h2,
     h3 {
         font-family: $cinzel;
-        color      : $very_dark_grey;
+        color      : $very-dark-grey;
     }
 
     .list-group-item {
-        background-color: $light_grayish_yellow;
+        background-color: $light-grayish-yellow;
 
         .thumb {
             transition: all 0.3s ease;
@@ -596,7 +596,7 @@ body {
     .menu-item h6 {
         margin     : 0;
         font-weight: 600;
-        color      : $very_dark_grey;
+        color      : $very-dark-grey;
     }
 
 
@@ -607,15 +607,15 @@ body {
     .price-left,
     .price-bottom {
         font-weight: 700;
-        color      : $very_dark_grey;
+        color      : $very-dark-grey;
         white-space: nowrap;
     }
 }
 
 .food-allergy-warning {
     background-color: rgba(210, 174, 53, 0.1);
-    border-top      : 3px solid $moderate_yellow;
-    border-bottom   : 3px solid $moderate_yellow;
+    border-top      : 3px solid $moderate-yellow;
+    border-bottom   : 3px solid $moderate-yellow;
 
     .alert-content {
         max-width: 900px;
@@ -624,7 +624,7 @@ body {
 
     .alert-icon {
         font-size  : 2rem;
-        color      : $moderate_yellow;
+        color      : $moderate-yellow;
         flex-shrink: 0;
     }
 
@@ -632,13 +632,13 @@ body {
         h5 {
             font-family: $cinzel;
             font-weight: 700;
-            color      : $very_dark_grey;
+            color      : $very-dark-grey;
         }
 
         p {
             font-family: $montserrat;
             font-size  : 0.95rem;
-            color      : $very_dark_grey;
+            color      : $very-dark-grey;
             opacity    : 0.9;
         }
     }
@@ -651,8 +651,8 @@ body {
     width           : 48px;
     height          : 48px;
     border-radius   : 50%;
-    background-color: $moderate_yellow;
-    color           : $very_dark_grey;
+    background-color: $moderate-yellow;
+    color           : $very-dark-grey;
     border          : none;
     display         : flex;
     align-items     : center;
@@ -666,7 +666,7 @@ body {
 
     &:hover {
         transform       : translateY(-3px);
-        background-color: color.adjust($moderate_yellow, $lightness: -8%);
+        background-color: color.adjust($moderate-yellow, $lightness: -8%);
     }
 
     &.show {
@@ -697,7 +697,7 @@ body {
 
     &:hover {
         transform       : translateY(-3px);
-        background-color: color.adjust($lime_green, $lightness: -5%);
+        background-color: color.adjust($lime-green, $lightness: -5%);
     }
 
     &.show {
@@ -725,7 +725,7 @@ body {
     .banner-content {
         position: relative;
         z-index : 1;
-        color   : $pure_white;
+        color   : $pure-white;
 
         h1 {
             padding-top: 120px;
@@ -742,7 +742,7 @@ body {
             .shape {
                 width           : 800px;
                 height          : 40px;
-                background-color: $moderate_yellow;
+                background-color: $moderate-yellow;
                 clip-path       : polygon(50% 0%, 100% 50%, 50% 100%, 0 50%);
             }
         }
@@ -751,7 +751,7 @@ body {
 
 
 .reservation-form {
-    background: $light_grayish_yellow;
+    background: $light-grayish-yellow;
 
     .form-label span[data-bs-toggle="tooltip"] {
         cursor     : help;
@@ -772,7 +772,7 @@ body {
 }
 
 .reservation-intro {
-    background: $light_grayish_yellow;
+    background: $light-grayish-yellow;
 
     .lead {
         strong {
@@ -824,7 +824,7 @@ body {
             bottom        : 0;
             padding       : .5rem .75rem;
             background    : linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, 0));
-            color         : $pure_white;
+            color         : $pure-white;
             font-weight   : 600;
             letter-spacing: .02em;
             font-size     : 1rem;
@@ -941,8 +941,8 @@ body {
     }
 
     /* Si usas fondo oscuro, cambia el color del fade a tu background */
-    /* .fade-left  { background: linear-gradient(to right, $very_dark_grey, rgba(9,9,9,0)); }
-       .fade-right { background: linear-gradient(to left,  $very_dark_grey, rgba(9,9,9,0)); } */
+    /* .fade-left  { background: linear-gradient(to right, $very-dark-grey, rgba(9,9,9,0)); }
+       .fade-right { background: linear-gradient(to left,  $very-dark-grey, rgba(9,9,9,0)); } */
 }
 
 /* ===== BREAKPOINTS ===== */
@@ -966,7 +966,7 @@ body {
 .galeria-grid .card {
     border-radius   : 14px;
     overflow        : hidden;
-    background-color: $pure_white;
+    background-color: $pure-white;
     text-align      : center;
 }
 
@@ -986,11 +986,11 @@ body {
 
 
 .modal-body {
-    background-color: $moderate_yellow;
-    color           : $light_grayish_yellow;
+    background-color: $moderate-yellow;
+    color           : $light-grayish-yellow;
 
     #gmTitle {
-        color     : $light_grayish_yellow;
+        color     : $light-grayish-yellow;
         text-align: center;
         font-size : clamp(1.75rem, 5vw, 2.5rem);
         ;
@@ -1009,16 +1009,16 @@ body {
     }
 
     .modal-footer {
-        background-color: $light_grayish_yellow;
+        background-color: $light-grayish-yellow;
     }
 
     .btn-secondary {
-        background-color: $moderate_yellow;
-        color           : $very_dark_grey;
+        background-color: $moderate-yellow;
+        color           : $very-dark-grey;
 
         &:hover {
-            background-color: $dark_red;
-            color           : $light_grayish_yellow;
+            background-color: $dark-red;
+            color           : $light-grayish-yellow;
         }
     }
 
@@ -1031,20 +1031,20 @@ body {
 
 .contact-form-section {
     button.btn {
-        background-color: $moderate_yellow;
-        color           : $very_dark_grey;
+        background-color: $moderate-yellow;
+        color           : $very-dark-grey;
         border          : none;
         font-weight     : 600;
         transition      : background-color 0.3s ease, transform 0.2s ease;
 
         &:hover {
-            background-color: color.adjust($moderate_yellow, $lightness: -8%);
+            background-color: color.adjust($moderate-yellow, $lightness: -8%);
             transform       : translateY(-2px);
         }
 
         &:disabled {
-            background-color: color.adjust($moderate_yellow, $lightness: 25%);
-            color           : color.adjust($very_dark_grey, $lightness: 25%);
+            background-color: color.adjust($moderate-yellow, $lightness: 25%);
+            color           : color.adjust($very-dark-grey, $lightness: 25%);
             cursor          : not-allowed;
         }
     }
@@ -1063,7 +1063,7 @@ body {
 
 
 .homemade-apple {
-    font-family: var(--homemade_apple);
+    font-family: var(--homemade-apple);
     font-weight: 400;
     font-style : normal;
 }
@@ -1138,7 +1138,7 @@ body {
 
 .brand-item figcaption {
     font-size: .95rem;
-    color    : $very_dark_grey;
+    color    : $very-dark-grey;
     opacity  : .9;
 }
 
@@ -1184,13 +1184,13 @@ body {
         box-shadow: none !important;
         border    : none !important;
         background: none !important;
-        color     : $light_grayish_yellow;
+        color     : $light-grayish-yellow;
         font-size : 3rem;
         margin    : 2rem;
     }
 
     .x-button:hover {
-        color: $moderate_yellow;
+        color: $moderate-yellow;
     }
 
 
@@ -1251,8 +1251,8 @@ body {
             top            : 12px;
             left           : 12px;
             z-index        : 2;
-            background     : $light_grayish_yellow;
-            color          : $very_dark_grey;
+            background     : $light-grayish-yellow;
+            color          : $very-dark-grey;
             padding        : 12px 16px;
         }
         .maps-p {
@@ -1271,8 +1271,8 @@ body {
             top            : 10px;
             left           : 10px;
             z-index        : 2;
-            background     : $light_grayish_yellow;
-            color          : $very_dark_grey;
+            background     : $light-grayish-yellow;
+            color          : $very-dark-grey;
             padding        : 16px 20px;
         }
 
@@ -1282,6 +1282,6 @@ body {
     }
 }
 
-.very_dark_grey {
-    background-color: $very_dark_grey;
+.very-dark-grey {
+    background-color: $very-dark-grey;
 }
