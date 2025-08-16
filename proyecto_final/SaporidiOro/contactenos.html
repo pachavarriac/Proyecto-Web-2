@@ -28,7 +28,7 @@
 
                 <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
                     <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
                     </ul>
@@ -38,15 +38,29 @@
                     </a>
 
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                        <li class="dropdown nav-item" tabindex="0">
+                            <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Galería</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="galeria-menu.html">Menú</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown nav-item" tabindex="0">
                             <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Nuestra Historia</a></li>
-                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a></li>
+                                <li class="nav-item px-1">
+                                    <a class="nav-link" href="acerca-historia.html">Nuestra Historia</a>
+                                </li>
+                                <li class="nav-item px-1">
+                                    <a class="nav-link" href="acerca-equipo.html">Nuestro Equipo</a>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Contáctenos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contactenos.html">Contáctenos</a></li>
                     </ul>
                 </div>
 
@@ -63,11 +77,24 @@
                     <div class="offcanvas-body fs-3">
                         <nav class="nav flex-column text-center">
                             <ul class="menu-list">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                                 <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                                <li class="dropdown nav-item" tabindex="0">
+                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
+                                        Galeria
+                                        <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item fs-3 px-1">
+                                            <a class="nav-link" href="galeria-menu.html">Menú</a>
+                                        </li>
+                                        <li class="nav-item fs-3 px-1">
+                                            <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="dropdown nav-item" tabindex="0">
                                     <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
                                         Acerca
@@ -75,12 +102,16 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item fs-3 px-1"><a class="nav-link"
-                                                href="historia.html">Nuestra Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a>
+                                                href="acerca-historia.html">Nuestra
+                                                Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
+                                                href="acerca-equipo.html">Nuestro
+                                                Equipo</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="nav-item"><a class="nav-link active" href="#">Contáctenos</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="contactenos.html">Contáctenos</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -96,6 +127,10 @@
             <h1>Contactenos</h1>
 
         </div>
+    </section>
+
+    <section class="shape-section mt-lg-5">
+        <div class="shape"></div>
     </section>
 
     <section class="reservation-intro py-5">
@@ -164,7 +199,8 @@
                             <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip" data-bs-placement="top"
                                 title="Escriba su mensaje o consulta."></i>
                         </label>
-                        <textarea class="form-control" id="resComentarios" name="comentarios" rows="5" required></textarea>
+                        <textarea class="form-control" id="resComentarios" name="comentarios" rows="5"
+                            required></textarea>
                         <div class="invalid-feedback">Por favor ingrese sus comentarios.</div>
                     </div>
 
@@ -183,6 +219,61 @@
             </form>
         </div>
     </section>
+
+    <section class="maps-branches very_dark_grey">
+        <div class="pt-5 px-0 d-flex row justify-content-center text-center">
+            <div class="shape-section mt-lg-5">
+                <div class="shape"></div>
+            </div>
+            <h2 class="text-center text-light mt-5 cinzel">Tres Lugares, Una Misma Pasión</h2>
+            <p class="text-light maps-p lead pt-3">En Sapori d’Oro llevamos la esencia de la cocina italiana a cada
+                rincón de Costa Rica. Ya sea en Alajuela, Escazú o La Rivera, cada una de nuestras sucursales comparte
+                la misma dedicación: ofrecerte auténticos sabores, un ambiente cálido y el servicio impecable que nos
+                distingue. Tres lugares diferentes, unidos por una misma pasión: hacer de cada visita una experiencia
+                inolvidable.</p>
+        </div>
+        <div class="px-0 py-5">
+
+            <!-- Alajuela -->
+            <article class="map-branch mb-lg-5 mt-lg-5 mb-5">
+                <div class="map-info">
+                    <h3 class="branch-title mb-1">Sapori d’Oro – Alajuela</h3>
+                    <small class="branch-address">Av. Central, Alajuela, Costa Rica</small>
+                </div>
+                <iframe class="branch-map"
+                    src="https://www.google.com/maps?q=Av.+Central,+Alajuela,+Costa+Rica&output=embed" loading="lazy"
+                    allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+
+            <!-- Escazú -->
+            <article class="map-branch mb-lg-5 mb-5">
+                <div class="map-info">
+                    <h3 class="branch-title mb-1">Sapori d’Oro – Escazú</h3>
+                    <small class="branch-address">Escazú Centro, San José, Costa Rica</small>
+                </div>
+                <iframe class="branch-map"
+                    src="https://www.google.com/maps?q=Escaz%C3%BA+Centro,+San+Jos%C3%A9,+Costa+Rica&output=embed"
+                    loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+
+            <!-- La Rivera -->
+            <article class="map-branch">
+                <div class="map-info">
+                    <h3 class="branch-title mb-1">Sapori d’Oro – La Rivera</h3>
+                    <small class="branch-address">La Rivera de Belén, Heredia, Costa Rica</small>
+                </div>
+                <iframe class="branch-map"
+                    src="https://www.google.com/maps?q=La+Rivera+de+Bel%C3%A9n,+Heredia,+Costa+Rica&output=embed"
+                    loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+
+        </div>
+
+        <div class="shape-section py-5">
+                <div class="shape"></div>
+            </div>
+    </section>
+
 
 
 

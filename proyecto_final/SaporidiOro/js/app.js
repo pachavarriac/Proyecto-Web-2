@@ -396,3 +396,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('brandsTrack');
+    if (!track) return;
+
+    // Guarda los ítems originales
+    const originals = Array.from(track.children);
+    const origCount = originals.length;
+    const GAP_PX = 48; // debe coincidir con tu gap en CSS
+
+    // Duplica los ítems para crear un bucle continuo (A + B)
+    originals.forEach(item => {
+        const clone = item.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    // Función para medir el ancho exacto del primer set (A)
+    const measureSetWidth = () => {
+        // Suma anchos de los primeros 'origCount' hijos (los originales)
+        const items = Array.from(track.children).slice(0, origCount);
+        const itemsWidth = items.reduce((sum, el) => sum + el.getBoundingClientRect().width, 0);
+        const gapsWidth = GAP_PX * Math.max(0, origCount - 1);
+        const setWidth = itemsWidth + gapsWidth;
+
+        track.style.setProperty('--set-width', `${setWidth}px`);
+        
+        // Ajusta la duración de la animación basada en el ancho
+        const duration = Math.max(20, setWidth / 60); // 60px por segundo
+        track.style.animationDuration = `${duration}s`;
+    };
+
+    // Mide ahora y tras carga (por si imágenes ajustan tamaño al cargar)
+    measureSetWidth();
+    window.addEventListener('load', measureSetWidth);
+    window.addEventListener('resize', measureSetWidth);
+});
+
+

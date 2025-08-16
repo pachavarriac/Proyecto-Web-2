@@ -781,7 +781,7 @@ body {
 }
 
 /* ===== BREAKPOINTS ===== */
-@media (max-width: 360px) {
+@media screen and (min-width: 200px) and (max-width: 991px) {
   .gallery-mobile {
     display: block;
   }
@@ -887,4 +887,175 @@ body {
   width: 800px !important;
   max-width: 100%;
   height: auto;
+}
+
+/* ===== Strip infinito de marcas ===== */
+.brands-viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* alto cómodo para logos + captions */
+  padding: 18px 0;
+  background: transparent;
+}
+
+.brands-track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  will-change: transform;
+  animation: brands-marquee 20s linear infinite;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.brands-track:hover {
+  animation-play-state: paused;
+}
+
+/* pausa en hover */
+@keyframes brands-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+  /* Se logra seamless con duplicado del set */
+}
+.brand-item {
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-align: center;
+}
+
+.brand-item img {
+  height: 256px;
+  /* ajusta si lo quieres mayor/menor */
+  width: auto;
+  display: block;
+  margin: 0 auto 8px;
+  filter: none;
+  transition: transform 0.25s ease;
+}
+
+.brand-item img:hover {
+  transform: scale(1.06);
+}
+
+.brand-item figcaption {
+  font-size: 0.95rem;
+  color: #090909;
+  opacity: 0.9;
+}
+
+/* Fades laterales solo en pantallas grandes */
+.brands-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  pointer-events: none;
+  display: none;
+}
+
+@media screen and (min-width: 200px) and (max-width: 991px) {
+  .brands-track {
+    gap: 28px;
+  }
+  .brand-item img {
+    height: 150px;
+    margin: 0;
+  }
+  .brand-item figcaption {
+    font-size: 0.85rem;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .x-button,
+  .x-button:focus,
+  .x-button:focus-visible,
+  .x-button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+    color: #f1eee2;
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  .x-button:hover {
+    color: #D2AE35;
+  }
+  .brands-fade {
+    display: block;
+  }
+  .brands-fade--left {
+    left: 0;
+    background: linear-gradient(to right, rgb(241, 238, 226), rgba(241, 238, 226, 0.7), rgba(241, 238, 226, 0));
+  }
+  .brands-fade--right {
+    right: 0;
+    background: linear-gradient(to left, rgb(241, 238, 226), rgba(241, 238, 226, 0.7), rgba(241, 238, 226, 0));
+  }
+}
+.maps-branches {
+  padding: 0 !important;
+  width: 100vw;
+}
+.maps-branches .container-fluid {
+  max-width: 100%;
+  padding: 0;
+}
+.maps-branches .map-branch {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+.maps-branches .branch-map {
+  width: 100%;
+  display: block;
+  border: 0;
+}
+@media screen and (max-width: 991px) {
+  .maps-branches .branch-map {
+    height: 300px;
+  }
+  .maps-branches .map-info {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: #f1eee2;
+    color: #090909;
+    padding: 12px 16px;
+  }
+  .maps-branches .maps-p {
+    max-width: 90vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .maps-branches .branch-map {
+    height: 520px;
+  }
+  .maps-branches .map-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    background: #f1eee2;
+    color: #090909;
+    padding: 16px 20px;
+  }
+  .maps-branches .maps-p {
+    max-width: 70vw;
+  }
+}
+
+.very_dark_grey {
+  background-color: #090909;
 }/*# sourceMappingURL=index.css.map */

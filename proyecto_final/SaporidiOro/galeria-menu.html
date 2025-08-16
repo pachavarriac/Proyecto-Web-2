@@ -39,13 +39,26 @@
                     </a>
 
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link active" href="#">Galería</a></li>
+                        <li class="dropdown nav-item" tabindex="0">
+                            <a class="nav-link submenu-toggle active" href="#" role="button" aria-expanded="false">Galería</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="galeria-menu.html">Menú</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown nav-item" tabindex="0">
                             <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Nuestra Historia</a>
+                                <li class="nav-item px-1">
+                                    <a class="nav-link" href="acerca-historia.html">Nuestra Historia</a>
                                 </li>
-                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a></li>
+                                <li class="nav-item px-1">
+                                    <a class="nav-link" href="acerca-equipo.html">Nuestro Equipo</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
@@ -69,16 +82,28 @@
                                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                                 <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link active" href="#">Galería</a></li>
+                                <li class="dropdown nav-item" tabindex="0">
+                                    <a class="nav-link submenu-toggle active" href="#" role="button" aria-expanded="false">
+                                        Galeria
+                                        <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item fs-3 px-1">
+                                            <a class="nav-link active" href="galeria-menu.html">Menu</a></li>
+                                        <li class="nav-item fs-3 px-1">
+                                            <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="dropdown nav-item" tabindex="0">
                                     <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
                                         Acerca
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="historia.html">Nuestra
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="acerca-historia.html">Nuestra
                                                 Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Nuestro
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="acerca-equipo.html">Nuestro
                                                 Equipo</a>
                                         </li>
                                     </ul>
@@ -529,150 +554,65 @@
         <!-- X de cerrar -->
         <button id="x-button" type="button" class="position-absolute top-0 end-0 z-index-x-button x-button"
             data-bs-dismiss="modal" aria-label="Cerrar">
-            <i class="bi bi-x-octagon-fill x-button-bi"></i>
+            <i class="bi bi-x-circle x-button-bi"></i>
         </button>
     </div>
-
-
-
-
-
-    <!--  -->
-
 
     <section class="shape-section py-5">
         <div class="shape"></div>
     </section>
 
-
-
-    <section class="gallery-responsive py-5">
+    <section class="brands-strip py-5">
         <div class="container">
-            <h3 class="text-center mb-4 cinzel py-lg-5">Galería Infinita</h3>
-
-            <!-- ===== MOBILE: Carousel Bootstrap ===== -->
-            <div id="galleryMobile" class="carousel slide gallery-mobile" data-bs-ride="carousel" data-bs-wrap="true">
-                <div class="carousel-inner">
-
-                    <!-- Item 1 -->
-                    <div class="carousel-item active">
-                        <figure class="card-photo m-0">
-                            <img src="/assets/images/menu/bruschetta_tradicional.png" class="d-block w-100"
-                                alt="Bruschetta al Pomodoro">
-                            <figcaption>Bruschetta al Pomodoro</figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="carousel-item">
-                        <figure class="card-photo m-0">
-                            <img src="/assets/images/menu/carpaccio_res.png" class="d-block w-100"
-                                alt="Carpaccio di Manzo">
-                            <figcaption>Carpaccio di Manzo</figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="carousel-item">
-                        <figure class="card-photo m-0">
-                            <img src="/assets/images/menu/ensalada_caprese.png" class="d-block w-100"
-                                alt="Insalata Caprese">
-                            <figcaption>Insalata Caprese</figcaption>
-                        </figure>
-                    </div>
-
-                    <!-- Agrega más items según necesites -->
-                </div>
-
-                <!-- Controles SOLO móvil -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#galleryMobile" data-bs-slide="prev"
-                    aria-label="Anterior">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#galleryMobile" data-bs-slide="next"
-                    aria-label="Siguiente">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-
-
-
+            <h3 class="text-center mb-4 cinzel py-lg-5">Nuestros Aliados & Marcas</h3>
         </div>
-        <!-- ===== DESKTOP: Tira infinita sin controles, con fade laterales ===== -->
-        <div class="gallery-desktop position-relative">
-            <!-- overlays de difuminado -->
-            <div class="fade-left" aria-hidden="true"></div>
-            <div class="fade-right" aria-hidden="true"></div>
 
-            <div class="gallery-viewport">
-                <div class="gallery-track" id="galleryTrack">
-                    <!-- SET A -->
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/bruschetta_tradicional.png" alt="Bruschetta al Pomodoro">
-                        <figcaption>Bruschetta al Pomodoro</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/carpaccio_res.png" alt="Carpaccio di Manzo">
-                        <figcaption>Carpaccio di Manzo</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/ensalada_caprese.png" alt="Insalata Caprese">
-                        <figcaption>Insalata Caprese</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/lasagna_bolognese.png" alt="Lasagna alla Bolognese">
-                        <figcaption>Lasagna alla Bolognese</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/risotto_alla_milanese.png" alt="Risotto alla Milanese">
-                        <figcaption>Risotto alla Milanese</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/fettuccine_alfredo.png" alt="Fettuccine Alfredo">
-                        <figcaption>Fettuccine Alfredo</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/tiramisu.png" alt="Tiramisú">
-                        <figcaption>Tiramisú</figcaption>
-                    </figure>
-
-                    <!-- SET B (duplicado para loop) -->
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/bruschetta_tradicional.png" alt="Bruschetta al Pomodoro">
-                        <figcaption>Bruschetta al Pomodoro</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/carpaccio_res.png" alt="Carpaccio di Manzo">
-                        <figcaption>Carpaccio di Manzo</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/ensalada_caprese.png" alt="Insalata Caprese">
-                        <figcaption>Insalata Caprese</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/lasagna_bolognese.png" alt="Lasagna alla Bolognese">
-                        <figcaption>Lasagna alla Bolognese</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/risotto_alla_milanese.png" alt="Risotto alla Milanese">
-                        <figcaption>Risotto alla Milanese</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/fettuccine_alfredo.png" alt="Fettuccine Alfredo">
-                        <figcaption>Fettuccine Alfredo</figcaption>
-                    </figure>
-                    <figure class="card-photo">
-                        <img src="/assets/images/menu/tiramisu.png" alt="Tiramisú">
-                        <figcaption>Tiramisú</figcaption>
-                    </figure>
-                </div>
+        <div class="brands-viewport">
+            <div class="brands-track" id="brandsTrack">
+                <!-- SET A (una sola vez; el JS duplicará para SET B) -->
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/5_stagioni.png" alt="Le 5 Stagioni">
+                    <figcaption>Le 5 Stagioni</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/bonafatti.png" alt="Bonfatti">
+                    <figcaption>Bonfatti</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/de_cecco.png" alt="De Cecco">
+                    <figcaption>De Cecco</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/bertolli.png" alt="Bertolli">
+                    <figcaption>Bertolli</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/felici_salumi.png" alt="Felici Salumi">
+                    <figcaption>Felici Salumi</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/ferrarini.png" alt="Ferrarini">
+                    <figcaption>Ferrarini</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/riso_scotti.png" alt="Riso Scotti">
+                    <figcaption>Riso Scotti</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/terra_di_siena.png" alt="Terra di Siena">
+                    <figcaption>Terra di Siena</figcaption>
+                </figure>
             </div>
+
+            <!-- Fades laterales en desktop (opcionales) -->
+            <div class="brands-fade brands-fade--left" aria-hidden="true"></div>
+            <div class="brands-fade brands-fade--right" aria-hidden="true"></div>
         </div>
     </section>
 
-
-
-
+    <section class="shape-section py-lg-5 mb-lg-5">
+        <div class="shape"></div>
+    </section>
 
     <footer class="footer-dark w-100 d-flex align-items-center justify-content-center text-center">
         <div class="container">

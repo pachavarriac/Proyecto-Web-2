@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/reglas.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>Sapori d’Oro</title>
 </head>
 
@@ -28,9 +29,9 @@
 
                 <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
                     <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="reservaciones.html">Reservaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
                     </ul>
 
                     <a class="navbar-brand brand-center" href="index.html" aria-label="Inicio">
@@ -39,13 +40,14 @@
 
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
                         <li class="dropdown nav-item" tabindex="0">
-                            <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Galería</a>
+                            <a class="nav-link submenu-toggle active" href="#" role="button"
+                                aria-expanded="false">Galería</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a class="nav-link" href="galeria-menu.html">Menú</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                    <a class="nav-link active" href="galeria-eventos.html">Eventos</a>
                                 </li>
                             </ul>
                         </li>
@@ -77,13 +79,14 @@
                     <div class="offcanvas-body fs-3">
                         <nav class="nav flex-column text-center">
                             <ul class="menu-list">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="reservaciones.html">Reservaciones</a>
+                                <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
                                 </li>
                                 <li class="dropdown nav-item" tabindex="0">
-                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
-                                        Galería
+                                    <a class="nav-link submenu-toggle active" href="#" role="button"
+                                        aria-expanded="false">
+                                        Galeria
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
@@ -91,7 +94,7 @@
                                             <a class="nav-link" href="galeria-menu.html">Menú</a>
                                         </li>
                                         <li class="nav-item fs-3 px-1">
-                                            <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                            <a class="nav-link active" href="galeria-eventos.html">Eventos</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -101,9 +104,11 @@
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="acerca-historia.html">Nuestra
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
+                                                href="acerca-historia.html">Nuestra
                                                 Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="acerca-equipo.html">Nuestro
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
+                                                href="acerca-equipo.html">Nuestro
                                                 Equipo</a>
                                         </li>
                                     </ul>
@@ -121,136 +126,133 @@
     <section class="menu-banner">
         <div class="banner-overlay"></div>
         <div class="banner-content text-center">
-            <h1>Reservaciones</h1>
+            <h1>Galería</h1>
 
         </div>
     </section>
 
-    <section class="reservation-intro py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 col-xl-8">
-                    <p class="lead text-center m-0">
-                        <strong>Reserva tu asiento en el corazón de la auténtica cocina italiana</strong><br>
-                        Disfruta de creaciones cuidadosamente elaboradas para deleitar a los paladares más exigentes
-                    </p>
+    <section class="shape-section mt-lg-5">
+            <div class="shape"></div>
+        </section>
+
+    <section class="py-5 imgModal-head">
+        <div class="container px-0">
+            <h2 class="cinzel text-center mb-4">Momentos especiales con nuestros clientes</h2>
+            <p class="text-center mb-5">
+                En <strong>Sapori d’Oro</strong>, creemos que cada comida es una oportunidad para crear recuerdos inolvidables.
+                Desde celebraciones familiares hasta encuentros entre amigos, cada sonrisa y brindis forman parte de
+                nuestra historia.
+                Esta galería captura la esencia de esos instantes únicos, donde la buena mesa y la calidez de nuestro
+                servicio se unen
+                para ofrecer experiencias que perduran en el corazón.
+            </p>
+
+            <!-- Carrusel fotográfico -->
+            <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- Slides generados -->
+                    <div class="carousel-item active justify-content-center">
+                        <img src="/assets/images/events/event-1.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-2.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-3.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-4.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-5.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-6.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-7.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-8.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/images/events/event-9.png" class="d-block w-100 carousel-img imgModal-open" alt="Evento 9">
+                    </div>
                 </div>
+
+                <!-- Controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- <div class="shape-section">
+
+
+    <section class="shape-section py-5">
         <div class="shape"></div>
-    </div> -->
+    </section>
 
-
-    <section class="reservation-form py-5">
+    <section class="brands-strip py-5">
         <div class="container">
-            <form id="formReserva" class="needs-validation" novalidate>
-                <div class="row g-4"> <!-- más gap vertical/horizontal -->
+            <h3 class="text-center mb-4 cinzel py-lg-5">Nuestros Aliados & Marcas</h3>
+        </div>
 
-                    <!-- Nombre -->
-                    <div class="col-md-6">
-                        <label for="resNombre" class="form-label required">
-                            Nombre
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Solo letras y espacios."></i>
-                        </label>
-                        <input type="text" class="form-control" id="resNombre" name="nombre" pattern="^[A-Za-zÀ-ÿ\s]+$"
-                            required placeholder="Ej: Marco Bianchi">
-                        <div class="invalid-feedback">Ingrese un nombre válido (solo letras y espacios).</div>
-                    </div>
+        <div class="brands-viewport">
+            <div class="brands-track" id="brandsTrack">
+                <!-- SET A (una sola vez; el JS duplicará para SET B) -->
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/5_stagioni.png" alt="Le 5 Stagioni">
+                    <figcaption>Le 5 Stagioni</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/bonafatti.png" alt="Bonfatti">
+                    <figcaption>Bonfatti</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/de_cecco.png" alt="De Cecco">
+                    <figcaption>De Cecco</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/bertolli.png" alt="Bertolli">
+                    <figcaption>Bertolli</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/felici_salumi.png" alt="Felici Salumi">
+                    <figcaption>Felici Salumi</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/ferrarini.png" alt="Ferrarini">
+                    <figcaption>Ferrarini</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/riso_scotti.png" alt="Riso Scotti">
+                    <figcaption>Riso Scotti</figcaption>
+                </figure>
+                <figure class="brand-item">
+                    <img src="/assets/images/brands/terra_di_siena.png" alt="Terra di Siena">
+                    <figcaption>Terra di Siena</figcaption>
+                </figure>
+            </div>
 
-                    <!-- Teléfono -->
-                    <div class="col-md-6">
-                        <label for="resTelefono" class="form-label required">
-                            Teléfono
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Solo números, espacios y guiones."></i>
-                        </label>
-                        <input type="tel" class="form-control" id="resTelefono" name="telefono" pattern="^[0-9\s-]+$"
-                            required placeholder="Ej: 8888-8888">
-                        <div class="invalid-feedback">Use solo números, espacios o guiones.</div>
-                    </div>
-
-                    <!-- Correo -->
-                    <div class="col-md-6">
-                        <label for="resCorreo" class="form-label">
-                            Correo electrónico
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Usa un correo válido."></i>
-                        </label>
-                        <input type="email" class="form-control" id="resCorreo" name="correo" required
-                            placeholder="tu@correo.com">
-                        <div class="invalid-feedback">Ingrese un correo válido.</div>
-                    </div>
-
-                    <!-- Sucursal -->
-                    <div class="col-md-6">
-                        <label for="resSucursal" class="form-label required">
-                            Sucursal
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Seleccione la sede de su preferencia."></i>
-                        </label>
-                        <select class="form-select" id="resSucursal" name="sucursal" required>
-                            <option value="" selected disabled>Elegir sucursal...</option>
-                            <option value="Alajuela">Alajuela (AL)</option>
-                            <option value="Escazú">Escazú (ES)</option>
-                            <option value="La Rivera">La Rivera (LR)</option>
-                        </select>
-                        <div class="invalid-feedback">Seleccione una sucursal.</div>
-                    </div>
-
-                    <!-- Fecha -->
-                    <div class="col-md-6">
-                        <label for="resFecha" class="form-label required">
-                            Fecha de reservación
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="No aceptamos fechas pasadas."></i>
-                        </label>
-                        <input type="date" class="form-control" id="resFecha" name="fecha" required>
-                        <div class="invalid-feedback">Seleccione una fecha válida.</div>
-                    </div>
-
-                    <!-- Hora -->
-                    <div class="col-md-6">
-                        <label for="resHora" class="form-label required">
-                            Hora de reservación
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Horario disponible según la sucursal."></i>
-                        </label>
-                        <input type="time" class="form-control" id="resHora" name="hora" required>
-                        <div class="invalid-feedback">Seleccione una hora.</div>
-                    </div>
-
-                    <!-- Personas -->
-                    <div class="col-md-6">
-                        <label for="resPersonas" class="form-label required">
-                            Cantidad de personas
-                            <i class="bi bi-question-circle text-info" data-bs-toggle="tooltip"
-                                title="Entre 1 y 20 personas por reserva."></i>
-                        </label>
-                        <input type="number" class="form-control" id="resPersonas" name="personas" min="1" max="20"
-                            step="1" required placeholder="Ej: 4">
-                        <div class="invalid-feedback">Ingrese una cantidad entre 1 y 20.</div>
-                    </div>
-
-                    <!-- Botón -->
-                    <div class="col-12 mt-5 text-center">
-                        <button type="submit" id="btnReservar" class="btn btn-warning fw-semibold" disabled>Confirmar
-                            reservación</button>
-                    </div>
-
-                    <!-- Leyenda -->
-                    <div class="col-12 mt-2 text-center">
-                        <small class="text-muted">(*) Campos obligatorios</small>
-                    </div>
-
-                </div>
-            </form>
+            <!-- Fades laterales en desktop (opcionales) -->
+            <div class="brands-fade brands-fade--left" aria-hidden="true"></div>
+            <div class="brands-fade brands-fade--right" aria-hidden="true"></div>
         </div>
     </section>
 
+    <section class="shape-section py-lg-5 mb-lg-5">
+        <div class="shape"></div>
+    </section>
 
     <footer class="footer-dark w-100 d-flex align-items-center justify-content-center text-center">
         <div class="container">
@@ -348,9 +350,29 @@
         <i class="bi bi-arrow-up"></i>
     </button>
 
+    <!-- Modal reutilizable -->
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0 shadow-none position-relative">
+
+                <div class="modal-body p-0 bg-transparent">
+                    <img id="mImg" src="" alt="" class="imgModal-img d-block mx-auto rounded-4 shadow bg-transparent">
+                </div>
+            </div>
+        </div>
+        <!-- X de cerrar -->
+        <button id="x-button" type="button" class="position-absolute top-0 end-0 z-index-x-button x-button"
+            data-bs-dismiss="modal" aria-label="Cerrar">
+            <i class="bi bi-x-circle x-button-bi"></i>
+        </button>
+    </div>
 
     <script src="/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW({ live: true }).init();
+    </script>
 
 
 </body>

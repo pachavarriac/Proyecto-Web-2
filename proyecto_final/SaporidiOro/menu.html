@@ -28,8 +28,8 @@
 
                 <div class="collapse navbar-collapse d-none d-lg-flex" id="mainNav">
                     <ul class="navbar-nav me-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                         <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a></li>
                     </ul>
 
@@ -38,12 +38,26 @@
                     </a>
 
                     <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
-                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                        <li class="dropdown nav-item" tabindex="0">
+                            <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Galería</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="galeria-menu.html">Menú</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown nav-item" tabindex="0">
                             <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">Acerca</a>
                             <ul class="dropdown-menu">
-                                <li class="nav-item px-1"><a class="nav-link" href="historia.html">Nuestra Historia</a></li>
-                                <li class="nav-item px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a></li>
+                                <li class="nav-item px-1">
+                                    <a class="nav-link" href="acerca-historia.html">Nuestra Historia</a>
+                                </li>
+                                <li class="nav-item px-1">
+                                    <a class="nav-link" href="acerca-equipo.html">Nuestro Equipo</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="contactenos.html">Contáctenos</a></li>
@@ -63,20 +77,34 @@
                     <div class="offcanvas-body fs-3">
                         <nav class="nav flex-column text-center">
                             <ul class="menu-list">
-                                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link active" href="#">Menu</a></li>
+                                <li class="nav-item"><a class="nav-link " href="index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                                 <li class="nav-item"><a class="nav-link" href="reservaciones.html">Reservaciones</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                                <li class="dropdown nav-item" tabindex="0">
+                                    <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
+                                        Galeria
+                                        <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item fs-3 px-1">
+                                            <a class="nav-link" href="galeria-menu.html">Menú</a>
+                                        </li>
+                                        <li class="nav-item fs-3 px-1">
+                                            <a class="nav-link" href="galeria-eventos.html">Eventos</a>
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="dropdown nav-item" tabindex="0">
                                     <a class="nav-link submenu-toggle" href="#" role="button" aria-expanded="false">
                                         Acerca
                                         <i class="bi bi-plus-circle ms-2 toggle-icon"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link"
-                                                href="historia.html">Nuestra Historia</a></li>
-                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="equipo.html">Nuestro Equipo</a>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="acerca-historia.html">Nuestra
+                                                Historia</a></li>
+                                        <li class="nav-item fs-3 px-1"><a class="nav-link" href="acerca-equipo.html">Nuestro
+                                                Equipo</a>
                                         </li>
                                     </ul>
                                 </li>
